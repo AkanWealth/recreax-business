@@ -1,6 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 // import { Button } from "../ui/button";
 import {
@@ -10,52 +13,318 @@ import {
   DropdownMenuItem,
 } from "../ui/dropdown-menu";
 
-import { ChevronDown } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
+
+import { ChevronDown, Menu, X } from "lucide-react";
 
 function Header() {
-  return (
-    <nav className="w-full py-10 px-20 bg-transparent">
-      <div className="flex shadow-md px-12 py-5 bg-white h-fit w-full rounded-full  items-center justify-between">
-        <Image src="/Logo.png" alt="logo" width={160} height={100} />
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-        <div className="flex items-center gap-2">
-          <Link className=" px-2 " href="/">
+  return (
+    <nav className="w-full py-0 px-0 sm:py-4 sm:px-8 md:py-8 md:px-12 lg:py-10 lg:px-20 bg-transparent">
+      <div className="flex shadow-md px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 bg-white h-fit w-full sm:rounded-full items-center justify-between">
+        <Image src="/Logo.png" alt="logo" width={120} height={75} />
+
+        {/* Desktop Navigation */}
+        <div className="hidden sm:flex items-center gap-1 md:gap-2">
+          <Link
+            className="px-1 sm:px-2 text-xs sm:text-sm font-plus-jakarta-sans text-gray-950"
+            href="/"
+          >
             Home
           </Link>
-          <Link className=" px-2 " href="/">
+          <Link
+            className="px-1 sm:px-2 text-xs sm:text-sm font-plus-jakarta-sans text-gray-950"
+            href="/accelerator"
+          >
             Accelerator
           </Link>
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <p className="flex font-medium text-gray-950 items-end gap-2">
-                Company <ChevronDown className="w-6 h-6" />
-              </p>
+            <DropdownMenuTrigger className="focus-visible:outline-none">
+              <div className="flex items-center h-fit gap-1 md:gap-2">
+                <p className="font-medium font-plus-jakarta-sans text-xs sm:text-sm text-gray-950">
+                  Company
+                </p>
+                <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 pt-1" />
+              </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                <Link href="/about">About</Link>
+            <DropdownMenuContent className="w-[280px] sm:w-[320px] md:w-[360px]">
+              <DropdownMenuItem className="flex flex-row gap-3 items-center justify-start ">
+                <Link
+                  href="/about-us"
+                  className="flex flex-row gap-3 items-center justify-start "
+                >
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className="flex flex-col gap-1 items-start justify-start">
+                    <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                      About Us
+                    </p>
+                    <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                      Learn who we are and what we do
+                    </p>
+                  </div>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/contact">Contact</Link>
+                <Link
+                  href="/contact-us"
+                  className="flex flex-row gap-3 items-center justify-start "
+                >
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className="flex flex-col gap-1 items-start justify-start">
+                    <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                      Contact Us
+                    </p>
+                    <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                      Get in touch with the ReCreaX team
+                    </p>
+                  </div>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
           <DropdownMenu>
-            <DropdownMenuTrigger>
-              <p className="flex font-medium text-gray-950 items-end gap-2">
-                Resources <ChevronDown className="w-6 h-6" />
-              </p>
+            <DropdownMenuTrigger className="focus-visible:outline-none">
+              <div className="flex items-center h-fit gap-1 md:gap-2">
+                <p className="font-medium font-plus-jakarta-sans text-xs sm:text-sm text-gray-950">
+                  Resources
+                </p>
+                <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 pt-1" />
+              </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>
-                <Link href="/about">About</Link>
+            <DropdownMenuContent className="w-[280px] sm:w-[320px] md:w-[360px]">
+              <DropdownMenuItem className="flex flex-row gap-3 items-center justify-start ">
+                <Link
+                  href="/case-studies"
+                  className="flex flex-row gap-3 items-center justify-start "
+                >
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className="flex flex-col gap-1 items-start justify-start">
+                    <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                      Case Studies
+                    </p>
+                    <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                      See how founders launched and scaled with ReCreaX{" "}
+                    </p>
+                  </div>
+                </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link href="/contact">Contact</Link>
+                <Link
+                  href="/blog"
+                  className="flex flex-row gap-3 items-center justify-start "
+                >
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className="flex flex-col gap-1 items-start justify-start">
+                    <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                      Blog
+                    </p>
+                    <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                      Weekly insights to help you build smarter
+                    </p>
+                  </div>
+                </Link>
+              </DropdownMenuItem>
+              <DropdownMenuItem>
+                <Link
+                  href="/newsletter"
+                  className="flex flex-row gap-3 items-center justify-start "
+                >
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className="flex flex-col gap-1 items-start justify-start">
+                    <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                      Newsletter
+                    </p>
+                    <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                      Get curated founder tips in your inbox
+                    </p>
+                  </div>
+                </Link>
+              </DropdownMenuItem>
+
+              <DropdownMenuItem>
+                <Link
+                  href="/playbooks"
+                  className="flex flex-row gap-3 items-center justify-start "
+                >
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className="flex flex-col gap-1 items-start justify-start">
+                    <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                      Playbooks
+                    </p>
+                    <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                      Step-by-step guides for product execution
+                    </p>
+                  </div>
+                </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="sm:hidden p-2"
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        >
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Navigation */}
+        {isMobileMenuOpen && (
+          <div className="absolute top-[74px] left-0 right-0 bg-blue-50 shadow-lg rounded-lg w-full p-4 sm:hidden">
+            <div className="flex flex-col bg-light gap-4">
+              <Link
+                className="font-medium font-plus-jakarta-sans text-sm text-gray-950"
+                href="/"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Home
+              </Link>
+              <Link
+                className="font-medium font-plus-jakarta-sans text-sm text-gray-950"
+                href="/accelerator"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Accelerator
+              </Link>
+
+              {/* Mobile Company Dropdown */}
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger className="focus-visible:outline-none py-0 no-underline">
+                    <p className="font-medium font-plus-jakarta-sans text-sm text-gray-950">
+                      Company
+                    </p>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="p-4 bg-white rounded-lg flex flex-col gap-2">
+                      <Link
+                        href="/about-us"
+                        className="flex flex-row gap-3 items-center justify-start   "
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className="flex flex-col gap-1 items-start justify-start">
+                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                            About Us
+                          </p>
+                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                            Learn who we are and what we do
+                          </p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/contact-us"
+                        className="flex flex-row gap-3 items-center justify-start   "
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className="flex flex-col gap-1 items-start justify-start">
+                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                            Contact Us
+                          </p>
+                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                            Get in touch with the ReCreaX team
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              {/* Mobile Resources Dropdown */}
+              <Accordion type="single" collapsible>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger className="focus-visible:outline-none py-0">
+                    <p className="font-medium font-plus-jakarta-sans text-sm text-gray-950">
+                      Resources
+                    </p>
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    <div className="p-4 bg-white rounded-lg flex flex-col gap-2">
+                      <Link
+                        href="/case-studies"
+                        className="flex flex-row gap-3 items-center justify-start "
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className="flex flex-col gap-1 items-start justify-start">
+                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                            Case Studies
+                          </p>
+                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                            See how founders launched and scaled with ReCreaX
+                          </p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/blog"
+                        className="flex flex-row gap-3 items-center justify-start "
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className="flex flex-col gap-1 items-start justify-start">
+                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                            Blog
+                          </p>
+                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                            Weekly insights to help you build smarter
+                          </p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/newsletter"
+                        className="flex flex-row gap-3 items-center justify-start "
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className="flex flex-col gap-1 items-start justify-start">
+                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                            Newsletter
+                          </p>
+                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                            Get curated founder tips in your inbox
+                          </p>
+                        </div>
+                      </Link>
+                      <Link
+                        href="/playbooks"
+                        className="flex flex-row gap-3 items-center justify-start "
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className="flex flex-col gap-1 items-start justify-start">
+                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                            Playbooks
+                          </p>
+                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                            Step-by-step guides for product execution
+                          </p>
+                        </div>
+                      </Link>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+
+              <Button className="bg-[#12233d] text-sm font-medium rounded-lg py-[12px] px-4 hover:bg-[#12233d]/80 text-white w-full">
+                Book a Free 1:1 Session
+              </Button>
+            </div>
+          </div>
+        )}
+
+        {/* Desktop Button */}
+        <Button className="hidden sm:block bg-[#12233d] rounded-lg py-[8px] sm:py-[10px] px-2 sm:px-3 hover:bg-[#12233d]/80 text-white text-xs sm:text-sm">
+          Book a Free 1:1 Session
+        </Button>
       </div>
     </nav>
   );

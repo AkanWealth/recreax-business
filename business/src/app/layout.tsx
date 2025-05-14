@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${montserrat.variable} ${plusJakartaSans.variable} antialiased`}
+        className={`${montserrat.variable} ${plusJakartaSans.variable} antialiased bg-[#f3f3f3]`}
       >
         <Header />
         {children}

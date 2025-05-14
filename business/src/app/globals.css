@@ -5,8 +5,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-montserrat: var(--font-montserrat);
+  --font-plus-jakarta-sans: var(--font-plus-jakarta-sans);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -78,7 +78,7 @@
 
   /* Brand Colors */
   --brand-grey: oklch(0.145 0 0 / 70%);
-  --apple-green: oklch(0.65 0.12 100);
+  --apple-green: #7ab82e;
   --brand-black: oklch(0.145 0 0);
   --recreax: oklch(0.205 0.02 240);
   --recreax-hover: oklch(0.35 0.05 240);
