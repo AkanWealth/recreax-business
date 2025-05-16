@@ -21,69 +21,27 @@ interface TestimonialCardProps {
 const TESTIMONIALS: Testimonial[] = [
   {
     id: 1,
-    name: "John Doe",
-    company: "John Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Ayowole O,",
+    company: "Audiocare",
+    body: "I&apos;m truly impressed by the dedication the team at ReCreaX showed during this project. They managed to build an incredible platform that showcases my business, within a tight deadline. Their hard work and expertise really made a difference!",
   },
   {
     id: 2,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Onome Jike",
+    company: "Alte Consulting",
+    body: "ReCreaX delivered excellent performance, managing the project end-to-end with strong communication, leadership, and problem-solving skills. Their proactive and adaptable approach was key to the project&apos;s success. I highly recommend them for a job well done.",
   },
   {
     id: 3,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Reetika Matha",
+    company: "Healthtech Founder",
+    body: "I really appreciate the effort the team at ReCreaX put into the GHIH project. Within a short time frame, they developed my Web App that allows elderly users connect easily with volunteers and companions.",
   },
   {
     id: 4,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 5,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 6,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 7,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 8,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 9,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 10,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  },
-  {
-    id: 11,
-    name: "Jane Doe",
-    company: "Jane Doe",
-    body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    name: "Emmanuel Adedayo",
+    company: "Agrotech Founder",
+    body: "Working with ReCreaX has been a rewarding experience. It gave me the support, resources, and collaborative space to turn my idea—the QRL Management Solution—into a real product. I was empowered to think creatively, refine my vision, and address real challenges faced by poultry farmers and small businesses in Nigeria.",
   },
 ];
 
@@ -101,7 +59,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   >
     <div className="bg-white flex flex-col gap-6 sm:gap-12 rounded-lg shadow-[4px_9px_35px_8px_rgba(151,_163,_57,_1)] m-4 sm:m-10 transition-shadow duration-300 p-4 sm:p-8">
       <p className="text-[#65605c] text-base sm:text-lg mb-4 sm:mb-6 font-montserrat">
-        {testimonial.body}
+        &quot;{testimonial.body}&quot;
       </p>
       <div className="flex flex-col items-start gap-2 sm:gap-3">
         <span className="font-semibold text-xl sm:text-2xl text-gray-800 font-plus-jakarta-sans">
