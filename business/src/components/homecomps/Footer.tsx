@@ -16,8 +16,8 @@ function Footer() {
             Let turn your idea into reality and launch faster
           </p>
         </div>
-        <Button className="bg-[#00ffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base ">
-          Book a call with Us! <ArrowRight className="w-4 h-4" />
+        <Button className="bg-[#00ffff] group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base ">
+          Book a call with Us! <ArrowRight className="w-4 h-4 group-hover:translate-x-1  transition-transform duration-700 ease-in-out" />
         </Button>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:flex sm:flex-row justify-between mt-8">
@@ -49,7 +49,42 @@ function Footer() {
               </Link>
             </div>
             <div className="flex flex-row  text-white text-sm sm:text-base font-plus-jakarta-sans gap-10">
-              t {""} t {""} t {""} t {""} t
+              <a href="https://www.facebook.com/company/recreax">
+                <Image
+                  src={"/linear/facebook.svg"}
+                  height={20}
+                  width={20}
+                  alt="Facebook"
+                  className="fill-white color-white "
+                />
+              </a>
+              <a href="https://www.X.com/recreax">
+                <Image src={"/linear/Tw.svg"} height={20} width={20} alt="X" />
+              </a>
+              <a href="https://www.instagram.com/recreax">
+                <Image
+                  src={"/linear/instagram.svg"}
+                  height={20}
+                  width={20}
+                  alt="Instagram"
+                />
+              </a>
+              <a href="https://www.instagram.com/recreax">
+                <Image
+                  src={"/linear/linkedin.svg"}
+                  height={20}
+                  width={20}
+                  alt="LinkedIn"
+                />
+              </a>
+              <a href="https://www.instagram.com/recreax">
+                <Image
+                  src={"/linear/tiktok.svg"}
+                  height={20}
+                  width={20}
+                  alt="TikTok"
+                />
+              </a>
             </div>
           </div>
         </div>

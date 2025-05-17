@@ -177,3 +177,19 @@
     @apply bg-background text-foreground;
   }
 }
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-33.333% - 1rem)); /* Adjust based on your gap */
+  }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.pause-animation {
+  animation-play-state: paused;
+}

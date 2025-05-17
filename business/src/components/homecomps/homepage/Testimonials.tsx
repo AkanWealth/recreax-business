@@ -23,13 +23,13 @@ const TESTIMONIALS: Testimonial[] = [
     id: 1,
     name: "Ayowole O,",
     company: "Audiocare",
-    body: "I&apos;m truly impressed by the dedication the team at ReCreaX showed during this project. They managed to build an incredible platform that showcases my business, within a tight deadline. Their hard work and expertise really made a difference!",
+    body: "I'm truly impressed by the dedication the team at ReCreaX showed during this project. They managed to build an incredible platform that showcases my business, within a tight deadline. Their hard work and expertise really made a difference!",
   },
   {
     id: 2,
     name: "Onome Jike",
     company: "Alte Consulting",
-    body: "ReCreaX delivered excellent performance, managing the project end-to-end with strong communication, leadership, and problem-solving skills. Their proactive and adaptable approach was key to the project&apos;s success. I highly recommend them for a job well done.",
+    body: "ReCreaX delivered excellent performance, managing the project end-to-end with strong communication, leadership, and problem-solving skills. Their proactive and adaptable approach was key to the project's success. I highly recommend them for a job well done.",
   },
   {
     id: 3,
@@ -51,11 +51,11 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   isActive,
 }) => (
   <motion.div
-    initial={{ x: isActive ? 0 : 1000, opacity: isActive ? 1 : 0 }}
-    animate={{ x: isActive ? 0 : 1000, opacity: isActive ? 1 : 0 }}
-    exit={{ x: -1000, opacity: 0 }}
+    initial={{ opacity: 0, x: 1000 }}
+    animate={{ opacity: isActive ? 1 : 0, x: isActive ? 0 : 1000 }}
+    exit={{ opacity: 0, x: -1000 }}
     transition={{ duration: 0.5, ease: "easeInOut" }}
-    className={`absolute top-0 left-0 w-full ${isActive ? "block" : "hidden"}`}
+    className={`w-full ${isActive ? "block" : "hidden"}`}
   >
     <div className="bg-white border-1 border-[#97a339] flex flex-col gap-6 sm:gap-12 rounded-lg shadow-[4px_9px_35px_8px_rgba(151,_163,_57,_1)] m-4 sm:m-10 transition-shadow duration-300 p-4 sm:p-8">
       <p className="text-[#65605c] text-base sm:text-lg mb-4 sm:mb-6 font-montserrat">
@@ -101,7 +101,7 @@ function Testimonials() {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row items-center justify-between w-full bg-white gap-6 sm:gap-8 md:gap-16 py-6 sm:py-10 md:py-20 px-4 sm:px-8 md:px-16 lg:px-32">
+    <div className="flex flex-col sm:flex-row items-center justify-between w-full bg-white gap-6 sm:gap-8 md:gap-16 py-6 sm:py-10 md:py-20 px-4 sm:px-8 md:px-16 lg:px-32 min-h-[600px] ">
       <h2 className="flex flex-row sm:flex-col gap-4 sm:gap-6 items-center sm:items-start justify-center whitespace-nowrap text-black text-center font-semibold text-xl sm:text-2xl md:text-4xl w-fit font-plus-jakarta-sans">
         <Image
           src="/images/Works-star.png"
@@ -132,17 +132,15 @@ function Testimonials() {
         </div>
 
         {/* Testimonial Cards */}
-        <div className="relative w-full h-[300px] sm:h-[350px] md:h-[400px] overflow-hidden">
-          <AnimatePresence mode="wait">
-            {TESTIMONIALS.map((testimonial, index) => (
-              <TestimonialCard
-                key={testimonial.id}
-                testimonial={testimonial}
-                isActive={index === activeIndex}
-              />
-            ))}
-          </AnimatePresence>
-        </div>
+        <AnimatePresence mode="wait">
+          {TESTIMONIALS.map((testimonial, index) => (
+            <TestimonialCard
+              key={testimonial.id}
+              testimonial={testimonial}
+              isActive={index === activeIndex}
+            />
+          ))}
+        </AnimatePresence>
 
         {/* Navigation Buttons */}
         <div className="flex justify-end gap-3 sm:gap-4 w-full">
