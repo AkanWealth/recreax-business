@@ -58,7 +58,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     className={`w-full ${isActive ? "block" : "hidden"}`}
   >
     <div className="bg-white border-1 border-[#97a339] flex flex-col gap-6 sm:gap-12 rounded-lg shadow-[4px_9px_35px_8px_rgba(151,_163,_57,_1)] m-4 sm:m-10 transition-shadow duration-300 p-4 sm:p-8">
-      <p className="text-[#65605c] text-base sm:text-lg mb-4 sm:mb-6 font-montserrat">
+      <p className="text-[#65605c] text-base sm:text-lg mb-4 sm:mb-6 font-plus-jakarta-sans">
         &quot;{testimonial.body}&quot;
       </p>
       <div className="flex flex-col items-start gap-2 sm:gap-3">

@@ -36,7 +36,7 @@ function Works() {
             <h2 className="text-2xl font-semibold text-[#2a2829] font-plus-jakarta-sans">
               Share your idea
             </h2>
-            <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-montserrat text-[#2a2829]">
+            <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-plus-jakarta-sans text-[#2a2829]">
               We will refine, validate your concept, and craft a structured
               execution plan
             </p>
@@ -63,7 +63,7 @@ function Works() {
             <h2 className="text-2xl font-semibold text-[#2a2829] font-plus-jakarta-sans">
               Build in sprints
             </h2>
-            <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-montserrat text-[#2a2829]">
+            <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-plus-jakarta-sans text-[#2a2829]">
               We turn your idea into a functional product, ensuring constant
               feedback and alignment
             </p>
@@ -90,7 +90,7 @@ function Works() {
             <h2 className="text-2xl font-semibold text-[#2a2829] font-plus-jakarta-sans">
               Launch & scale
             </h2>
-            <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-montserrat text-[#2a2829]">
+            <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-plus-jakarta-sans text-[#2a2829]">
               We are available to provide continuous support to help you scale
               beyond launch.
             </p>

@@ -70,7 +70,7 @@ function Built() {
                 Refine your idea. Validate your market
               </p>
             </div>
-            <p className="text-[#060c15] text-base md:text-lg font-montserrat font-normal ">
+            <p className="text-[#060c15] text-base md:text-lg font-plus-jakarta-sans font-normal ">
               We simplify the product development process, guiding you to test
               your idea, refine your strategy, and build a product users love
               without the guesswork.
@@ -107,7 +107,7 @@ function Built() {
                 Design what users actually want
               </p>
             </div>
-            <p className="text-[#060c15] text-base md:text-lg font-montserrat font-normal ">
+            <p className="text-[#060c15] text-base md:text-lg font-plus-jakarta-sans font-normal ">
               Our design sprints turn insights into intuitive experiences. We
               create user flows, wireframes, and prototypes that bring your
               vision to life.
@@ -144,7 +144,7 @@ function Built() {
                 From idea to a real MVP. Fast.{" "}
               </p>
             </div>
-            <p className="text-[#060c15] text-base md:text-lg font-montserrat font-normal ">
+            <p className="text-[#060c15] text-base md:text-lg font-plus-jakarta-sans font-normal ">
               We build lean, functional MVPs using no-code and low-code tools.
               Your product gets tested early, saving time and budget.
             </p>
@@ -180,7 +180,7 @@ function Built() {
                 Don&apos;t just launch. Grow.
               </p>
             </div>
-            <p className="text-[#060c15] text-base md:text-lg font-montserrat font-normal ">
+            <p className="text-[#060c15] text-base md:text-lg font-plus-jakarta-sans font-normal ">
               Post-launch, we iterate based on real user feedback. From
               performance improvements to feature add-ons, we help you scale
               smarter.
