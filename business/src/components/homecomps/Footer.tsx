@@ -12,12 +12,13 @@ function Footer() {
           <p className="text-blue-50 text-lg font-semibold font-plus-jakarta-sans">
             Got a Product Idea?
           </p>
-          <p className="text-white  text-3xl sm:text-5xl font-bold font-plus-jakarta-sans">
+          <p className="text-white  text-3xl sm:text-5xl font-bold font-tomato">
             Let turn your idea into reality and launch faster
           </p>
         </div>
         <Button className="bg-[#00ffff] group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base ">
-          Book a call with Us! <ArrowRight className="w-4 h-4 group-hover:translate-x-1  transition-transform duration-700 ease-in-out" />
+          Book a call with Us!{" "}
+          <ArrowRight className="w-4 h-4 group-hover:translate-x-1  transition-transform duration-700 ease-in-out" />
         </Button>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:flex sm:flex-row justify-between mt-8">

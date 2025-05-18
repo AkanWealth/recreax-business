@@ -186,10 +186,43 @@
   }
 }
 
-.animate-scroll {
-  animation: scroll 30s linear infinite;
+.hero-animate-scroll {
+  animation: hero-scroll 30s linear infinite;
+  width: fit-content; /* Ensures the container fits the content */
 }
 
-.pause-animation {
+.hero-scroll-content {
+  flex-shrink: 0; /* Prevents the content from shrinking */
+}
+
+.hero-pause-animation {
   animation-play-state: paused;
+}
+
+@keyframes hero-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Moves exactly one set width */
+  }
+}
+.metrics-animate-scroll {
+  animation: scroll 10s linear infinite;
+}
+
+.metrics-pause-animation {
+  animation-duration: 80s;
+}
+
+/* HTML: <div class="curved-rectangle"></div> */
+.curved-rectangle {
+  aspect-ratio: 3/2;
+  z-index: -10;
+  top: -180px;
+  /* update the 85% to control the curvature
+     you can also update the 50% to control the position
+  */
+  clip-path: ellipse(85% 50% at 50% 100%);
+  background: #032353;
 }

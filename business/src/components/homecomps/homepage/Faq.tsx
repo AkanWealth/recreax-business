@@ -86,7 +86,7 @@ function Faq() {
         variants={itemVariants}
         className="flex flex-col gap-4 text-center font-plus-jakarta-sans"
       >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#12233d] font-bold">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#12233d] font-bold font-tomato">
           Frequently Asked Questions
         </h2>
         <p className="font-normal text-base md:text-lg text-[#12233d]">
@@ -101,7 +101,7 @@ function Faq() {
               value={question.question}
               className="border-b border-gray-200"
             >
-              <AccordionTrigger className="text-left px-3 py-4  text-lg sm:text-2xl font-plus-jakarta-sans font-semibold text-[#303237]  hover:no-underline">
+              <AccordionTrigger className="text-left px-3 py-4  text-lg sm:text-2xl font-tomato font-semibold text-[#303237]  hover:no-underline">
                 {question.question}
               </AccordionTrigger>
               <AccordionContent className=" p-3  text-base font-plus-jakarta-sans font-normal text-[#65605c]">

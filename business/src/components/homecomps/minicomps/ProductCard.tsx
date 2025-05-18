@@ -44,7 +44,7 @@ function ProductCard({
       </motion.div>
       <div className="flex flex-col items-start justify-start gap-3 sm:gap-4 w-full">
         <div className="flex flex-row items-center justify-between w-full">
-          <h3 className="text-xl sm:text-2xl font-bold font-plus-jakarta-sans">
+          <h3 className="text-xl sm:text-2xl font-bold font-tomato">
             {title}
           </h3>
           <motion.a

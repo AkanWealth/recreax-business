@@ -30,10 +30,10 @@ function Works() {
           className="flex flex-col gap-8 md:gap-16 items-start bg-white w-full md:w-fit rounded-2xl py-6 pl-6 shadow-lg hover:shadow-xl"
         >
           <div className="flex flex-col gap-2 items-start ">
-            <p className="rounded-full font-plus-jakarta-sans text-white bg-[#003267] h-8 w-8 flex items-center justify-center">
+            <p className="rounded-full font-tomato text-white bg-[#003267] h-8 w-8 flex items-center justify-center">
               1
             </p>
-            <h2 className="text-2xl font-semibold text-[#2a2829] font-plus-jakarta-sans">
+            <h2 className="text-2xl font-semibold text-[#2a2829] font-tomato">
               Share your idea
             </h2>
             <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-plus-jakarta-sans text-[#2a2829]">
@@ -57,10 +57,10 @@ function Works() {
           className="flex flex-col gap-8 md:gap-16 items-start bg-white w-full md:w-fit rounded-2xl py-6 pl-6 shadow-lg hover:shadow-xl"
         >
           <div className="flex flex-col gap-2 items-start ">
-            <p className="rounded-full font-plus-jakarta-sans text-[#060c15] bg-[#a6b1e1] h-8 w-8 flex items-center justify-center">
+            <p className="rounded-full font-tomato text-[#060c15] bg-[#a6b1e1] h-8 w-8 flex items-center justify-center">
               2
             </p>
-            <h2 className="text-2xl font-semibold text-[#2a2829] font-plus-jakarta-sans">
+            <h2 className="text-2xl font-semibold text-[#2a2829] font-tomato">
               Build in sprints
             </h2>
             <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-plus-jakarta-sans text-[#2a2829]">
@@ -84,10 +84,10 @@ function Works() {
           className="flex flex-col gap-8 md:gap-16 items-start bg-white w-full md:w-fit rounded-2xl p-6 shadow-lg hover:shadow-xl"
         >
           <div className="flex flex-col gap-2 items-start ">
-            <p className="rounded-full font-plus-jakarta-sans text-[#060c15] bg-[#9efbdf] h-8 w-8 flex items-center justify-center">
+            <p className="rounded-full font-tomato text-[#060c15] bg-[#9efbdf] h-8 w-8 flex items-center justify-center">
               3
             </p>
-            <h2 className="text-2xl font-semibold text-[#2a2829] font-plus-jakarta-sans">
+            <h2 className="text-2xl font-semibold text-[#2a2829] font-tomato">
               Launch & scale
             </h2>
             <p className="text-base md:text-lg font-normal max-w-full md:max-w-80 font-plus-jakarta-sans text-[#2a2829]">

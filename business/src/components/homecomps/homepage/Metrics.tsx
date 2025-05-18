@@ -26,9 +26,9 @@ function Metrics() {
         </p>
         <div className="flex w-full flex-col sm:flex-row gap-4 sm:gap-6 md:gap-8 lg:gap-12">
           <div className="w-full bg-white rounded-2xl flex flex-row gap-2 p-3 sm:p-4 md:p-6 lg:py-6 lg:px-8 items-start justify-between">
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start font-plus-jakarta-sans font-bold text-[#2a2829]">
+            <p className="text-xl font-tomato sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start  font-bold text-[#2a2829]">
               10+
-              <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace-nowrap">
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace-nowrap font-plus-jakarta-sans">
                 Successful Projects
               </span>
             </p>
@@ -41,9 +41,9 @@ function Metrics() {
             />
           </div>
           <div className="w-full bg-white rounded-2xl flex flex-row gap-2 p-3 sm:p-4 md:p-6 lg:py-6 lg:px-8 items-start justify-between">
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start font-plus-jakarta-sans font-bold text-[#2a2829]">
+            <p className="text-xl font-tomato sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start font-bold text-[#2a2829]">
               70%
-              <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace-nowrap">
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace-nowrap font-plus-jakarta-sans">
                 Execution than Hiring
               </span>
             </p>
@@ -56,9 +56,9 @@ function Metrics() {
             />
           </div>
           <div className="w-full bg-white rounded-2xl flex flex-row gap-2 p-3 sm:p-4 md:p-6 lg:py-6 lg:px-8 items-start justify-between">
-            <p className="text-xl sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start font-plus-jakarta-sans font-bold text-[#2a2829]">
+            <p className="text-xl font-tomato sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start font-bold text-[#2a2829]">
               15+
-              <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace-nowrap">
+              <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace-nowrap font-plus-jakarta-sans">
                 Product Experts
               </span>
             </p>
@@ -79,7 +79,7 @@ function Metrics() {
       >
         <div
           className={`flex gap-8 items-center ${
-            isHovered ? "pause-animation" : "animate-scroll"
+            isHovered ? "metrics-pause-animation" : "metrics-animate-scroll"
           }`}
         >
           {/* Triple the logos for smoother looping */}

@@ -35,7 +35,7 @@ function Built() {
         whileInView="visible"
         viewport={{ once: true, margin: "-100px" }}
         variants={cardVariants}
-        className="text-white text-center font-bold text-2xl sm:text-3xl md:text-5xl max-w-[600px] font-plus-jakarta-sans"
+        className="text-white text-center font-tomato text-2xl sm:text-3xl md:text-5xl max-w-[600px] font-semibold"
       >
         Built to Launch Fast. Designed to Scale
       </motion.h2>
@@ -57,7 +57,7 @@ function Built() {
           />
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
-              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-plus-jakarta-sans font-semibold ">
+              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/Strategy-bulb.png"
                   alt="Strategy lightbulb"
@@ -94,7 +94,7 @@ function Built() {
           />
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
-              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-plus-jakarta-sans font-semibold ">
+              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/UX-screen.png"
                   alt="UX screen"
@@ -131,7 +131,7 @@ function Built() {
           />
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
-              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-plus-jakarta-sans font-semibold ">
+              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/Build-wall.png"
                   alt="Build wall"
@@ -167,7 +167,7 @@ function Built() {
           />
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
-              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-plus-jakarta-sans font-semibold ">
+              <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/Scale-icon.png"
                   alt="Scale icon"

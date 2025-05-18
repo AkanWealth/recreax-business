@@ -62,7 +62,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
         &quot;{testimonial.body}&quot;
       </p>
       <div className="flex flex-col items-start gap-2 sm:gap-3">
-        <span className="font-semibold text-xl sm:text-2xl text-gray-800 font-plus-jakarta-sans">
+        <span className="font-semibold text-xl sm:text-2xl text-gray-800 font-tomato">
           {testimonial.name}
         </span>
         <span className="text-[#2a2829] text-sm sm:text-base font-normal font-plus-jakarta-sans">
@@ -102,7 +102,7 @@ function Testimonials() {
 
   return (
     <div className="flex flex-col sm:flex-row items-center justify-between w-full bg-white gap-6 sm:gap-8 md:gap-16 py-6 sm:py-10 md:py-20 px-4 sm:px-8 md:px-16 lg:px-32 min-h-[600px] ">
-      <h2 className="flex flex-row sm:flex-col gap-4 sm:gap-6 items-center sm:items-start justify-center whitespace-nowrap text-black text-center font-semibold text-xl sm:text-2xl md:text-4xl w-fit font-plus-jakarta-sans">
+      <h2 className="flex flex-row sm:flex-col gap-4 sm:gap-6 items-center sm:items-start justify-center whitespace-nowrap text-black text-center font-semibold text-xl sm:text-2xl md:text-4xl w-fit font-tomato">
         <Image
           src="/images/Works-star.png"
           alt="works-1"
