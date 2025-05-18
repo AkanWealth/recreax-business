@@ -20,7 +20,7 @@ function Hero() {
     { url: "/images/carousel/c5.png", degree: -30 },
   ];
   return (
-    <div className="flex flex-col gap-8 sm:gap-[120px] items-center justify-between sm:min-h-screen   overflow-hidden">
+    <div className="flex flex-col gap-8 sm:gap-[120px] items-center justify-between sm:min-h-screen bg-[url(/images/bg/hhero.png)]   overflow-hidden">
       {/* Hero content section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

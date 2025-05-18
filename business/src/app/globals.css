@@ -106,68 +106,7 @@
   --rcx-50: oklch(0.95 0.02 240);
 }
 
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
 
-  /* Brand Colors - Dark Mode */
-  --brand-grey: oklch(0.985 0 0 / 70%);
-  --apple-green: oklch(0.75 0.12 100);
-  --brand-black: oklch(0.985 0 0);
-  --recreax: oklch(0.35 0.02 240);
-  --recreax-hover: oklch(0.45 0.05 240);
-  --brand-white: oklch(0.145 0 0);
-  --clickable-text: oklch(0.65 0.1 240);
-  --completed: oklch(0.75 0.15 140);
-  --in-progress: oklch(0.65 0.15 240);
-  --to-do: oklch(0.75 0.15 80);
-  --warning: oklch(0.75 0.2 30);
-  --brand-cyan: oklch(0.75 0.15 200);
-  --cyan-hover: oklch(0.8 0.1 200);
-  --brand-light-active: oklch(0.25 0.05 200);
-  --brand-light-hover: oklch(0.27 0.03 200);
-  --brand-light: oklch(0.28 0.02 200);
-
-  /* RCX Scale - Dark Mode */
-  --rcx-900: oklch(0.92 0 0);
-  --rcx-800: oklch(0.85 0 0);
-  --rcx-700: oklch(0.82 0 0);
-  --rcx-600: oklch(0.78 0 0);
-  --rcx-400: oklch(0.55 0.02 240);
-  --rcx-300: oklch(0.45 0.02 240);
-  --rcx-200: oklch(0.25 0.02 240);
-  --rcx-100: oklch(0.15 0.02 240);
-  --rcx-50: oklch(0.05 0.02 240);
-}
 
 @layer base {
   * {
@@ -225,4 +164,46 @@
   */
   clip-path: ellipse(85% 50% at 50% 100%);
   background: #032353;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.6s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.6s ease-out;
 }
