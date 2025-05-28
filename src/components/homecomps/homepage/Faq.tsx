@@ -84,16 +84,19 @@ function Faq() {
     >
       <motion.div
         variants={itemVariants}
-        className="flex flex-col gap-4 text-center font-plus-jakarta-sans"
+        className="flex flex-col gap-4 text-center "
       >
-        <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#12233d] font-bold font-tomato">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#12233d] font-tomato font-bold ">
           Frequently Asked Questions
         </h2>
-        <p className="font-normal text-base md:text-lg text-[#12233d]">
+        <p className="font-normal text-base md:text-lg font-plus-jakarta-sans text-[#12233d]">
           Have a question? We are here to answer.
         </p>
       </motion.div>
-      <motion.div variants={itemVariants} className="w-full">
+      <motion.div
+        variants={itemVariants}
+        className="w-full "
+      >
         <Accordion type="multiple" className="bg-transparent">
           {questions.map((question) => (
             <AccordionItem

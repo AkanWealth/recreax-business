@@ -45,7 +45,7 @@ function Header() {
   return (
     <nav className=" sticky top-0 left-0 right-0 z-50 w-full py-0 px-0 sm:py-4 sm:px-8 md:py-8 md:px-12 lg:py-10 lg:px-20 bg-transparent">
       <div className="flex shadow-md px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 bg-white h-fit w-full sm:rounded-full items-center justify-between">
-        <Image src="/Logo.png" alt="logo" width={120} height={75} />
+        <Image src="/Logo.svg" alt="logo" width={120} height={75} />
 
         {/* Desktop Navigation */}
         <div className="hidden sm:flex items-center gap-1 md:gap-2">
@@ -362,7 +362,7 @@ function Header() {
         )}
 
         {/* Desktop Button */}
-        <Button className="hidden sm:block bg-[#12233d] rounded-lg py-[8px] sm:py-[10px] px-2 sm:px-3 hover:bg-[#12233d]/80 text-white text-xs sm:text-sm">
+        <Button className="hidden items-center justify-center sm:flex bg-[#12233d] rounded-lg py-[8px] sm:py-[10px] px-2 sm:px-3 hover:bg-[#12233d]/80 text-white text-xs sm:text-sm">
           Book a Free 1:1 Session
         </Button>
       </div>
