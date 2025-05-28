@@ -51,8 +51,8 @@ function Built() {
           <Image
             src="/images/Strategy.png"
             alt="Strategy"
-            width={231}
-            height={150}
+            width={462}
+            height={300}
             className="w-full md:w-auto"
           />
           <div className="flex flex-col gap-4 md:gap-6">
@@ -61,8 +61,9 @@ function Built() {
                 <Image
                   src="/images/Strategy-bulb.png"
                   alt="Strategy lightbulb"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 Strategy
               </p>
@@ -88,8 +89,8 @@ function Built() {
           <Image
             src="/images/UX.png"
             alt="UX"
-            width={231}
-            height={150}
+            width={462}
+            height={300}
             className="w-full md:w-auto"
           />
           <div className="flex flex-col gap-4 md:gap-6">
@@ -98,8 +99,9 @@ function Built() {
                 <Image
                   src="/images/UX-screen.png"
                   alt="UX screen"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 UI/UX
               </p>
@@ -125,8 +127,8 @@ function Built() {
           <Image
             src="/images/Build.png"
             alt="Build"
-            width={290}
-            height={150}
+            width={580}
+            height={300}
             className="w-full md:w-auto"
           />
           <div className="flex flex-col gap-4 md:gap-6">
@@ -135,8 +137,9 @@ function Built() {
                 <Image
                   src="/images/Build-wall.png"
                   alt="Build wall"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 Build
               </p>
@@ -161,8 +164,8 @@ function Built() {
           <Image
             src="/images/Scale.png"
             alt="Scale Graph"
-            width={230}
-            height={150}
+            width={460}
+            height={300}
             className="w-full md:w-auto"
           />
           <div className="flex flex-col gap-4 md:gap-6">
@@ -171,8 +174,9 @@ function Built() {
                 <Image
                   src="/images/Scale-icon.png"
                   alt="Scale icon"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 Scale
               </p>

@@ -1,8 +1,23 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+
+import IconInput from "@/components/genui/IconInput";
+
+import { Button } from "@/components/ui/button";
+import { FaSpinner } from "react-icons/fa";
+
+interface subscriberProps {
+  firstName: string;
+  email: string;
+}
+
+interface ValidationErrors {
+  firstName?: string;
+  email?: string;
+}
 
 function NewsModal({
   open,
@@ -11,6 +26,58 @@ function NewsModal({
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }) {
+  const [subscriber, setSubscriber] = useState<subscriberProps>({
+    firstName: "",
+    email: "",
+  });
+  const [isValid, setIsValid] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const [errors, setErrors] = useState<ValidationErrors>({});
+
+  const [hasStartedTyping, setHasStartedTyping] = useState(false);
+  
+  useEffect(() => {
+    const hasContent = subscriber.firstName.trim() || subscriber.email.trim();
+    if (hasContent && !hasStartedTyping) {
+      setHasStartedTyping(true);
+    }
+    
+    if (hasStartedTyping) {
+      validate();
+    }
+  }, [subscriber, hasStartedTyping]);
+
+  const validate = () => {
+    const newErrors: ValidationErrors = {};
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    // First name validation
+    const firstName = subscriber?.firstName?.trim() ?? "";
+    if (firstName.length < 3) {
+      newErrors.firstName = "First name must be at least 3 characters long";
+    }
+
+    // Email validation
+    const email = subscriber?.email ?? "";
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Please enter a valid email address";
+    }
+
+    setErrors(newErrors);
+    setIsValid(Object.keys(newErrors).length === 0);
+  };
+
+  const handleSubscribe = () => {
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      setIsSubscribed(true);
+    }, 2000);
+  };
+
   return (
     <AnimatePresence>
       {open && (
@@ -116,10 +183,46 @@ function NewsModal({
                 </ul>
               </div>
             </motion.div>
-            <div className="flex flex-col w-full rounded-2xl bg-white  px-2 py-4 sm:p-6 gap-4  sm:gap-6  lg:gap-20">
-              <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-tomato text-[#12233d] font-semibold">
-                What You&apos;ll Get:
-              </h3>
+            <div className="flex font-plus-jakarta-sans flex-col w-full rounded-2xl bg-white p-6 gap-4">
+              <IconInput
+                id="firstName"
+                value={subscriber?.firstName}
+                type="text"
+                label="text"
+                placeholder="First Name"
+                onChange={(value) => {
+                  setSubscriber((prev) => ({
+                    ...prev,
+                    firstName: value.target.value,
+                  }));
+                }}
+                errorMsg={errors.firstName}
+              />
+              <IconInput
+                id="email"
+                value={subscriber?.email}
+                type="email"
+                label="email"
+                placeholder="Email Address"
+                onChange={(value) => {
+                  setSubscriber((prev) => ({
+                    ...prev,
+                    email: value.target.value,
+                  }));
+                }}
+                errorMsg={errors.email}
+              />
+              <Button
+                disabled={!isValid}
+                onClick={handleSubscribe}
+                className="w-full"
+              >
+                {isLoading ? (
+                  <FaSpinner className="animate-spin mr-2" />
+                ) : (
+                  "Subscribe Now"
+                )}
+              </Button>
             </div>
           </motion.div>
         </>

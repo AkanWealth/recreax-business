@@ -1,7 +1,7 @@
-import React, { ReactElement, useState } from "react";
+import React, { useState } from "react";
 import { FaLock, FaEyeSlash, FaEye } from "react-icons/fa";
 
-interface InputEleProps {
+interface IconInputProps {
   type: string;
   id: string;
   value?: string;
@@ -11,7 +11,7 @@ interface InputEleProps {
   label: string;
   addStyle?: string;
   errorMsg?: string;
-  icon?: ReactElement
+  Icon?: React.ElementType;
   options?: { value: string; label: string }[];
 
   onChange?: (
@@ -21,7 +21,7 @@ interface InputEleProps {
   ) => void;
 }
 
-function InputEle({
+function IconInput({
   type,
   id,
   required = true,
@@ -32,8 +32,9 @@ function InputEle({
   addStyle = "",
   errorMsg = "",
   value = "",
+  Icon,
   onChange = () => {},
-}: InputEleProps) {
+}: IconInputProps) {
   const [showPassword, setShowPassword] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -134,7 +135,7 @@ function InputEle({
           </label>
           <select
             value={value}
-            className=" p-2 rounded border font-plus-jakarta-sans bg-white border-gray-400 text-base font-plus-jakarta-sans"
+            className=" p-2 rounded border  bg-white border-gray-400 text-base font-plus-jakarta-sans"
             name={id}
             id={id}
             required={required}
@@ -157,29 +158,29 @@ function InputEle({
 
     default:
       return (
-        <div className={` w-full h-fit flex flex-col gap-3 ${addStyle} `}>
-          <label
-            className=" text-lg font-plus-jakarta-sans font-semibold  "
-            htmlFor={id}
+        <div className="flex flex-col gap-2 w-full">
+          <div
+            className={` font-plus-jakarta-sans font-normal text-base rounded border ${
+              errorMsg ? "border-red-500" : "border-gray-400"
+            }  w-full p-2 items-center justify-start h-fit flex flex-row gap-2 ${addStyle} `}
           >
-            {label} {required ? <span className="text-red-600">*</span> : ""}
-          </label>
-          <input
-            className=" p-2 rounded border border-gray-400  "
-            placeholder={placeholder}
-            name={id}
-            id={id}
-            value={value}
-            required={required}
-            disabled={disabled}
-            type={type}
-            onChange={onChange}
-          />
-
-          <p className="text-red-500 text-lg font-medium">{errorMsg}</p>
+            {Icon && <Icon />}
+            <input
+              className=" p-2 text-[#2a2829] w-full  "
+              placeholder={placeholder}
+              name={id}
+              id={id}
+              value={value}
+              required={required}
+              disabled={disabled}
+              type={type}
+              onChange={onChange}
+            />
+          </div>
+          <p className="text-red-500 text-sm font-normal">{errorMsg}</p>
         </div>
       );
   }
 }
 
-export default InputEle;
+export default IconInput;
