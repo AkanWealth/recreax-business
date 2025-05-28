@@ -29,9 +29,12 @@ import {
 } from "../ui/accordion";
 
 import { ChevronDown, Menu, X } from "lucide-react";
+import NewsModal from "@/components/homecomps/blogpage/NewsModal";
 
 function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const pathname = usePathname();
 
   // Close mobile menu when route changes
@@ -153,8 +156,8 @@ function Header() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <Link
-                  href="/newsletter"
+                <p
+                  onClick={() => setIsModalOpen(true)}
                   className="flex flex-row gap-3 items-center justify-start "
                 >
                   <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
@@ -168,7 +171,7 @@ function Header() {
                       Get curated founder tips in your inbox
                     </p>
                   </div>
-                </Link>
+                </p>
               </DropdownMenuItem>
 
               <DropdownMenuItem>
@@ -313,10 +316,9 @@ function Header() {
                           </p>
                         </div>
                       </Link>
-                      <Link
-                        href="/newsletter"
+                      <p
                         className="flex flex-row gap-3 items-center justify-start "
-                        onClick={() => setIsMobileMenuOpen(false)}
+                        onClick={() => setIsModalOpen(true)}
                       >
                         <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
                           <IoMailUnreadOutline className="w-5 h-5 text-[#003267]" />
@@ -329,7 +331,7 @@ function Header() {
                             Get curated founder tips in your inbox
                           </p>
                         </div>
-                      </Link>
+                      </p>
                       <Link
                         href="/playbooks"
                         className="flex flex-row gap-3 items-center justify-start "
@@ -364,6 +366,9 @@ function Header() {
           Book a Free 1:1 Session
         </Button>
       </div>
+      {isModalOpen && (
+        <NewsModal open={isModalOpen} onOpenChange={setIsModalOpen} />
+      )}
     </nav>
   );
 }

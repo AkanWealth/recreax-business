@@ -44,34 +44,32 @@ function NewsModal({
     if (hasContent && !hasStartedTyping) {
       setHasStartedTyping(true);
     }
+    const validate = () => {
+      const newErrors: ValidationErrors = {};
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+      // First name validation
+      const firstName = subscriber?.firstName?.trim() ?? "";
+      if (firstName.length < 3) {
+        newErrors.firstName = "First name must be at least 3 characters long";
+      }
+
+      // Email validation
+      const email = subscriber?.email ?? "";
+      if (!email) {
+        newErrors.email = "Email is required";
+      } else if (!emailRegex.test(email)) {
+        newErrors.email = "Please enter a valid email address";
+      }
+
+      setErrors(newErrors);
+      setIsValid(Object.keys(newErrors).length === 0);
+    };
 
     if (hasStartedTyping) {
       validate();
     }
   }, [subscriber, hasStartedTyping]);
-
-  const validate = () => {
-    const newErrors: ValidationErrors = {};
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-    // First name validation
-    const firstName = subscriber?.firstName?.trim() ?? "";
-    if (firstName.length < 3) {
-      newErrors.firstName = "First name must be at least 3 characters long";
-    }
-
-    // Email validation
-    const email = subscriber?.email ?? "";
-    if (!email) {
-      newErrors.email = "Email is required";
-    } else if (!emailRegex.test(email)) {
-      newErrors.email = "Please enter a valid email address";
-    }
-
-    setErrors(newErrors);
-    setIsValid(Object.keys(newErrors).length === 0);
-  };
-
   const handleSubscribe = () => {
     setIsLoading(true);
     setTimeout(() => {
@@ -228,6 +226,13 @@ function NewsModal({
                 )}
               </Button>
             </div>
+            {isSubscribed && (
+              <div className="flex flex-col gap-4">
+                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-[#12233d] font-bold font-tomato">
+                  Thank you for subscribing!
+                </h3>
+              </div>
+            )}
           </motion.div>
         </>
       )}

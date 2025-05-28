@@ -4,16 +4,15 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import NewsModal from "./NewsModal";
 function Newsletter() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    console.log(email);
 
     // Simulate API call
     setTimeout(() => {
@@ -54,12 +53,12 @@ function Newsletter() {
         size={"lg"}
         className="w-full sm:w-auto bg-[#12233d] hover:bg-[#1e3a64] text-white rounded-xl font-plus-jakarta-sans font-semibold text-base transition-all duration-300"
         disabled={isSubmitting}
-        onClick={() => setIsModalOpen(true)}
+        onClick={() => handleSubmit}
       >
         Subscribe
       </Button>
 
-      {/* <motion.form
+      <motion.form
         onSubmit={handleSubmit}
         className="w-full max-w-[600px] flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center"
         initial={{ opacity: 0 }}
@@ -108,7 +107,7 @@ function Newsletter() {
             "Subscribe"
           )}
         </Button>
-      </motion.form> */}
+      </motion.form>
 
       {isSubmitted && (
         <motion.div
@@ -120,7 +119,6 @@ function Newsletter() {
           Thank you for subscribing!
         </motion.div>
       )}
-      {isModalOpen && <NewsModal open={isModalOpen} onOpenChange={setIsModalOpen} />}
     </motion.div>
   );
 }
