@@ -6,6 +6,13 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 
+import { PiBuilding, PiBookOpenTextLight } from "react-icons/pi";
+import { FaRegAddressCard } from "react-icons/fa";
+import { MdWeb } from "react-icons/md";
+import { IoMailUnreadOutline } from "react-icons/io5";
+
+import { BsNewspaper } from "react-icons/bs";
+
 // import { Button } from "../ui/button";
 import {
   DropdownMenu,
@@ -66,7 +73,9 @@ function Header() {
                   href="/about-us"
                   className="flex flex-row gap-3 items-center justify-start "
                 >
-                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                    <PiBuilding className="w-5 h-5 text-[#003267]" />
+                  </div>
                   <div className="flex flex-col gap-1 items-start justify-start">
                     <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                       About Us
@@ -82,7 +91,9 @@ function Header() {
                   href="/contact-us"
                   className="flex flex-row gap-3 items-center justify-start "
                 >
-                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                    <FaRegAddressCard className="w-5 h-5 text-[#003267]" />
+                  </div>
                   <div className="flex flex-col gap-1 items-start justify-start">
                     <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                       Contact Us
@@ -110,7 +121,9 @@ function Header() {
                   href="/case-studies"
                   className="flex flex-row gap-3 items-center justify-start "
                 >
-                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                    <BsNewspaper className="w-5 h-5 text-[#003267]" />
+                  </div>
                   <div className="flex flex-col gap-1 items-start justify-start">
                     <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                       Case Studies
@@ -126,7 +139,9 @@ function Header() {
                   href="/blog"
                   className="flex flex-row gap-3 items-center justify-start "
                 >
-                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                    <MdWeb className="w-5 h-5 text-[#003267]" />
+                  </div>
                   <div className="flex flex-col gap-1 items-start justify-start">
                     <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                       Blog
@@ -142,7 +157,9 @@ function Header() {
                   href="/newsletter"
                   className="flex flex-row gap-3 items-center justify-start "
                 >
-                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                    <IoMailUnreadOutline className="w-5 h-5 text-[#003267]" />
+                  </div>
                   <div className="flex flex-col gap-1 items-start justify-start">
                     <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                       Newsletter
@@ -159,7 +176,9 @@ function Header() {
                   href="/playbooks"
                   className="flex flex-row gap-3 items-center justify-start "
                 >
-                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                    <PiBookOpenTextLight className="w-5 h-5 text-[#003267]" />
+                  </div>
                   <div className="flex flex-col gap-1 items-start justify-start">
                     <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                       Playbooks
@@ -216,7 +235,9 @@ function Header() {
                         className="flex flex-row gap-3 items-center justify-start   "
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                          <PiBuilding className="w-5 h-5 text-[#003267]" />
+                        </div>
                         <div className="flex flex-col gap-1 items-start justify-start">
                           <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                             About Us
@@ -231,7 +252,9 @@ function Header() {
                         className="flex flex-row gap-3 items-center justify-start   "
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                          <FaRegAddressCard className="w-5 h-5 text-[#003267]" />
+                        </div>
                         <div className="flex flex-col gap-1 items-start justify-start">
                           <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                             Contact Us
@@ -261,7 +284,9 @@ function Header() {
                         className="flex flex-row gap-3 items-center justify-start "
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                          <BsNewspaper className="w-5 h-5 text-[#003267]" />
+                        </div>
                         <div className="flex flex-col gap-1 items-start justify-start">
                           <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                             Case Studies
@@ -276,7 +301,9 @@ function Header() {
                         className="flex flex-row gap-3 items-center justify-start "
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                          <MdWeb className="w-5 h-5 text-[#003267]" />
+                        </div>
                         <div className="flex flex-col gap-1 items-start justify-start">
                           <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                             Blog
@@ -291,7 +318,9 @@ function Header() {
                         className="flex flex-row gap-3 items-center justify-start "
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                          <IoMailUnreadOutline className="w-5 h-5 text-[#003267]" />
+                        </div>
                         <div className="flex flex-col gap-1 items-start justify-start">
                           <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                             Newsletter
@@ -306,7 +335,9 @@ function Header() {
                         className="flex flex-row gap-3 items-center justify-start "
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 rounded-full"></div>
+                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                          <PiBookOpenTextLight className="w-5 h-5 text-[#003267]" />
+                        </div>
                         <div className="flex flex-col gap-1 items-start justify-start">
                           <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
                             Playbooks

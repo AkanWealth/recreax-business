@@ -49,7 +49,7 @@ function Built() {
           className="col-span-1 md:col-span-7 flex flex-col items-start bg-white rounded-2xl p-4 md:p-6 gap-4 md:gap-6 justify-center transition-all duration-300 hover:shadow-xl"
         >
           <Image
-            src="/images/Strategy.png"
+            src="/images/Strategy.svg"
             alt="Strategy"
             width={462}
             height={300}
@@ -87,7 +87,7 @@ function Built() {
           className="col-span-1 md:col-span-5 bg-[#f6ffdf] flex flex-col items-start justify-center p-4 md:p-6 gap-4 md:gap-6 rounded-2xl transition-all duration-300 hover:shadow-xl"
         >
           <Image
-            src="/images/UX.png"
+            src="/images/UX.svg"
             alt="UX"
             width={462}
             height={300}
@@ -125,7 +125,7 @@ function Built() {
           className="col-span-1 md:col-span-5 bg-[#ffffff] flex flex-col items-start justify-center p-4 md:p-6 gap-4 md:gap-6 rounded-2xl transition-all duration-300 hover:shadow-xl"
         >
           <Image
-            src="/images/Build.png"
+            src="/images/Build.svg"
             alt="Build"
             width={580}
             height={300}
@@ -162,7 +162,7 @@ function Built() {
           className="col-span-1 md:col-span-7 flex flex-col items-start bg-[#f4efff] rounded-2xl p-4 md:p-6 gap-4 md:gap-6 justify-center transition-all duration-300 hover:shadow-xl"
         >
           <Image
-            src="/images/Scale.png"
+            src="/images/Scale.svg"
             alt="Scale Graph"
             width={460}
             height={300}

@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { PhoneInput } from "@/components/genui/PhoneInput";
 import InputEle from "@/components/genui/InputEle";
-import Image from "next/image";
 
+import { HiArrowRight } from "react-icons/hi2";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -60,7 +60,7 @@ function ContactForm() {
     const allFieldsFilled = Object.values(formData).every(
       (value) => value.trim() !== ""
     );
-    
+
     if (allFieldsFilled) {
       setIsFormValid(true);
     } else {
@@ -196,20 +196,14 @@ function ContactForm() {
             <button
               type="submit"
               onClick={handleSubmit}
-              className={`py-3 flex items-center gap-2 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 ${
+              className={`font-plus-jakarta-sans font-semibold text-base flex items-center gap-2 p-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${
                 isFormValid
                   ? "bg-[#12233d] hover:bg-[#38547b] text-white shadow-lg hover:shadow-xl"
-                  : "bg-gray-500 text-white cursor-not-allowed"
+                  : "bg-gray-500/40 text-white cursor-not-allowed"
               }`}
             >
-              Submit Request{" "}
-              <Image
-                src={"/linear/Right-1.svg"}
-                alt={"arrow"}
-                width={24}
-                height={24}
-                className="sm:w-6 sm:h-6 stroke-white fill-white"
-              />
+              Submit Request
+              <HiArrowRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white" />
             </button>
           </div>
         </form>

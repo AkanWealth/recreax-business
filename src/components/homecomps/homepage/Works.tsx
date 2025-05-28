@@ -42,7 +42,7 @@ function Works() {
             </p>
           </div>
           <Image
-            src="/images/Works-1.png"
+            src="/images/Works-1.svg"
             alt="works-1"
             width={342}
             height={259}
@@ -69,7 +69,7 @@ function Works() {
             </p>
           </div>
           <Image
-            src="/images/Works-2.png"
+            src="/images/Works-2.svg"
             alt="works-2"
             width={352}
             height={244}
@@ -96,7 +96,7 @@ function Works() {
             </p>
           </div>
           <Image
-            src="/images/Works-3.png"
+            src="/images/Works-3.svg"
             alt="works-3"
             width={342}
             height={259}
