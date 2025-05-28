@@ -8,6 +8,8 @@ import IconInput from "@/components/genui/IconInput";
 
 import { Button } from "@/components/ui/button";
 import { FaSpinner } from "react-icons/fa";
+import { FaRegUser } from "react-icons/fa6";
+import { IoMailOutline } from "react-icons/io5";
 
 interface subscriberProps {
   firstName: string;
@@ -36,13 +38,13 @@ function NewsModal({
   const [errors, setErrors] = useState<ValidationErrors>({});
 
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
-  
+
   useEffect(() => {
     const hasContent = subscriber.firstName.trim() || subscriber.email.trim();
     if (hasContent && !hasStartedTyping) {
       setHasStartedTyping(true);
     }
-    
+
     if (hasStartedTyping) {
       validate();
     }
@@ -99,8 +101,8 @@ function NewsModal({
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
                      bg-[#f3f3f3] rounded-lg shadow-xl p-4 sm:p-6 md:py-8 md:px-10 lg:py-12 lg:px-14 z-50 
-                     w-[95%] sm:w-[90%] md:w-[85%] lg:w-full flex flex-col max-w-[1000px] gap-4 sm:gap-6 md:gap-8 lg:gap-20 
-                     h-[90vh] sm:h-fit max-h-[90vh] overflow-y-auto"
+                     w-[95%] sm:w-[90%] md:w-[85%] lg:w-full flex flex-col max-w-[1000px] gap-4 sm:gap-6 md:gap-8 lg:gap-10 
+                     h-fit max-h-[1200px]  overflow-y-auto"
           >
             <div className="flex flex-row justify-end items-start sticky top-0 bg-transparent py-2">
               <motion.button
@@ -189,6 +191,7 @@ function NewsModal({
                 value={subscriber?.firstName}
                 type="text"
                 label="text"
+                Icon={<FaRegUser />}
                 placeholder="First Name"
                 onChange={(value) => {
                   setSubscriber((prev) => ({
@@ -203,6 +206,7 @@ function NewsModal({
                 value={subscriber?.email}
                 type="email"
                 label="email"
+                Icon={<IoMailOutline />}
                 placeholder="Email Address"
                 onChange={(value) => {
                   setSubscriber((prev) => ({

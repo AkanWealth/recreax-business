@@ -11,7 +11,7 @@ interface IconInputProps {
   label: string;
   addStyle?: string;
   errorMsg?: string;
-  Icon?: React.ElementType;
+  Icon?: React.ReactNode;
   options?: { value: string; label: string }[];
 
   onChange?: (
@@ -164,7 +164,7 @@ function IconInput({
               errorMsg ? "border-red-500" : "border-gray-400"
             }  w-full p-2 items-center justify-start h-fit flex flex-row gap-2 ${addStyle} `}
           >
-            {Icon && <Icon />}
+            {Icon}
             <input
               className=" p-2 text-[#2a2829] w-full  "
               placeholder={placeholder}

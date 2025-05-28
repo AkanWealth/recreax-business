@@ -1,13 +1,18 @@
+"use client";
+
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import NewsModal from "@/components/homecomps/blogpage/NewsModal";
 
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 function Footer() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <footer className="flex flex-col bg-[#12233d] py-12 sm:py-14 px-6 sm:px-20">
       <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center h-fit border-b border-[#e7e9ec] pb-10">
@@ -141,12 +146,12 @@ function Footer() {
               >
                 Playbook
               </Link>
-              <Link
-                href={"/newsletter"}
+              <p
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
+                onClick={() => setIsModalOpen(true)}
               >
                 Newsletter
-              </Link>
+              </p>
             </div>
           </div>
         </div>
@@ -219,15 +224,18 @@ function Footer() {
             >
               Playbook
             </Link>
-            <Link
-              href={"/newsletter"}
+            <p
               className="text-white hover:text-[#bce8ef] transition-colors duration-300   text-sm sm:text-base font-normal font-plus-jakarta-sans"
+              onClick={() => setIsModalOpen(true)}
             >
               Newsletter
-            </Link>
+            </p>
           </div>
         </div>
       </div>
+      {isModalOpen && (
+        <NewsModal open={isModalOpen} onOpenChange={setIsModalOpen} />
+      )}
     </footer>
   );
 }
