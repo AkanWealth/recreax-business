@@ -1,28 +1,53 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { IoMailOutline } from "react-icons/io5";
+import IconInput from "@/components/genui/IconInput";
+
+interface ValidationErrors {
+  email?: string;
+}
+
 function Newsletter() {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState<ValidationErrors>({});
 
+  const validate = () => {
+    const newErrors: ValidationErrors = {};
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!email) {
+      newErrors.email = "Email is required";
+    } else if (!emailRegex.test(email)) {
+      newErrors.email = "Invalid email address";
+    } else {
+      setErrors({});
+    }
+  };
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    console.log(email);
+    validate();
+    if (Object.keys(errors).length > 0) {
+      return;
+    } else {
+      setIsSubmitting(true);
+      console.log(email);
 
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setEmail("");
+      // Simulate API call
+      setTimeout(() => {
+        setIsSubmitting(false);
+        setIsSubmitted(true);
+        setEmail("");
 
-      // Reset success message after 3 seconds
-      setTimeout(() => setIsSubmitted(false), 3000);
-    }, 1000);
+        // Reset success message after 3 seconds
+        setTimeout(() => setIsSubmitted(false), 3000);
+      }, 1000);
+    }
   };
 
   return (
@@ -48,16 +73,6 @@ function Newsletter() {
         </p>
       </motion.div>
 
-      <Button
-        type="submit"
-        size={"lg"}
-        className="w-full sm:w-auto bg-[#12233d] hover:bg-[#1e3a64] text-white rounded-xl font-plus-jakarta-sans font-semibold text-base transition-all duration-300"
-        disabled={isSubmitting}
-        onClick={() => handleSubmit}
-      >
-        Subscribe
-      </Button>
-
       <motion.form
         onSubmit={handleSubmit}
         className="w-full max-w-[600px] flex flex-col sm:flex-row gap-3 sm:gap-4 items-center justify-center"
@@ -65,13 +80,17 @@ function Newsletter() {
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.5, duration: 0.6 }}
       >
-        <Input
-          type="email"
-          placeholder="Enter your email"
-          className="w-full bg-white transition-all duration-300 focus:ring-2 focus:ring-[#12233d]"
+        <IconInput
+          id="email"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
+          type="email"
+          label="email"
+          Icon={<IoMailOutline className="text-[#65605c]" />}
+          placeholder="Email Address"
+          onChange={(value) => {
+            setEmail(value.target.value);
+          }}
+          errorMsg={errors.email}
         />
         <Button
           type="submit"

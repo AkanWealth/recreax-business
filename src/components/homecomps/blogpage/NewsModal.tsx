@@ -8,16 +8,12 @@ import IconInput from "@/components/genui/IconInput";
 
 import { Button } from "@/components/ui/button";
 import { FaSpinner } from "react-icons/fa";
-import { FaRegUser } from "react-icons/fa6";
 import { IoMailOutline } from "react-icons/io5";
 
 interface subscriberProps {
-  firstName: string;
   email: string;
 }
-
 interface ValidationErrors {
-  firstName?: string;
   email?: string;
 }
 
@@ -29,7 +25,6 @@ function NewsModal({
   onOpenChange: (open: boolean) => void;
 }) {
   const [subscriber, setSubscriber] = useState<subscriberProps>({
-    firstName: "",
     email: "",
   });
   const [isValid, setIsValid] = useState(false);
@@ -40,19 +35,13 @@ function NewsModal({
   const [hasStartedTyping, setHasStartedTyping] = useState(false);
 
   useEffect(() => {
-    const hasContent = subscriber.firstName.trim() || subscriber.email.trim();
+    const hasContent = subscriber.email.trim();
     if (hasContent && !hasStartedTyping) {
       setHasStartedTyping(true);
     }
     const validate = () => {
       const newErrors: ValidationErrors = {};
       const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-
-      // First name validation
-      const firstName = subscriber?.firstName?.trim() ?? "";
-      if (firstName.length < 3) {
-        newErrors.firstName = "First name must be at least 3 characters long";
-      }
 
       // Email validation
       const email = subscriber?.email ?? "";
@@ -99,8 +88,8 @@ function NewsModal({
             transition={{ duration: 0.3, ease: "easeOut" }}
             className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
                      bg-[#f3f3f3] rounded-lg shadow-xl p-4 sm:p-6 md:py-8 md:px-10 lg:py-12 lg:px-14 z-50 
-                     w-[95%] sm:w-[90%] md:w-[85%] lg:w-full flex flex-col max-w-[1000px] gap-4 sm:gap-6 md:gap-8 lg:gap-10 
-                     h-fit max-h-[1200px]  overflow-y-auto"
+                     w-[95%] sm:w-[90%] md:w-[85%] lg:w-full flex flex-col max-w-[1000px] gap-4 sm:gap-6 md:gap-8 lg:gap-16 
+                     h-fit "
           >
             <div className="flex flex-row justify-end items-start sticky top-0 bg-transparent py-2">
               <motion.button
@@ -112,127 +101,74 @@ function NewsModal({
                 ✕
               </motion.button>
             </div>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-              <Image
-                src="/images/Newsletter-person.png"
-                alt="newsletter person"
-                width={1000}
-                height={1000}
-                className="w-fit mx-auto h-[200px] sm:h-[250px] md:h-[280px] lg:max-h-[315px]  rounded-lg"
-              />
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-6 sm:gap-8 md:gap-12 lg:gap-20 items-center justify-center"
-            >
-              <div className="w-full sm:w-1/2 max-w-[400px]">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-[#12233d] font-bold font-tomato">
-                  The ReCreax Newsletter
-                </h3>
-                <p className="text-base sm:text-lg text-[#65605c] font-plus-jakarta-sans font-normal mt-2 sm:mt-4">
-                  Whether you&apos;re validating your idea, building an MVP or
-                  preparing for launch, we deliver short, sharp insights every
-                  week to help you validate faster, build smarter, and stay
-                  ahead.
-                </p>
-              </div>
-              <div className="w-full flex flex-col gap-4 sm:gap-6 sm:w-1/2 max-w-[400px]">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-[32px] font-tomato text-[#12233d] font-semibold">
-                  What You&apos;ll Get:
-                </h3>
-                <ul className="text-sm sm:text-base font-plus-jakarta-sans font-semibold lg:text-lg text-[#65605c] list-disc pl-4 space-y-2">
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.4 }}
-                    className="mt-1"
-                  >
-                    Founder playbooks
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.5 }}
-                    className="mt-1"
-                  >
-                    Real case studies (MVPs, Pivots, Launches)
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.6 }}
-                    className="mt-1"
-                  >
-                    Execution frameworks you can use today
-                  </motion.li>
-                  <motion.li
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.7 }}
-                    className="mt-1"
-                  >
-                    Curated resources from the ReCreaX network
-                  </motion.li>
-                </ul>
-              </div>
-            </motion.div>
-            <div className="flex font-plus-jakarta-sans flex-col w-full rounded-2xl bg-white p-6 gap-4">
-              <IconInput
-                id="firstName"
-                value={subscriber?.firstName}
-                type="text"
-                label="text"
-                Icon={<FaRegUser />}
-                placeholder="First Name"
-                onChange={(value) => {
-                  setSubscriber((prev) => ({
-                    ...prev,
-                    firstName: value.target.value,
-                  }));
-                }}
-                errorMsg={errors.firstName}
-              />
-              <IconInput
-                id="email"
-                value={subscriber?.email}
-                type="email"
-                label="email"
-                Icon={<IoMailOutline />}
-                placeholder="Email Address"
-                onChange={(value) => {
-                  setSubscriber((prev) => ({
-                    ...prev,
-                    email: value.target.value,
-                  }));
-                }}
-                errorMsg={errors.email}
-              />
-              <Button
-                disabled={!isValid}
-                onClick={handleSubscribe}
-                className="w-full"
+            <div className="flex sm:flex-row items-center justify-between flex-col gap-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
               >
-                {isLoading ? (
-                  <FaSpinner className="animate-spin mr-2" />
+                <Image
+                  src="/images/NewsletterPerson.png"
+                  alt="newsletter person"
+                  width={1000}
+                  height={1000}
+                  className="w-fit mx-auto h-[196px]   rounded-lg"
+                />
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.3 }}
+                className="flex flex-col  gap-6 sm:gap-8 md:gap-12 lg:gap-20 items-start"
+              >
+                <div className="w-full max-w-[450px]">
+                  <h3 className="text-xl sm:text-2xl md:text-[32px] leading-[140%]text-[#12233d] font-semibold font-tomato">
+                    Stay Ahead with Weekly Insights
+                  </h3>
+                  <p className="text-base text-[#2a2829] font-plus-jakarta-sans font-normal leading-[148%] mt-2 sm:mt-4">
+                    Get Founders Playbook, Case Studies, Execution Guides to
+                    validate and build ideas smarter
+                  </p>
+                </div>
+                {isSubscribed ? (
+                  <div className="flex flex-col gap-4">
+                    <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-[#12233d] font-bold font-tomato">
+                      Thank you for subscribing!
+                    </h3>
+                  </div>
                 ) : (
-                  "Subscribe Now"
+                  <div className="flex font-plus-jakarta-sans flex-col w-full rounded-2xl bg-white p-6 gap-4">
+                    <IconInput
+                      id="email"
+                      value={subscriber?.email}
+                      type="email"
+                      label="email"
+                    Icon={<IoMailOutline className="text-[#65605c]" />}
+                    placeholder="Email Address"
+                    onChange={(value) => {
+                      setSubscriber((prev) => ({
+                        ...prev,
+                        email: value.target.value,
+                      }));
+                    }}
+                    errorMsg={errors.email}
+                  />
+                  <Button
+                    disabled={!isValid}
+                    onClick={handleSubscribe}
+                    className="w-full disabled:bg-gray-500 hover:bg-[#38547b] bg-[#12233d] text-white"
+                  >
+                    {isLoading ? (
+                      <FaSpinner className="animate-spin mr-2" />
+                    ) : (
+                      "Subscribe Now"
+                      )}
+                    </Button>
+                  </div>
                 )}
-              </Button>
+              </motion.div>
             </div>
-            {isSubscribed && (
-              <div className="flex flex-col gap-4">
-                <h3 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-[#12233d] font-bold font-tomato">
-                  Thank you for subscribing!
-                </h3>
-              </div>
-            )}
           </motion.div>
         </>
       )}

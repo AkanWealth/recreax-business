@@ -166,7 +166,7 @@ function IconInput({
           >
             {Icon}
             <input
-              className=" p-2 text-[#2a2829] w-full  "
+              className=" p-2 text-[#2a2829] w-full focus:outline-none  "
               placeholder={placeholder}
               name={id}
               id={id}
