@@ -134,7 +134,7 @@ function InputEle({
           </label>
           <select
             value={value}
-            className=" p-2 rounded border font-plus-jakarta-sans bg-white border-gray-400 text-base font-plus-jakarta-sans"
+            className=" p-2 rounded border font-plus-jakarta-sans bg-white border-gray-400 text-base "
             name={id}
             id={id}
             required={required}
