@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import NewsModal from "@/components/homecomps/blogpage/NewsModal";
+import { useRouter } from "next/navigation";
 
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
+  const router = useRouter();
   return (
     <footer className="flex flex-col bg-[#12233d] py-12 sm:py-14 px-6 sm:px-20">
       <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center h-fit border-b border-[#e7e9ec] pb-10">
@@ -24,7 +25,10 @@ function Footer() {
             Let turn your idea into reality and launch faster
           </p>
         </div>
-        <Button className="bg-[#00ffff] group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base ">
+        <Button
+          onClick={() => router.push("/contact-us")}
+          className="bg-[#00ffff] group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base "
+        >
           Book a call with Us!{" "}
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1  transition-transform duration-700 ease-in-out" />
         </Button>
