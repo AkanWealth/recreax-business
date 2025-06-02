@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import ProductCycleLottie from "./LottieComp";
 
 function Validate() {
   // Animation variants
@@ -42,13 +43,7 @@ function Validate() {
         transition={{ duration: 0.6 }}
         className="flex justify-center w-full items-center max-w-[580px]"
       >
-        <Image
-          src="/images/Validate-cycle.svg"
-          alt="Validate"
-          width={100}
-          height={100}
-          className="w-full max-w-[470px]"
-        />
+        <ProductCycleLottie />
       </motion.div>
       <motion.div
         variants={containerVariants}

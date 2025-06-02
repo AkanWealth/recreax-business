@@ -37,7 +37,7 @@ function Metrics() {
               alt="Projects"
               width={32}
               height={32}
-              className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12"
+              className="w-6 h-6 sm:w-8 sm:h-8 md:w-10 md:h-10 lg:w-12 lg:h-12"
             />
           </div>
           <div className="w-full bg-white rounded-2xl flex flex-row gap-2 p-3 sm:p-4 md:p-6 lg:py-6 lg:px-8 items-start justify-between">
