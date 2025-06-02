@@ -57,9 +57,9 @@ function Header() {
           </Link>
           <Link
             className="px-1 sm:px-2 text-xs sm:text-sm font-plus-jakarta-sans text-gray-950"
-            href="/accelerator"
+            href="/studio"
           >
-            Accelerator
+            Studio
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="focus-visible:outline-none">
@@ -217,10 +217,10 @@ function Header() {
               </Link>
               <Link
                 className="font-medium font-plus-jakarta-sans text-sm text-gray-950"
-                href="/accelerator"
+                href="/studio"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Accelerator
+                Studio
               </Link>
 
               {/* Mobile Company Dropdown */}

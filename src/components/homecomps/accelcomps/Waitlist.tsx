@@ -113,7 +113,7 @@ function Waitlist() {
       <div className="flex flex-col py-8 md:py-16 lg:py-[120px] mx-auto gap-6 lg:gap-12 max-w-[800px] px-4 sm:px-6">
         <div className="w-full flex flex-col gap-2 animate-fadeIn">
           <h2 className="font-tomato font-bold leading-[140%] text-center text-[#12233d] text-3xl sm:text-4xl lg:text-5xl">
-            Join the Recreax Accelerator
+            Join the ReCreaX Studio
           </h2>
           <p className="font-normal text-sm sm:text-base text-center leading-[148%] font-plus-jakarta-sans text-[#65605c]">
             Reserve your spot for mentorship, funding, and growth.
@@ -323,9 +323,9 @@ function Waitlist() {
                   You&apos;re In! 🎉
                 </h2>
                 <p className="text-lg sm:text-xl md:text-3xl text-center font-plus-jakarta-sans text-[#12233d] font-semibold leading-tight mt-2">
-                  Thanks for joining the ReCreaX Accelerator waitlist.
-                  We&apos;ll reach out soon with next steps. <br /> In the
-                  meantime, check your inbox for a welcome message.
+                  Thanks for joining the ReCreaX Studio waitlist. We&apos;ll
+                  reach out soon with next steps. <br /> In the meantime, check
+                  your inbox for a welcome message.
                 </p>
               </div>
               <button

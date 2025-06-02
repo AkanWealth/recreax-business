@@ -14,7 +14,7 @@ function AccelFAQ() {
     {
       question: "Is this a training program?",
       answer:
-        "No. This is a hands-on, build accelerator. You come with an idea, and we help you turn it into a product.",
+        "No. This is a hands-on, build studio. You come with an idea, and we help you turn it into a product.",
     },
     {
       question: "Do I need technical experience?",
@@ -77,7 +77,7 @@ function AccelFAQ() {
         className="flex flex-col gap-4 text-center "
       >
         <h2 className="text-3xl md:text-4xl lg:text-5xl text-[#12233d] font-tomato font-bold ">
-          ReCreaX Accelerator FAQs
+          ReCreaX Studio FAQs
         </h2>
       </motion.div>
       <motion.div variants={itemVariants} className="w-full ">

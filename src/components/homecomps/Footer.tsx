@@ -96,10 +96,10 @@ function Footer() {
                 Home
               </Link>
               <Link
-                href={"/accelerator"}
+                href={"/studio"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
               >
-                Accelerator
+                Studio
               </Link>
               <Link
                 href={"/contact-us"}
@@ -108,10 +108,10 @@ function Footer() {
                 Book a Free 1:1
               </Link>
               <Link
-                href={"/accelerator"}
+                href={"/studio"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
               >
-                Accelerator
+                Studio
               </Link>
               <Link
                 href={"/about-us"}
@@ -174,10 +174,10 @@ function Footer() {
               Home
             </Link>
             <Link
-              href={"/accelerator"}
+              href={"/studio"}
               className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
             >
-              Accelerator
+              Studio
             </Link>
             <Link
               href={"/contact-us"}
@@ -186,10 +186,10 @@ function Footer() {
               Book a Free 1:1
             </Link>
             <Link
-              href={"/accelerator"}
+              href={"/studio"}
               className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
             >
-              Accelerator
+              Studio
             </Link>
             <Link
               href={"/about-us"}
