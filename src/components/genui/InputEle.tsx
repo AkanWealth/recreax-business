@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactElement, useState } from "react";
 import { FaLock, FaEyeSlash, FaEye } from "react-icons/fa";
 
 interface InputEleProps {
@@ -11,6 +11,7 @@ interface InputEleProps {
   label: string;
   addStyle?: string;
   errorMsg?: string;
+  icon?: ReactElement
   options?: { value: string; label: string }[];
 
   onChange?: (
@@ -133,7 +134,7 @@ function InputEle({
           </label>
           <select
             value={value}
-            className=" p-2 rounded border font-plus-jakarta-sans bg-white border-gray-400 text-base font-plus-jakarta-sans"
+            className=" p-2 rounded border font-plus-jakarta-sans bg-white border-gray-400 text-base "
             name={id}
             id={id}
             required={required}

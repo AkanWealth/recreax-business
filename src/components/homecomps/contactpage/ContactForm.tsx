@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import { PhoneInput } from "@/components/genui/PhoneInput";
 import InputEle from "@/components/genui/InputEle";
-import Image from "next/image";
 
+import { HiArrowRight } from "react-icons/hi2";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -41,7 +41,6 @@ const formSchema = z.object({
 type FormData = z.infer<typeof formSchema>;
 
 function ContactForm() {
-  // Initialize with empty strings instead of trying to parse an empty object
   const [formData, setFormData] = useState<FormData>({
     fullName: "",
     email: "",
@@ -50,31 +49,36 @@ function ContactForm() {
     request: "",
     message: "",
   });
-
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>(
     {}
   );
-
-  // Add this new state for form validity
-  const [isFormValid, setIsFormValid] = useState(false);
-
-  // Add this effect to check form validity
+  const [isFormValid, setIsFormValid] = useState(true);
+  // Add submission state
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Check form validity only when all fields are filled
   useEffect(() => {
-    const result = formSchema.safeParse(formData);
-    setIsFormValid(result.success);
+    const allFieldsFilled = Object.values(formData).every(
+      (value) => value.trim() !== ""
+    );
+
+    if (allFieldsFilled) {
+      setIsFormValid(true);
+    } else {
+      setIsFormValid(false);
+    }
   }, [formData]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
-      // Validate the form data
       const validatedData = formSchema.parse(formData);
       // TODO: Handle form submission with validatedData
       console.log("Form submitted:", validatedData);
+      // Set submission state to true after successful submission
+      setIsSubmitted(true);
     } catch (error) {
       if (error instanceof z.ZodError) {
-        // Convert Zod errors to a more usable format
         const newErrors: Partial<Record<keyof FormData, string>> = {};
         error.errors.forEach((err) => {
           const path = err.path[0] as keyof FormData;
@@ -96,17 +100,14 @@ function ContactForm() {
           as possible.
         </p>
       </div>
-      {isFormValid && formData.fullName ? (
+      {isSubmitted ? (
         <div className="w-full max-w-3xl rounded-2xl p-6 sm:p-24 border border-gray-200 animate-fadeIn">
           <p className="text-lg sm:text-2xl text-center font-plus-jakarta-sans text-[#12233d]">
             Thank you for your submission! We&apos;ll get back to you shortly.
           </p>
         </div>
       ) : (
-        <form
-          onSubmit={handleSubmit}
-          className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-12 w-full max-w-3xl animate-slideUp"
-        >
+        <form className="grid grid-cols-1 sm:grid-cols-4 gap-6 sm:gap-12 w-full max-w-3xl animate-slideUp">
           <InputEle
             type="text"
             id="fullName"
@@ -139,7 +140,9 @@ function ContactForm() {
             label="Email Address"
             placeholder="Enter your email address"
             value={formData.email}
-            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
             errorMsg={errors.email}
             addStyle="col-span-4 md:col-span-2 transition-all duration-300 hover:scale-[1.01]"
           />
@@ -167,7 +170,10 @@ function ContactForm() {
             options={[
               { value: "", label: "Select Request Type" },
               { value: "Partnership", label: "Partnership" },
-              { value: "Project Collaboration", label: "Project Collaboration" },
+              {
+                value: "Project Collaboration",
+                label: "Project Collaboration",
+              },
               { value: "Talent Inquiry", label: "Talent Inquiry" },
               { value: "General Question", label: "General Question" },
             ]}
@@ -189,21 +195,15 @@ function ContactForm() {
           <div className="col-span-4 flex justify-start">
             <button
               type="submit"
-              disabled={!isFormValid}
-              className={`py-3 flex items-center gap-2 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 ${
+              onClick={handleSubmit}
+              className={`font-plus-jakarta-sans font-semibold text-base flex items-center gap-2 p-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${
                 isFormValid
                   ? "bg-[#12233d] hover:bg-[#38547b] text-white shadow-lg hover:shadow-xl"
-                  : "bg-gray-500 text-white cursor-not-allowed"
+                  : "bg-gray-500/40 text-white cursor-not-allowed"
               }`}
             >
-              Submit Request{" "}
-              <Image
-                src={"/linear/Right-1.svg"}
-                alt={"arrow"}
-                width={24}
-                height={24}
-                className="sm:w-6 sm:h-6 stroke-white fill-white"
-              />
+              Submit Request
+              <HiArrowRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white" />
             </button>
           </div>
         </form>

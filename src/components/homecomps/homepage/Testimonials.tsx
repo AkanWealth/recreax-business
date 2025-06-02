@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { HiArrowLongLeft, HiArrowLongRight } from "react-icons/hi2";
 // Types
 interface Testimonial {
   id: number;
@@ -57,7 +57,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
     transition={{ duration: 0.5, ease: "easeInOut" }}
     className={`w-full ${isActive ? "block" : "hidden"}`}
   >
-    <div className="bg-white border-1 border-[#97a339] flex flex-col gap-6 sm:gap-12 rounded-lg shadow-[4px_9px_35px_8px_rgba(151,_163,_57,_1)] m-4 sm:m-10 transition-shadow duration-300 p-4 sm:p-8">
+    <div className="bg-white border-1 flex flex-col gap-6 sm:gap-12 rounded-lg shadow-[4px_9px_35px_8px_rgba(151,_163,_57,_0.3)] m-4 sm:m-10 transition-shadow duration-300 p-4 sm:p-8">
       <p className="text-[#65605c] text-base sm:text-lg mb-4 sm:mb-6 font-plus-jakarta-sans">
         &quot;{testimonial.body}&quot;
       </p>
@@ -143,47 +143,21 @@ function Testimonials() {
         </AnimatePresence>
 
         {/* Navigation Buttons */}
-        <div className="flex justify-end gap-3 sm:gap-4 w-full">
+        <div className="flex justify-end gap-3 sm:gap-[10px] w-full">
           <button
             onClick={handlePrevious}
-            className="bg-[#12233d] text-white p-2 sm:p-3 rounded-full hover:bg-[#1a3456] transition-colors"
+            className="bg-[#12233d] text-white py-[7px] px-[10px] rounded-[8px] sm:py-2 sm:px-3  hover:bg-[#38547b] transition-colors"
             aria-label="Previous testimonial"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 h-5 sm:w-6 sm:h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M15.75 19.5L8.25 12l7.5-7.5"
-              />
-            </svg>
+            <HiArrowLongLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white text-white bor" />
           </button>
 
           <button
             onClick={handleNext}
-            className="bg-[#12233d] text-white p-2 sm:p-3 rounded-full hover:bg-[#1a3456] transition-colors"
+            className="bg-[#12233d] text-white py-[7px] px-[10px] rounded-[8px] sm:py-2 sm:px-3  hover:bg-[#38547b] transition-colors"
             aria-label="Next testimonial"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={2}
-              stroke="currentColor"
-              className="w-5 h-5 sm:w-6 sm:h-6"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
+            <HiArrowLongRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white text-white bor" />
           </button>
         </div>
       </div>

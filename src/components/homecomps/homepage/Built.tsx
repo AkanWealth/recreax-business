@@ -3,6 +3,13 @@
 import React from "react";
 import Image from "next/image";
 
+import Lottie from "@/components/homecomps/minicomps/Lottie";
+
+import aniBuild from "./Build.json";
+import aniScale from "./Scale.json";
+import aniStrategy from "./Strategy.json";
+import aniUX from "./Design.json";
+
 import { motion } from "framer-motion";
 
 function Built() {
@@ -48,21 +55,18 @@ function Built() {
           variants={{ ...cardVariants, ...hoverVariants }}
           className="col-span-1 md:col-span-7 flex flex-col items-start bg-white rounded-2xl p-4 md:p-6 gap-4 md:gap-6 justify-center transition-all duration-300 hover:shadow-xl"
         >
-          <Image
-            src="/images/Strategy.png"
-            alt="Strategy"
-            width={231}
-            height={150}
-            className="w-full md:w-auto"
-          />
+          <div className="w-full h-full max-w-[230px]">
+            <Lottie data={aniStrategy} loop={true} />
+          </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/Strategy-bulb.png"
                   alt="Strategy lightbulb"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 Strategy
               </p>
@@ -85,21 +89,18 @@ function Built() {
           variants={{ ...cardVariants, ...hoverVariants }}
           className="col-span-1 md:col-span-5 bg-[#f6ffdf] flex flex-col items-start justify-center p-4 md:p-6 gap-4 md:gap-6 rounded-2xl transition-all duration-300 hover:shadow-xl"
         >
-          <Image
-            src="/images/UX.png"
-            alt="UX"
-            width={231}
-            height={150}
-            className="w-full md:w-auto"
-          />
+          <div className="w-full h-full max-w-[230px]">
+            <Lottie data={aniUX} loop={true} />
+          </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/UX-screen.png"
                   alt="UX screen"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 UI/UX
               </p>
@@ -122,21 +123,18 @@ function Built() {
           variants={{ ...cardVariants, ...hoverVariants }}
           className="col-span-1 md:col-span-5 bg-[#ffffff] flex flex-col items-start justify-center p-4 md:p-6 gap-4 md:gap-6 rounded-2xl transition-all duration-300 hover:shadow-xl"
         >
-          <Image
-            src="/images/Build.png"
-            alt="Build"
-            width={290}
-            height={150}
-            className="w-full md:w-auto"
-          />
+          <div className="w-full h-full max-w-[265px]">
+            <Lottie data={aniBuild} loop={true} />
+          </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/Build-wall.png"
                   alt="Build wall"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 Build
               </p>
@@ -158,21 +156,18 @@ function Built() {
           variants={{ ...cardVariants, ...hoverVariants }}
           className="col-span-1 md:col-span-7 flex flex-col items-start bg-[#f4efff] rounded-2xl p-4 md:p-6 gap-4 md:gap-6 justify-center transition-all duration-300 hover:shadow-xl"
         >
-          <Image
-            src="/images/Scale.png"
-            alt="Scale Graph"
-            width={230}
-            height={150}
-            className="w-full md:w-auto"
-          />
+          <div className="w-full h-full max-w-[230px]">
+            <Lottie data={aniScale} loop={true} />
+          </div>
           <div className="flex flex-col gap-4 md:gap-6">
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
                   src="/images/Scale-icon.png"
                   alt="Scale icon"
-                  width={36}
-                  height={36}
+                  width={100}
+                  height={100}
+                  className="w-full max-w-[36px] md:w-auto"
                 />
                 Scale
               </p>
