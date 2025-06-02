@@ -10,7 +10,7 @@ function AboutMetrics() {
         <h2 className="text-2xl lg:text-5xl leading-[140%] text-center font-tomato font-bold text-[#12233d]">
           Numbers We&apos;re Proud Of
         </h2>
-        <div className="flex w-full flex-col sm:flex-row  justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
+        <div className="flex w-full flex-col sm:flex-row  items-center sm:items-stretch justify-center gap-4 sm:gap-6 md:gap-8 lg:gap-12">
           <div className="w-full max-w-[370px]  bg-[#f1fafc] rounded-2xl flex flex-row gap-2  p-3 sm:p-4 md:p-6 lg:py-6 lg:px-8 items-start justify-between">
             <p className="text-xl font-tomato sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start  font-bold text-[#2a2829]">
               10+
