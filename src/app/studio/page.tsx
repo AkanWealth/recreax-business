@@ -4,10 +4,11 @@ import Build from "@/components/homecomps/accelcomps/Build";
 import Special from "@/components/homecomps/accelcomps/Special";
 import Expect from "@/components/homecomps/accelcomps/Expect";
 import Validate from "@/components/homecomps/accelcomps/Validate";
+import AccelHero from "@/components/homecomps/accelcomps/AccelHero";
 function page() {
   return (
     <div>
-      Studio page
+      <AccelHero />
       <Validate />
       <Expect />
       <Special />
