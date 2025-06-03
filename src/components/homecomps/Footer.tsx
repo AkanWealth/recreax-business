@@ -40,6 +40,7 @@ function Footer() {
               src={"/Logo_blackbg.png"}
               height={50}
               width={164}
+              unoptimized={true}
               alt="Recreax Logo"
             />
             <p className=" whitespace-nowrap font-plus-jakarta-sans text-white text-sm sm:text-base ">

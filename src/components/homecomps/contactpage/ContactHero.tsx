@@ -28,6 +28,7 @@ function ContactHero() {
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Image
+              unoptimized={true}
               src="/images/contactPhone.png"
               alt="arrow"
               width={70}

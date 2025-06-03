@@ -108,6 +108,7 @@ function NewsModal({
                 transition={{ delay: 0.2 }}
               >
                 <Image
+                  unoptimized={true}
                   src="/images/NewsletterPerson.png"
                   alt="newsletter person"
                   width={1000}

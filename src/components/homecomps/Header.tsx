@@ -46,7 +46,13 @@ function Header() {
     <nav className=" sticky top-0 left-0 right-0 z-50 w-full py-0 px-0 sm:py-4 sm:px-8 md:py-8 md:px-12 lg:py-10 lg:px-20 bg-transparent">
       <div className="flex shadow-md px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 bg-white h-fit w-full sm:rounded-full items-center justify-between">
         <Link href="/">
-          <Image src="/Logo.svg" alt="logo" width={120} height={75} />
+          <Image
+            unoptimized={true}
+            src="/Logo.svg"
+            alt="logo"
+            width={120}
+            height={75}
+          />
         </Link>
 
         {/* Desktop Navigation */}

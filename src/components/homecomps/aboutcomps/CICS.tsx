@@ -15,6 +15,7 @@ function CICS() {
           className="flex flex-row items-center justify-center gap-2 bg-white text-sm md:text-base lg:text-lg text-[#12233d] font-semibold w-fit rounded-full h-fit px-4 py-2 font-plus-jakarta-sans mx-auto"
         >
           <Image
+            unoptimized={true}
             src="/images/Works-star.png"
             alt="works-1"
             width={20}

@@ -14,6 +14,7 @@ function BlogCard({ image, title, date, readTime, type }: BlogCardProps) {
   return (
     <div className="flex flex-col w-fit gap-8 max-w-[370px] h-fitrounded-2xl border-0 ">
       <Image
+        unoptimized={true}
         src={image}
         alt={title}
         width={370}

@@ -62,6 +62,7 @@ function Built() {
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
+                  unoptimized={true}
                   src="/images/Strategy-bulb.png"
                   alt="Strategy lightbulb"
                   width={100}
@@ -96,6 +97,7 @@ function Built() {
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
+                  unoptimized={true}
                   src="/images/UX-screen.png"
                   alt="UX screen"
                   width={100}
@@ -130,6 +132,7 @@ function Built() {
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
+                  unoptimized={true}
                   src="/images/Build-wall.png"
                   alt="Build wall"
                   width={100}
@@ -163,6 +166,7 @@ function Built() {
             <div className="flex flex-col gap-4 md:gap-6">
               <p className=" flex flex-row gap-2 text-[#060c15] text-2xl md:text-4xl font-tomato font-semibold ">
                 <Image
+                  unoptimized={true}
                   src="/images/Scale-icon.png"
                   alt="Scale icon"
                   width={100}

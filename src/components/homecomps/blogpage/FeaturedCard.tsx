@@ -58,6 +58,7 @@ function FeaturedCard({ blogData }: FeaturedCardProps) {
         transition={{ delay: 0.5 }}
       >
         <Image
+          unoptimized={true}
           src={blogData.imageUrl}
           width={500}
           height={500}

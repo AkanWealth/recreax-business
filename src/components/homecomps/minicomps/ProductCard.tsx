@@ -35,6 +35,7 @@ function ProductCard({
         className="w-full"
       >
         <Image
+          unoptimized={true}
           className="rounded-lg w-full h-auto"
           src={image}
           alt={title}
@@ -44,9 +45,7 @@ function ProductCard({
       </motion.div>
       <div className="flex flex-col items-start justify-start gap-3 sm:gap-4 w-full">
         <div className="flex flex-row items-center justify-between w-full">
-          <h3 className="text-xl sm:text-2xl font-bold font-tomato">
-            {title}
-          </h3>
+          <h3 className="text-xl sm:text-2xl font-bold font-tomato">{title}</h3>
           <motion.a
             href={link}
             target="_blank"
@@ -70,6 +69,7 @@ function ProductCard({
           </p>
           <div className="flex flex-row items-center justify-start gap-3">
             <Image
+              unoptimized={true}
               src={companyLogo}
               alt={title}
               width={40}

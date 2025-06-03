@@ -3,6 +3,10 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "motion/react";
+import Lottie from "../minicomps/Lottie";
+import aniShare from "./Share.json";
+import aniPlanning from "./Planning.json";
+import aniLaunch from "./Launch.json";
 
 function Works() {
   return (
@@ -14,6 +18,7 @@ function Works() {
         className="flex flex-row items-center justify-center gap-2 bg-white text-base md:text-lg text-[#12233d] font-semibold w-fit rounded-full h-fit px-4 py-2 font-plus-jakarta-sans"
       >
         <Image
+          unoptimized={true}
           src="/images/Works-star.png"
           alt="works-1"
           width={20}
@@ -41,13 +46,9 @@ function Works() {
               execution plan
             </p>
           </div>
-          <Image
-            src="/images/Works-1.svg"
-            alt="works-1"
-            width={342}
-            height={259}
-            className="w-full md:w-auto"
-          />
+          <div className="w-full h-full max-w-[342px]">
+            <Lottie data={aniShare} loop={true} />
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -68,13 +69,9 @@ function Works() {
               feedback and alignment
             </p>
           </div>
-          <Image
-            src="/images/Works-2.svg"
-            alt="works-2"
-            width={352}
-            height={244}
-            className="w-full md:w-auto"
-          />
+          <div className="w-full h-full max-w-[352px]">
+            <Lottie data={aniPlanning} loop={true} />
+          </div>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, x: 50 }}
@@ -95,13 +92,9 @@ function Works() {
               beyond launch.
             </p>
           </div>
-          <Image
-            src="/images/Works-3.svg"
-            alt="works-3"
-            width={342}
-            height={259}
-            className="w-full md:w-auto"
-          />
+          <div className="w-full h-full max-w-[342px]">
+            <Lottie data={aniLaunch} loop={true} />
+          </div>
         </motion.div>
       </div>
     </div>
