@@ -7,15 +7,15 @@ import { motion } from "motion/react";
 
 function AboutHero() {
   return (
-    <div className="flex flex-col gap-8 sm:gap-[120px] items-center justify-between h-fit bg-[url(/images/bg/hhero.png)]   overflow-hidden">
+    <div className="flex flex-col gap-8 sm:gap-[60px] md:gap-[120px] items-center justify-between h-fit bg-[url(/images/bg/hhero.png)] bg-cover bg-center overflow-hidden">
       {/* Hero content section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 flex flex-col gap-6 sm:gap-8 items-center justify-center w-full px-4 py-8 sm:py-16 sm:px-[120px]"
+        className="relative z-10 flex flex-col gap-6 sm:gap-8 items-center justify-center w-full px-4 py-8 sm:py-12 md:py-16 sm:px-8 md:px-[120px] max-w-screen-xl mx-auto"
       >
-        <div className="flex flex-row flex-wrap w-full gap-2 sm:gap-4 items-center justify-center text-center font-tomato text-3xl sm:text-[64px] max-w-[1000px] font-semibold">
+        <div className="flex flex-row flex-wrap w-full gap-2 sm:gap-4 items-center justify-center text-center font-tomato text-2xl xs:text-3xl sm:text-4xl md:text-[64px] max-w-[1000px] font-semibold">
           <motion.span
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -34,7 +34,7 @@ function AboutHero() {
               alt="Rocket"
               width={70}
               height={70}
-              className="sm:w-[70px] sm:h-[70px] w-[32px] h-[32px]"
+              className="w-[28px] h-[28px] xs:w-[32px] xs:h-[32px] sm:w-[50px] sm:h-[50px] md:w-[70px] md:h-[70px]"
               priority
             />
           </motion.div>
@@ -65,7 +65,7 @@ function AboutHero() {
               width={186}
               height={72}
               unoptimized={true}
-              className="sm:w-[186px] sm:h-[72px] w-[70px] h-[32px]"
+              className="w-[60px] h-[24px] xs:w-[70px] xs:h-[32px] sm:w-[120px] sm:h-[48px] md:w-[186px] md:h-[72px]"
               priority
             />
           </motion.div>
@@ -82,13 +82,13 @@ function AboutHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.4 }}
-          className="flex flex-col w-full sm:flex-row justify-between items-center gap-4 sm:gap-8"
+          className="flex flex-col w-full md:flex-row justify-between items-center gap-4 sm:gap-8"
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="text-left text-[#2a2829] text-base font-tomato font-semibold leading-[155%] sm:text-2xl max-w-[300px]"
+            className="text-left text-[#2a2829] text-sm xs:text-base sm:text-lg md:text-2xl font-tomato font-semibold leading-[155%] max-w-[300px] md:max-w-[320px]"
           >
             ReCreaX is where early-stage startups and emerging tech talents
             collaborate to build, launch, and scale real-world products—fast.
@@ -99,14 +99,13 @@ function AboutHero() {
             width={404}
             height={305}
             unoptimized={true}
-            className="w-[404px] h-[305px]"
+            className="mx-auto w-full max-w-[200px] xs:max-w-[260px] sm:max-w-[320px] md:max-w-[404px] h-auto"
           />
-
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.2 }}
-            className="text-left text-[#2a2829] text-base font-tomato font-semibold leading-[155%] sm:text-2xl max-w-[300px]"
+            className="text-left text-[#2a2829] text-sm xs:text-base sm:text-lg md:text-2xl font-tomato font-semibold leading-[155%] max-w-[300px] md:max-w-[320px]"
           >
             Founders get structured execution without hiring stress, while
             talents gain hands-on experience and career growth.
