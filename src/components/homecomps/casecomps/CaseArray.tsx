@@ -14,7 +14,7 @@ function CaseArray() {
       ownerRole: "Cofounder, Meyo Apparel",
       companyLogo: "/images/GHIH.svg",
       review: "It's dreamy, it's fantastic and it makes me look really good",
-      link: "https://www.google.com",
+      link: "/case-studies/hubit",
     },
     {
       image: "/images/AudioCare.png",
@@ -23,7 +23,7 @@ function CaseArray() {
       ownerRole: "Cofounder, AudioCare",
       companyLogo: "/images/Audio.svg",
       review: "It's dreamy, it's fantastic and it makes me look really good",
-      link: "https://www.google.com",
+      link: "/case-studies/audiocare",
     },
     {
       image: "/images/Ican.png",
@@ -32,7 +32,7 @@ function CaseArray() {
       ownerRole: "Founder",
       companyLogo: "/images/ICAN.svg",
       review: "This is a review",
-      link: "https://www.google.com",
+      link: "/case-studies/ican",
     },
     {
       image: "/images/Founder.png",
@@ -41,7 +41,7 @@ function CaseArray() {
       ownerRole: "Co-founder",
       companyLogo: "/images/Founder.svg",
       review: "This is a review",
-      link: "https://www.google.com",
+      link: "/case-studies/founder-thrive",
     },
   ];
   const categories = [
