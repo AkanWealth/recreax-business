@@ -64,6 +64,7 @@ function AboutHero() {
               alt="People"
               width={186}
               height={72}
+              unoptimized={true}
               className="sm:w-[186px] sm:h-[72px] w-[70px] h-[32px]"
               priority
             />
@@ -93,10 +94,11 @@ function AboutHero() {
             collaborate to build, launch, and scale real-world products—fast.
           </motion.p>
           <Image
-            src="/images/About-Hero.png"
+            src="/images/AHero.png"
             alt="About Hero"
             width={404}
             height={305}
+            unoptimized={true}
             className="w-[404px] h-[305px]"
           />
 

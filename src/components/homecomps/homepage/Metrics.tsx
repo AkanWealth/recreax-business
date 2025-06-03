@@ -85,6 +85,7 @@ function Metrics() {
           {/* Triple the logos for smoother looping */}
           {[...logos, ...logos, ...logos].map((logo, index) => (
             <Image
+              unoptimized={true}
               key={index}
               src={logo}
               alt={`Partner logo ${index + 1}`}

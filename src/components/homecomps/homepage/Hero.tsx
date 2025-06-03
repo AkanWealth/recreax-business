@@ -43,6 +43,7 @@ function Hero() {
             transition={{ delay: 0.4 }}
           >
             <Image
+              unoptimized={true}
               src="/images/hero-light.png"
               alt="People"
               width={70}
@@ -73,6 +74,7 @@ function Hero() {
             transition={{ delay: 1 }}
           >
             <Image
+              unoptimized={true}
               src="/images/hero-people.png"
               alt="People"
               width={150}
@@ -125,6 +127,7 @@ function Hero() {
                 style={{ transform: `rotate(${image.degree}deg)` }}
               >
                 <Image
+                  unoptimized={true}
                   src={image.url}
                   alt={`Carousel image ${imageIndex + 1}`}
                   fill
@@ -147,6 +150,7 @@ function Hero() {
                 style={{ transform: `rotate(${image.degree}deg)` }}
               >
                 <Image
+                  unoptimized={true}
                   src={image.url}
                   alt={`Carousel image ${imageIndex + 1}`}
                   fill
