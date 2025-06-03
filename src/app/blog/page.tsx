@@ -21,8 +21,8 @@ function page() {
           readTime="5 min read"
           type="founder"
         />
-        <Newsletter />
       </section>
+      <Newsletter />
     </div>
   );
 }

@@ -1,10 +1,19 @@
 import React from "react";
-import Newsletter from "@/components/homecomps/blogpage/Newsletter";
+import CaseHero from "@/components/homecomps/casecomps/CaseHero";
+import CaseBuild from "@/components/homecomps/casecomps/CaseBuild";
+import Testimonials from "@/components/homecomps/homepage/Testimonials";
+import CaseLogos from "@/components/homecomps/casecomps/CaseLogos";
+import CaseArray from "@/components/homecomps/casecomps/CaseArray";
+
 
 function page() {
   return (
     <div>
-      <Newsletter />
+      <CaseHero />
+      <CaseArray />
+      <CaseLogos />
+      <Testimonials />
+      <CaseBuild />
     </div>
   );
 }

@@ -164,7 +164,7 @@ function Header() {
                 </Link>
               </DropdownMenuItem>
               <DropdownMenuItem>
-                <p
+                <div
                   onClick={() => setIsModalOpen(true)}
                   className="flex flex-row gap-3 items-center justify-start "
                 >
@@ -179,7 +179,7 @@ function Header() {
                       Get curated founder tips in your inbox
                     </p>
                   </div>
-                </p>
+                </div>
               </DropdownMenuItem>
 
               <DropdownMenuItem>
