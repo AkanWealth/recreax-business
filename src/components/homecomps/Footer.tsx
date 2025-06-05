@@ -146,7 +146,7 @@ function Footer() {
                 Blog
               </Link>
               <Link
-                href={"/playbook"}
+                href={"/blog/playbook"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
               >
                 Playbook
@@ -224,7 +224,7 @@ function Footer() {
               Blog
             </Link>
             <Link
-              href={"/playbook"}
+              href={"/blog/playbook"}
               className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
             >
               Playbook
