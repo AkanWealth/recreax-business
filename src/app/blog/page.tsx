@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import BlogCard from "@/components/homecomps/minicomps/BlogCard";
 import Newsletter from "@/components/homecomps/blogpage/Newsletter";
 import BlogHero from "@/components/homecomps/blogpage/BlogHero";
 import Featured from "@/components/homecomps/blogpage/Featured";
+import BlogDisplay from "@/components/homecomps/blogpage/BlogDisplay";
 // import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 function page() {
@@ -13,14 +13,7 @@ function page() {
       <BlogHero />
       <Featured />
       <section className="flex flex-col bg-white items-center justify-center w-full">
-        <BlogCard
-          image="/images/newsletter.png"
-          title="Hot eba"
-          description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos."
-          date="2021-01-01"
-          readTime="5 min read"
-          type="founder"
-        />
+        <BlogDisplay />
       </section>
       <Newsletter />
     </div>

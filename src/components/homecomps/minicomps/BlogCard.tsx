@@ -1,15 +1,6 @@
 import React from "react";
 import Image from "next/image";
-
-type BlogCardProps = {
-  image: string;
-  title: string;
-  description: string;
-  date: string;
-  readTime: string;
-  type: "founder" | "executive";
-};
-
+import { BlogCardProps } from "@/types/general";
 function BlogCard({ image, title, date, readTime, type }: BlogCardProps) {
   return (
     <div className="flex flex-col w-fit gap-8 max-w-[370px] h-fitrounded-2xl border-0 ">

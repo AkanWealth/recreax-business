@@ -11,4 +11,14 @@ interface CaseStudy {
   shareUrl: string;
 }
 
-export type { CaseStudy };
+interface BlogCardProps {
+  image: string;
+  title: string;
+  description: string;
+  date: string;
+  readTime: string;
+  type: "founder" | "executive" | "case study" | string;
+  category: string;
+}
+
+export type { CaseStudy, BlogCardProps };
