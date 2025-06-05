@@ -29,7 +29,7 @@ function BlogCard({ image, title, date, readTime, type }: BlogCardProps) {
               }`}
             ></span>
           )}
-          {type}
+          {type.charAt(0).toUpperCase() + type.slice(1)}
         </p>
         <p className="text-sm text-gray-500">{date}</p>
         <div className="flex flex-col gap-2">

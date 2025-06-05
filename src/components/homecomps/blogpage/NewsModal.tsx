@@ -76,7 +76,7 @@ function NewsModal({
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black z-40"
+            className="fixed inset-0 max-w-screen bg-black z-40"
             onClick={() => onOpenChange(false)}
           />
 
@@ -109,7 +109,7 @@ function NewsModal({
               >
                 <Image
                   unoptimized={true}
-                  src="/images/NewsletterPerson.png"
+                  src="/images/NewsletterPerson.svg"
                   alt="newsletter person"
                   width={1000}
                   height={1000}
@@ -145,25 +145,25 @@ function NewsModal({
                       value={subscriber?.email}
                       type="email"
                       label="email"
-                    Icon={<IoMailOutline className="text-[#65605c]" />}
-                    placeholder="Email Address"
-                    onChange={(value) => {
-                      setSubscriber((prev) => ({
-                        ...prev,
-                        email: value.target.value,
-                      }));
-                    }}
-                    errorMsg={errors.email}
-                  />
-                  <Button
-                    disabled={!isValid}
-                    onClick={handleSubscribe}
-                    className="w-full disabled:bg-gray-500 hover:bg-[#38547b] bg-[#12233d] text-white"
-                  >
-                    {isLoading ? (
-                      <FaSpinner className="animate-spin mr-2" />
-                    ) : (
-                      "Subscribe Now"
+                      Icon={<IoMailOutline className="text-[#65605c]" />}
+                      placeholder="Email Address"
+                      onChange={(value) => {
+                        setSubscriber((prev) => ({
+                          ...prev,
+                          email: value.target.value,
+                        }));
+                      }}
+                      errorMsg={errors.email}
+                    />
+                    <Button
+                      disabled={!isValid}
+                      onClick={handleSubscribe}
+                      className="w-full disabled:bg-gray-500 hover:bg-[#38547b] bg-[#12233d] text-white"
+                    >
+                      {isLoading ? (
+                        <FaSpinner className="animate-spin mr-2" />
+                      ) : (
+                        "Subscribe Now"
                       )}
                     </Button>
                   </div>
