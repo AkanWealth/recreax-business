@@ -110,6 +110,10 @@ const tomato = localFont({
 export const metadata: Metadata = {
   title: "Recreax Buisness",
   description: "Recreax Buisness",
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+  },
 };
 
 export default function RootLayout({
@@ -120,7 +124,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${tomato.className}   ${plusJakartaSans.variable} antialiased bg-[#f3f3f3]`}
+        className={` ${tomato.className}   ${plusJakartaSans.variable}  antialiased bg-[#f3f3f3]`}
       >
         <Header />
         {children}

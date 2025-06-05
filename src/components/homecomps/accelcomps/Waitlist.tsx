@@ -302,7 +302,7 @@ function Waitlist() {
         </form>
       </div>
       {isSubmitted && (
-        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn">
+        <div className="fixed inset-0 max w-screen z-50 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 animate-fadeIn">
           <div className="w-full max-w-2xl rounded-2xl bg-white p-6 sm:p-8 md:p-12 shadow-2xl transform transition-all animate-scaleIn">
             <div className="flex flex-col items-center space-y-4">
               <svg
