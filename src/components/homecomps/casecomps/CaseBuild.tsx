@@ -19,7 +19,7 @@ function CaseBuild() {
         </p>
         <div className="animate-slideUp">
           <Button
-            onClick={() => router.push("/studio/waitlist")}
+            onClick={() => router.push("/contact-us")}
             className="bg-[#00ffff] w-fit group hover:bg-[#aeffff] px-4 py-3 md:px-5 md:py-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-sm md:text-base"
           >
             Let&apos;s Build Together{" "}

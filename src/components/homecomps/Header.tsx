@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 
-import { PiBuilding, PiBookOpenTextLight } from "react-icons/pi";
+import { PiBuilding } from "react-icons/pi";
 import { FaRegAddressCard } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 import { IoMailUnreadOutline } from "react-icons/io5";
@@ -182,7 +182,7 @@ function Header() {
                 </div>
               </DropdownMenuItem>
 
-              <DropdownMenuItem>
+              {/* <DropdownMenuItem>
                 <Link
                   href="/playbooks"
                   className="flex flex-row gap-3 items-center justify-start "
@@ -199,7 +199,7 @@ function Header() {
                     </p>
                   </div>
                 </Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
             </DropdownMenuContent>
           </DropdownMenu>
         </div>
@@ -340,7 +340,7 @@ function Header() {
                           </p>
                         </div>
                       </p>
-                      <Link
+                      {/* <Link
                         href="/playbooks"
                         className="flex flex-row gap-3 items-center justify-start "
                         onClick={() => setIsMobileMenuOpen(false)}
@@ -356,7 +356,7 @@ function Header() {
                             Step-by-step guides for product execution
                           </p>
                         </div>
-                      </Link>
+                      </Link> */}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
