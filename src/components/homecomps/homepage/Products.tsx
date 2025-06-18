@@ -9,14 +9,14 @@ import { HiArrowRight } from "react-icons/hi2";
 function Products() {
   const products = [
     {
-      image: "/images/Hubit.png",
+      image: "/images/GHIH.png",
       title: "Generation Hand-in-Hand",
       ownerName: "Reetika Mehta",
       ownerRole: "Founder, GHIH",
       companyLogo: "/images/GHIH.svg",
       review:
         "Within a short time, ReCreaX developed my Web App that allows elderly users to connect easily with volunteers and companions.",
-      link: "https://www.google.com",
+      link: "https://generationshandinhand.bubbleapps.io/version-test",
     },
     {
       image: "/images/AudioCare.png",
@@ -26,17 +26,17 @@ function Products() {
       companyLogo: "/images/Audio.svg",
       review:
         "ReCreaX team managed to build an incredible platform that showcases my sound business, within a tight deadline",
-      link: "https://www.google.com",
+      link: "https://audiocare.framer.website/",
     },
     {
-      image: "/images/Ican.png",
+      image: "/images/QRL.png",
       title: "QRLimited",
       ownerName: "Emmanuel Adedayo",
       ownerRole: "CoFounder, QRLimited",
       companyLogo: "/images/QRL.svg",
       review:
         "ReCreaX gave me the guidance, resources and collaborative environment I needed to make the QRL Management Solution a reality",
-      link: "https://www.google.com",
+      link: "https://www.figma.com/proto/b95oOz9scDO7Yju3mIvNbs/QR-LIMITED?",
     },
     {
       image: "/images/dbo.png",
@@ -46,7 +46,7 @@ function Products() {
       companyLogo: "/images/logos/logo-9.png",
       review:
         "They successfully managed the project from start to finish, demonstrating strong communication, leadership, and problem-solving skills",
-      link: "https://www.google.com",
+      link: "https://www.drbodeoguntoke.com/",
     },
   ];
 
