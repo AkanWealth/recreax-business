@@ -20,10 +20,11 @@ function Products() {
     {
       image: "/images/AudioCare.png",
       title: "AudioCare",
-      ownerName: "Olaoluwa Olaiya",
-      ownerRole: "Cofounder, AudioCare",
+      ownerName: "Ayowole O",
+      ownerRole: "Founder, AudioCare",
       companyLogo: "/images/Audio.svg",
-      review: "It's dreamy, it's fantastic and it makes me look really good",
+      review:
+        "ReCreaX team managed to build an incredible platform that showcases my sound business, within a tight deadline",
       link: "https://www.google.com",
     },
     {
