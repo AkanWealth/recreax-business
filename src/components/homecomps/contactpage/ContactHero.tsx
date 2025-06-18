@@ -67,7 +67,10 @@ function ContactHero() {
           </span>
         </motion.p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-          <Button className="bg-[#00ffff] w-full sm:w-60 h-12 sm:h-14 group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base">
+          <Button
+            onClick={() => window.open("https://calendly.com/rasheed-ogunbakinde-recreax/30min", "_blank")}
+            className="bg-[#00ffff] w-full sm:w-60 h-12 sm:h-14 group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base"
+          >
             Book a Free 1:1 Session{" "}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-700 ease-in-out" />
           </Button>
