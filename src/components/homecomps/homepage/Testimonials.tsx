@@ -27,8 +27,8 @@ const TESTIMONIALS: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Jim Beams",
-    company: "Alte Consulting",
+    name: "Dr. Bode Oguntoke",
+    company: "DBO",
     body: "ReCreaX delivered excellent performance, managing the project end-to-end with strong communication, leadership, and problem-solving skills. Their proactive and adaptable approach was key to the project's success. I highly recommend them for a job well done.",
   },
   {
