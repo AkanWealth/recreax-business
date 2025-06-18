@@ -55,6 +55,7 @@ function ProductCard({
             className="w-fit"
           >
             <Image
+              unoptimized={true}
               src={"/linear/Right.svg"}
               alt={title}
               width={24}

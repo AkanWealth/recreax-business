@@ -34,6 +34,7 @@ function BlogHero() {
           className="inline"
         >
           <Image
+            unoptimized={true}
             src="/images/BlogHeroshape.svg"
             alt="logo"
             width={70}

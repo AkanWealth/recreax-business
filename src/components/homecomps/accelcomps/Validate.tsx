@@ -63,6 +63,7 @@ function Validate() {
           <motion.div variants={itemVariants} className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <Image
+                unoptimized={true}
                 src="/images/icons/vali-1.svg"
                 alt="build"
                 width={40}
@@ -81,6 +82,7 @@ function Validate() {
           <motion.div variants={itemVariants} className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <Image
+                unoptimized={true}
                 src="/images/icons/vali-2.svg"
                 alt="build"
                 width={40}
@@ -99,6 +101,7 @@ function Validate() {
           <motion.div variants={itemVariants} className="flex flex-col gap-4">
             <div className="flex items-center gap-4">
               <Image
+                unoptimized={true}
                 src="/images/icons/vali-3.svg"
                 alt="build"
                 width={40}

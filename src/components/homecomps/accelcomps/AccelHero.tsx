@@ -33,6 +33,7 @@ function AccelHero() {
             transition={{ delay: 0.4 }}
           >
             <Image
+              unoptimized={true}
               src="/images/studiohero-1.svg"
               alt="People"
               width={70}
@@ -63,6 +64,7 @@ function AccelHero() {
             transition={{ delay: 1 }}
           >
             <Image
+              unoptimized={true}
               src="/images/studiohero-2.svg"
               alt="Check"
               width={70}
@@ -100,6 +102,7 @@ function AccelHero() {
         </motion.div>
       </motion.div>
       <Image
+        unoptimized={true}
         src="/images/bg/shero.svg"
         alt="Hero"
         width={1543}

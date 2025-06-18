@@ -39,7 +39,7 @@ function BlogDetsHero({ blogHeroData }: { blogHeroData: BlogPost }) {
           width={927}
           height={477}
           priority
-          unoptimized
+          unoptimized={true}
           className="w-full h-auto rounded-lg"
         />
       </motion.div>
@@ -60,7 +60,7 @@ function BlogDetsHero({ blogHeroData }: { blogHeroData: BlogPost }) {
               alt={blogHeroData.author}
               width={40}
               height={40}
-              unoptimized
+              unoptimized={true}
               className="w-8 h-8 rounded-full"
             />
             <p className="text-base md:text-lg font-semibold leading-[155%] tracking-normal align-middle font-plus-jakarta-sans">

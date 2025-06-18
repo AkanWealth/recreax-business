@@ -19,6 +19,7 @@ function AboutMetrics() {
               </span>
             </p>
             <Image
+              unoptimized={true}
               src="/icons/10proj.svg"
               alt="Projects"
               width={32}
@@ -34,6 +35,7 @@ function AboutMetrics() {
               </span>
             </p>
             <Image
+              unoptimized={true}
               src="/icons/15experts.svg"
               alt="Projects"
               width={32}
@@ -49,6 +51,7 @@ function AboutMetrics() {
               </span>
             </p>
             <Image
+              unoptimized={true}
               src="/icons/70hiring.svg"
               alt="Hiring"
               width={32}

@@ -35,6 +35,7 @@ function Special() {
         transition={{ duration: 0.8 }}
       >
         <Image
+          unoptimized={true}
           src="/images/AccelSpecial.svg"
           alt="Special"
           width={446}
