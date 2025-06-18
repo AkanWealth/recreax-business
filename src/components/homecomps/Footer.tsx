@@ -6,14 +6,14 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import NewsModal from "@/components/homecomps/blogpage/NewsModal";
-import { useRouter } from "next/navigation";
+// import { useRouter } from "next/navigation";
 
 import { FaFacebook, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter, FaTiktok } from "react-icons/fa6";
 
 function Footer() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const router = useRouter();
+  // const router = useRouter();
   return (
     <footer className="flex flex-col bg-[#12233d] py-12 sm:py-14 px-6 sm:px-20">
       <div className="flex sm:flex-row flex-col justify-between items-start sm:items-center h-fit border-b border-[#e7e9ec] pb-10">
@@ -26,7 +26,12 @@ function Footer() {
           </p>
         </div>
         <Button
-          onClick={() => router.push("/contact-us")}
+          onClick={() =>
+            window.open(
+              "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
+              "_blank"
+            )
+          }
           className="bg-[#00ffff] group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base "
         >
           Book a call with Us!{" "}
