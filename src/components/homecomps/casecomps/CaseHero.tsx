@@ -103,6 +103,7 @@ function CaseHero() {
         <Image
           src="/images/bg/chero.svg"
           alt="Case Hero"
+          unoptimized={true}
           width={1000}
           height={1000}
           className="w-full h-auto object-contain"

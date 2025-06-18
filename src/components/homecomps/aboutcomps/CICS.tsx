@@ -73,7 +73,13 @@ function CICS() {
               whileHover={{ scale: 1.05 }}
               className="flex flex-col items-center justify-center gap-2 w-[80px] h-[80px] lg:w-[100px] lg:h-[100px] bg-[#9efae4] border border-white rounded-full"
             >
-              <Image src={item.icon} alt={item.alt} width={52} height={52} />
+              <Image
+                unoptimized={true}
+                src={item.icon}
+                alt={item.alt}
+                width={52}
+                height={52}
+              />
             </motion.div>
             <div className="flex flex-col items-center justify-center gap-3 lg:gap-4 mt-4">
               <h2 className="text-xl lg:text-2xl text-center font-semibold font-tomato text-[#2a2829] leading-[155%]">

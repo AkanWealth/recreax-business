@@ -68,16 +68,16 @@ function Footer() {
               </Link>
             </div>
             <div className="flex flex-row  text-white text-sm sm:text-base font-plus-jakarta-sans gap-10">
-              <a href="https://www.facebook.com/company/recreax">
+              <a href="https://www.facebook.com/share/1LWZBE8jrV/">
                 <FaFacebook className="w-5 h-5 sm:w-6 sm:h-6 stroke-white hover:fill-[#bce8ef] transition-all duration-300" />
               </a>
-              <a href="https://www.X.com/recreax">
+              <a href="https://x.com/recreaxbusiness">
                 <FaXTwitter className="w-5 h-5 sm:w-6 sm:h-6 stroke-white hover:fill-[#bce8ef] transition-all duration-300" />
               </a>
-              <a href="https://www.instagram.com/recreax">
+              <a href="https://www.instagram.com/recreaxbusiness">
                 <FaInstagram className="w-5 h-5 sm:w-6 sm:h-6 stroke-white hover:fill-[#bce8ef] transition-all duration-300" />
               </a>
-              <a href="https://www.linkedin.com/company/recreax">
+              <a href="https://www.linkedin.com/showcase/recreax-for-business/">
                 <FaLinkedinIn className="w-5 h-5 sm:w-6 sm:h-6 stroke-white hover:fill-[#bce8ef] transition-all duration-300" />
               </a>
               <a href="https://www.tiktok.com/@recreax">

@@ -30,6 +30,7 @@ function AboutHero() {
             transition={{ delay: 0.4 }}
           >
             <Image
+              unoptimized={true}
               src="/images/icons/aboutrocket.svg"
               alt="Rocket"
               width={70}
