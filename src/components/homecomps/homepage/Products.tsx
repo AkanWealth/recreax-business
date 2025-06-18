@@ -10,11 +10,12 @@ function Products() {
   const products = [
     {
       image: "/images/Hubit.png",
-      title: "Hubit Plx",
-      ownerName: "Confidence Taiwo",
-      ownerRole: "Cofounder, Meyo Apparel",
+      title: "Generation Hand-in-Hand",
+      ownerName: "Reetika Mehta",
+      ownerRole: "Founder, GHIH",
       companyLogo: "/images/GHIH.svg",
-      review: "It's dreamy, it's fantastic and it makes me look really good",
+      review:
+        "Within a short time, ReCreaX developed my Web App that allows elderly users to connect easily with volunteers and companions.",
       link: "https://www.google.com",
     },
     {
@@ -29,20 +30,22 @@ function Products() {
     },
     {
       image: "/images/Ican.png",
-      title: "Product 3",
-      ownerName: "Bob Wilson",
-      ownerRole: "Founder",
-      companyLogo: "/images/ICAN.svg",
-      review: "This is a review",
+      title: "QRLimited",
+      ownerName: "Emmanuel Adedayo",
+      ownerRole: "CoFounder, QRLimited",
+      companyLogo: "/images/QRL.svg",
+      review:
+        "ReCreaX gave me the guidance, resources and collaborative environment I needed to make the QRL Management Solution a reality",
       link: "https://www.google.com",
     },
     {
-      image: "/images/Founder.png",
-      title: "Founder Thrive",
-      ownerName: "Alice Brown",
-      ownerRole: "Co-founder",
-      companyLogo: "/images/Founder.svg",
-      review: "This is a review",
+      image: "/images/dbo.png",
+      title: "DBO Website",
+      ownerName: "Dr. Bode Oguntoke",
+      ownerRole: "Founder, DBO",
+      companyLogo: "/images/logos/logo-9.png",
+      review:
+        "They successfully managed the project from start to finish, demonstrating strong communication, leadership, and problem-solving skills",
       link: "https://www.google.com",
     },
   ];

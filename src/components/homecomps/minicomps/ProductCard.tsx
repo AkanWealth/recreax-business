@@ -74,7 +74,7 @@ function ProductCard({
               alt={title}
               width={40}
               height={40}
-              className=" sm:w-[50px] sm:h-[50px]"
+              className=" sm:w-[50px] h-fit "
             />
             <div className="flex flex-col items-start justify-start gap-1">
               <p className="text-base sm:text-lg font-semibold font-plus-jakarta-sans text-[#2a2829]">
