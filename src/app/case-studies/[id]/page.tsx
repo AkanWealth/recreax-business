@@ -1,16 +1,29 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import CaseDetsHero from "@/components/homecomps/casecomps/CaseDetsHero";
 import CaseDetsBody from "@/components/homecomps/casecomps/CaseDetsBody";
 import { caseData } from "@/mocks/casestudyData";
 import Link from "next/link";
 import CaseBuild from "@/components/homecomps/casecomps/CaseBuild";
 import CaseProds from "@/components/homecomps/casecomps/CaseProds";
+import { CaseStudy } from "@/types/general";
 
-export default async function Page({ params }: { params: { id: string } }) {
-  // Simulate network delay
-  const { id } = await params;
 
-  const caseStudy = caseData.find((cs) => String(cs.id) === id);
+export default function Page({ params }: { params: Promise<{ id: string }> }) {
+  // Simulate network delay for testing
+  const [caseStudy, setCaseStudy] = useState<CaseStudy | null>(null);
+
+  useEffect(() => {
+    const fetchCaseStudy = async () => {
+      const { id } = await params;
+      const caseStudy = caseData.find((cs) => String(cs.id) === id);
+      if (caseStudy) {
+        setCaseStudy(caseStudy);
+      }
+    };
+    fetchCaseStudy();
+  }, [params]);
 
   if (!caseStudy) {
     return (
