@@ -54,12 +54,7 @@ function Footer() {
           </div>
           <div className="flex flex-col-reverse sm:flex-col w-fit gap-2">
             <div className="flex flex-row gap-8">
-              <Link
-                href={"/terms-of-service"}
-                className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-plus-jakarta-sans"
-              >
-                Terms of service
-              </Link>
+           
               <Link
                 href={"/privacy-policy"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-plus-jakarta-sans"
