@@ -88,9 +88,9 @@ function CaseHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.6 }}
         >
-          From raw ideas to real products — faster and smarter. We&apos;ve
-          helped 10+ first-time founders go from concept to launch with clarity
-          and confidence. Dive into real stories of startups that built,
+          Move from raw ideas to real products, faster and smarter. We&apos;ve
+          helped over 10 first-time founders go from concept to launch with
+          clarity and confidence. Dive into real stories of startups that built,
           pivoted, and grew with ReCreaX as their execution partner.
         </motion.p>
       </motion.div>

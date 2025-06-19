@@ -54,12 +54,7 @@ function Footer() {
           </div>
           <div className="flex flex-col-reverse sm:flex-col w-fit gap-2">
             <div className="flex flex-row gap-8">
-              <Link
-                href={"/terms-of-service"}
-                className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-plus-jakarta-sans"
-              >
-                Terms of service
-              </Link>
+           
               <Link
                 href={"/privacy-policy"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-plus-jakarta-sans"
@@ -108,17 +103,14 @@ function Footer() {
                 Studio
               </Link>
               <Link
-                href={"/contact-us"}
+                href={"https://calendly.com/rasheed-ogunbakinde-recreax/30min"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
               >
                 Book a Free 1:1
               </Link>
-              <Link
-                href={"/studio"}
-                className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
-              >
-                Studio
-              </Link>
+        
               <Link
                 href={"/about-us"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
@@ -186,7 +178,9 @@ function Footer() {
               Studio
             </Link>
             <Link
-              href={"/contact-us"}
+              href={"https://calendly.com/rasheed-ogunbakinde-recreax/30min"}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
             >
               Book a Free 1:1

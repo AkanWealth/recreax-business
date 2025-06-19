@@ -29,12 +29,12 @@ function AccelFAQ() {
     {
       question: "Will you help with fundraising?",
       answer:
-        "Yes. While we&apos;re not a fundraising platform, we support fundraising readiness and offer investor prep, network access and (in future cohorts) warm intros to early-stage investors.",
+        "Yes. While we are not a fundraising platform, we support fundraising readiness and offer investor prep, network access and (in future cohorts) warm intros to early-stage investors.",
     },
     {
       question: "Do you take equity?",
       answer:
-        "Not at this stage. We&apos;re offering the first few cohorts at a flat fee to support bootstrapped and first-time founders.",
+        "Not at this stage. We are offering the first few cohorts at a flat fee to support bootstrapped and first-time founders.",
     },
     {
       question: "Will I own my product?",

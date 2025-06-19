@@ -37,28 +37,28 @@ function CICS() {
             icon: "/images/icons/competence.svg",
             title: "Competence",
             description:
-              "Excellence through real-world execution, not just theoretical knowledge.",
+              "We deliver excellence through real-world product execution rooted in strategic thinking, technical depth and user understanding.",
             alt: "Competence",
           },
           {
             icon: "/images/icons/innovation.svg",
             title: "Innovation",
             description:
-              "Disrupting outdated hiring and talent development models.",
+              "We embrace agile approaches to digital product delivery, enabling faster launches and smarter iteration without the burden of in-house hiring.",
             alt: "Innovation",
           },
           {
             icon: "/images/icons/connection.svg",
-            title: "Connection",
+            title: "Collaboration",
             description:
-              "A thriving platform where talents and startups connect for mutual growth and success.",
-            alt: "Connection",
+              "Every project is a partnership. We work as an extension of your team, aligning with your goals and delivering outcomes that matter.",
+            alt: "Collaboration",
           },
           {
             icon: "/images/icons/sincerity.svg",
             title: "Sincerity",
             description:
-              "A genuine commitment to talent empowerment and business success.",
+              "We lead with clarity and integrity, committed to building products and partnerships that are honest, transparent and outcome-driven.",
             alt: "Sincerity",
           },
         ].map((item, index) => (

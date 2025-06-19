@@ -100,7 +100,7 @@ function Hero() {
           className="flex flex-col sm:flex-row gap-4 sm:gap-8"
         >
           <Link href="/book-a-call">
-            <Button className="px-6 py-4 rounded-xl font-plus-jakarta-sans font-medium text-base text-center bg-[#12233d] text-white hover:bg-[#1a2f4d] transition-colors duration-300 w-full sm:w-auto">
+            <Button onClick={() => window.open("https://calendly.com/rasheed-ogunbakinde-recreax/30min", "_blank")} className="px-6 py-4 rounded-xl font-plus-jakarta-sans font-medium text-base text-center bg-[#12233d] text-white hover:bg-[#1a2f4d] transition-colors duration-300 w-full sm:w-auto">
               Book a Free 1:1 Session
             </Button>
           </Link>

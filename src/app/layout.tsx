@@ -110,10 +110,7 @@ const tomato = localFont({
 export const metadata: Metadata = {
   title: "Recreax Buisness",
   description: "Recreax Buisness",
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-  },
+
 };
 
 export default function RootLayout({

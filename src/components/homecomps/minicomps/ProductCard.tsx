@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface ProductCardProps {
   image: string;
@@ -46,14 +47,7 @@ function ProductCard({
       <div className="flex flex-col items-start justify-start gap-3 sm:gap-4 w-full">
         <div className="flex flex-row items-center justify-between w-full">
           <h3 className="text-xl sm:text-2xl font-bold font-tomato">{title}</h3>
-          <motion.a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.1 }}
-            transition={{ duration: 0.2 }}
-            className="w-fit"
-          >
+          <Link href={link} className="w-fit">
             <Image
               unoptimized={true}
               src={"/linear/Right.svg"}
@@ -62,7 +56,7 @@ function ProductCard({
               height={24}
               className="sm:w-6 sm:h-6 -rotate-45"
             />
-          </motion.a>
+          </Link>
         </div>
         <div className="flex flex-col items-start justify-start gap-2">
           <p className="text-base sm:text-lg font-plus-jakarta-sans text-[#65605c]">

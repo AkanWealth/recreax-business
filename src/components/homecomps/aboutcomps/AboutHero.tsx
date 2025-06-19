@@ -76,7 +76,7 @@ function AboutHero() {
             transition={{ delay: 0.8 }}
             className="whitespace-nowrap"
           >
-            Real Talents
+            Full-Stack Product Teams
           </motion.span>
         </div>
         <motion.div
@@ -91,8 +91,8 @@ function AboutHero() {
             transition={{ delay: 1.2 }}
             className="text-left text-[#2a2829] text-sm xs:text-base sm:text-lg md:text-2xl font-tomato font-semibold leading-[155%] max-w-[300px] md:max-w-[320px]"
           >
-            ReCreaX is where early-stage startups and emerging tech talents
-            collaborate to build, launch, and scale real-world products—fast.
+            ReCreaX is where startups and non-technical founders turn bold ideas
+            into real, usable products with speed and clarity
           </motion.p>
           <Image
             src="/images/AHero.png"
@@ -108,8 +108,9 @@ function AboutHero() {
             transition={{ delay: 1.2 }}
             className="text-left text-[#2a2829] text-sm xs:text-base sm:text-lg md:text-2xl font-tomato font-semibold leading-[155%] max-w-[300px] md:max-w-[320px]"
           >
-            Founders get structured execution without hiring stress, while
-            talents gain hands-on experience and career growth.
+            We provide structured execution without the stress of hiring. Our
+            dedicated product teams manage analysis, design, and development so
+            you can focus on growth and go to market faster.
           </motion.p>
         </motion.div>
       </motion.div>

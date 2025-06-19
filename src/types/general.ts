@@ -1,13 +1,22 @@
 interface CaseStudy {
   id: string;
-  imageUrl: string;
+  heroImageUrl: string;
   title: string;
   description: string;
   author: string;
   authorImage: string;
   createdAt: string;
-  tableOfContents: string[];
-  content: string;
+  problem: string;
+  solution: string;
+  solutionImg: string[];
+  outcome: string;
+  outcomeImg: string[];
+  quote: {
+    message: string;
+    author: string;
+    role: string;
+    projectLink: string;
+  };
   shareUrl: string;
 }
 interface BlogPost {

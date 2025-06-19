@@ -15,7 +15,7 @@ function AboutMetrics() {
             <p className="text-xl font-tomato sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start  font-bold text-[#2a2829]">
               10+
               <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace font-plus-jakarta-sans">
-                MVPs launched across Fintech, E-commerce & SaaS.
+                MVPs launched across Fintech, E-commerce & SaaS
               </span>
             </p>
             <Image
@@ -31,7 +31,8 @@ function AboutMetrics() {
             <p className="text-xl font-tomato sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start font-bold text-[#2a2829]">
               15+
               <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace font-plus-jakarta-sans">
-                talents placed on real projects
+                Product experts across strategy, design, engineering, and QA in
+                our delivery network
               </span>
             </p>
             <Image
@@ -47,7 +48,7 @@ function AboutMetrics() {
             <p className="text-xl font-tomato sm:text-2xl md:text-3xl lg:text-5xl flex flex-col items-start font-bold text-[#2a2829]">
               70%
               <span className="text-sm sm:text-base md:text-lg font-semibold text-[#2a2829] whitespace font-plus-jakarta-sans">
-                faster execution speed vs traditional hiring
+                faster execution speed than traditional hiring or agencies
               </span>
             </p>
             <Image

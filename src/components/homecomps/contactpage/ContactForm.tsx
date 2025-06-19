@@ -174,7 +174,6 @@ function ContactForm() {
                 value: "Project Collaboration",
                 label: "Project Collaboration",
               },
-              { value: "Talent Inquiry", label: "Talent Inquiry" },
               { value: "General Question", label: "General Question" },
             ]}
             errorMsg={errors.request}

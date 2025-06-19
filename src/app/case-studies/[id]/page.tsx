@@ -1,34 +1,76 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useState } from "react";
 import CaseDetsHero from "@/components/homecomps/casecomps/CaseDetsHero";
 import CaseDetsBody from "@/components/homecomps/casecomps/CaseDetsBody";
-// import { CaseStudy } from "@/types/general";
+import { caseData } from "@/mocks/casestudyData";
+import Link from "next/link";
+import CaseBuild from "@/components/homecomps/casecomps/CaseBuild";
+import CaseProds from "@/components/homecomps/casecomps/CaseProds";
+import { CaseStudy } from "@/types/general";
 
-const caseData = {
-  id: "hubit",
-  imageUrl: "/images/caseplaceholder.png",
-  title: `Launched MVP in 8 weeks: ReCreaX's Success Story with XYZ`,
-  description:
-    "XYZ is a [short description of the company] founded by [Founder Name], a first-time founder solving [pain point]. With a clear vision but no technical team, they partnered with ReCreaX to bring their idea to life, validated with over x real users and launched in 8 weeks",
-  author: "Pelumi Oladoja",
-  authorImage: "/images/author-placeholder.png",
-  createdAt: "November 4, 2024",
-  tableOfContents: ["Problem", "Solution", "Outcome"],
-  content: `<div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start; gap: 24px">
-<h5 style="font-family: 'Tomato'; font-weight: 600; font-size: 24px; line-height: 155%; letter-spacing: normal; vertical-align: middle">Launched MVP in 8 weeks: ReCreaX's Success Story with XYZ</h5>
-    <div><p style="font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: 18px; line-height: 155%; letter-spacing: normal; vertical-align: middle">Breaking into tech is no longer just about talent. It's about access to tools, training, and real experience. And that costs money. For many aspiring tech professionals, financial limitations is a barrier to acquiring the skills and exposure needed to thrive in their career.</p> <br style="margin-bottom: 16px" />
-    <p style="font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: 18px; line-height: 155%; letter-spacing: normal; vertical-align: middle">However, at ReCreaX, we hold the belief that financial constraints should never hold you back from gaining hands-on experience and advancing your career. That's why we've partnered with CredPal, a leading credit platform, to offer you a flexible way to finance your tech projects learning journey in our project-based learning program</p> <br style="margin-bottom: 16px" />  
-<p style="font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: 18px; line-height: 155%; letter-spacing: normal; vertical-align: middle">However, at ReCreaX, we hold the belief that financial constraints should never hold you back from gaining hands-on experience and advancing your career. That's why we've partnered with CredPal, a leading credit platform, to offer you a flexible way to finance your tech projects learning journey in our project-based learning program</p><br style="margin-bottom: 16px" />
-<p style="font-family: 'Plus Jakarta Sans'; font-weight: 400; font-size: 18px; line-height: 155%; letter-spacing: normal; vertical-align: middle">ReCreaX X CredPal partnership changes how tech education and practical experience can be accessed by everyone, regardless of their current financial situation. You can now access credit facilities to grow and pay later in manageable installments that align with your financial capability allowing you to focus on skill development rather than worrying about immediate costs.</p> </div> </div>`,
-  shareUrl: `https://www.recreax.com/case-studies/`,
-};
 
-function page() {
+export default function Page({ params }: { params: Promise<{ id: string }> }) {
+  // Simulate network delay for testing
+  const [caseStudy, setCaseStudy] = useState<CaseStudy | null>(null);
+
+  useEffect(() => {
+    const fetchCaseStudy = async () => {
+      const { id } = await params;
+      const caseStudy = caseData.find((cs) => String(cs.id) === id);
+      if (caseStudy) {
+        setCaseStudy(caseStudy);
+      }
+    };
+    fetchCaseStudy();
+  }, [params]);
+
+  if (!caseStudy) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen bg-white px-4">
+        <svg
+          width="80"
+          height="80"
+          fill="none"
+          viewBox="0 0 24 24"
+          className="mb-6 text-gray-400"
+        >
+          <path
+            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 15a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm1-7h-2v5h2V10z"
+            fill="currentColor"
+          />
+        </svg>
+        <h1 className="text-4xl font-bold mb-2 text-center">
+          404 - Case Study Not Found
+        </h1>
+        <p className="text-lg mb-6 text-center">
+          Sorry, the case study you are looking for does not exist or may have
+          been moved.
+        </p>
+        <div className="flex gap-4">
+          <button
+            onClick={() => window.history.back()}
+            className="px-4 py-2 bg-gray-200 hover:bg-gray-300 rounded transition"
+          >
+            ← Go Back
+          </button>
+          <Link
+            href="/case-studies"
+            className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+          >
+            View All Case Studies
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="flex flex-col items-center justify-center bg-white">
-      <CaseDetsHero caseHeroData={caseData} />
-      <CaseDetsBody caseBodyData={caseData} />
+      <CaseDetsHero caseHeroData={caseStudy} />
+      <CaseDetsBody caseBodyData={caseStudy} />
+      <CaseProds />
+      <CaseBuild />
     </div>
   );
 }
-
-export default page;
