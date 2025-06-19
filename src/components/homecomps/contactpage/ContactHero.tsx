@@ -38,8 +38,9 @@ function ContactHero() {
           </motion.div>
         </h1>
         <p className="text-center text-base sm:text-lg font-plus-jakarta-sans font-normal text-[#2a2829] max-w-[800px]">
-          Whether you&apos;re a founder with a big idea or a talent looking to
-          work on meaningful projects, we&apos;d love to hear from you.
+          Whether you&apos;re a founder, startup, small business, or company
+          team looking to bring a digital product to life, we&apos;d love to
+          hear from you.
         </p>
       </motion.div>
       <motion.div
@@ -57,7 +58,7 @@ function ContactHero() {
             info@recreax.com
           </span>
         </motion.p>
-        <motion.p
+        {/* <motion.p
           whileHover={{ scale: 1.05 }}
           className="flex flex-col gap-2 items-center sm:items-start justify-start w-fit text-white text-xl sm:text-2xl font-tomato font-semibold"
         >
@@ -65,10 +66,15 @@ function ContactHero() {
           <span className="text-white text-base sm:text-lg font-plus-jakarta-sans font-normal">
             +2348086929001
           </span>
-        </motion.p>
+        </motion.p> */}
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
-            onClick={() => window.open("https://calendly.com/rasheed-ogunbakinde-recreax/30min", "_blank")}
+            onClick={() =>
+              window.open(
+                "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
+                "_blank"
+              )
+            }
             className="bg-[#00ffff] w-full sm:w-60 h-12 sm:h-14 group hover:bg-[#aeffff] p-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-base"
           >
             Book a Free 1:1 Session{" "}

@@ -48,7 +48,17 @@ function Faq() {
     {
       question: "How can we get started?",
       answer:
-        "It's simple! Share your idea with us, and we'll create a clear execution plan to bring it to life. Start Here",
+        <>
+          It&apos;s simple! Share your idea with us, and we&apos;ll create a clear execution plan to bring it to life.{" "}
+          <a
+            href="https://calendly.com/rasheed-ogunbakinde-recreax/30min"
+            className="text-[#12233d] underline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Start Here
+          </a>
+        </>
     },
   ];
 

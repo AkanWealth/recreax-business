@@ -75,7 +75,7 @@ function Validate() {
             </div>
             <p className="text-[#65605c] text-left font-normal leading-[155%] lg:text-lg font-plus-jakarta-sans">
               You don&apos;t need an in-house product team to start. We give you
-              the structure, tools, and team to launch confidently — without the
+              the structure, tools, and team to launch confidently without the
               overhead.
             </p>
           </motion.div>
@@ -93,7 +93,7 @@ function Validate() {
               </h5>
             </div>
             <p className="text-[#65605c] text-left font-normal leading-[155%] lg:text-lg font-plus-jakarta-sans">
-              From idea to launch — we define, design, and build a real product
+              From idea to launch, we define, design, and build a real product
               fast. You&apos;ll test with users, gather feedback, and ship in
               just 90 days.
             </p>
@@ -112,7 +112,7 @@ function Validate() {
               </h5>
             </div>
             <p className="text-[#65605c] text-left font-normal leading-[155%] lg:text-lg font-plus-jakarta-sans">
-              More than just building — we help you lay the right foundation for
+              More than just building, we help you lay the right foundation for
               growth with smart strategy, lean testing, and launch support.
             </p>
           </motion.div>

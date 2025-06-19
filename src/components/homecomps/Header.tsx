@@ -11,7 +11,7 @@ import { FaRegAddressCard } from "react-icons/fa";
 import { MdWeb } from "react-icons/md";
 import { IoMailUnreadOutline } from "react-icons/io5";
 
-import { BsNewspaper } from "react-icons/bs";
+// import { BsNewspaper } from "react-icons/bs";
 
 // import { Button } from "../ui/button";
 import {
@@ -68,6 +68,12 @@ function Header() {
             href="/studio"
           >
             Studio
+          </Link>
+          <Link
+            className="px-1 sm:px-2 text-xs sm:text-sm font-plus-jakarta-sans text-gray-950"
+            href="/case-studies"
+          >
+            Case Studies
           </Link>
           <DropdownMenu>
             <DropdownMenuTrigger className="focus-visible:outline-none">
@@ -127,7 +133,7 @@ function Header() {
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[280px] sm:w-[320px] md:w-[360px]">
-              <DropdownMenuItem className="flex flex-row gap-3 items-center justify-start ">
+              {/* <DropdownMenuItem className="flex flex-row gap-3 items-center justify-start ">
                 <Link
                   href="/case-studies"
                   className="flex flex-row gap-3 items-center justify-start "
@@ -144,7 +150,7 @@ function Header() {
                     </p>
                   </div>
                 </Link>
-              </DropdownMenuItem>
+              </DropdownMenuItem> */}
               <DropdownMenuItem>
                 <Link
                   href="/blog"
@@ -230,6 +236,13 @@ function Header() {
               >
                 Studio
               </Link>
+              <Link
+                className="font-medium font-plus-jakarta-sans text-sm text-gray-950"
+                href="/case-studies"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Case Studies
+              </Link>
 
               {/* Mobile Company Dropdown */}
               <Accordion type="single" collapsible>
@@ -290,7 +303,7 @@ function Header() {
                   </AccordionTrigger>
                   <AccordionContent>
                     <div className="p-4 bg-white rounded-lg flex flex-col gap-2">
-                      <Link
+                      {/* <Link
                         href="/case-studies"
                         className="flex flex-row gap-3 items-center justify-start "
                         onClick={() => setIsMobileMenuOpen(false)}
@@ -306,7 +319,7 @@ function Header() {
                             See how founders launched and scaled with ReCreaX
                           </p>
                         </div>
-                      </Link>
+                      </Link> */}
                       <Link
                         href="/blog"
                         className="flex flex-row gap-3 items-center justify-start "
@@ -362,7 +375,15 @@ function Header() {
                 </AccordionItem>
               </Accordion>
 
-              <Button className="bg-[#12233d] text-sm font-medium rounded-lg py-[12px] px-4 hover:bg-[#12233d]/80 text-white w-full">
+              <Button
+                onClick={() =>
+                  window.open(
+                    "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
+                    "_blank"
+                  )
+                }
+                className="bg-[#12233d] text-sm font-medium rounded-lg py-[12px] px-4 hover:bg-[#12233d]/80 text-white w-full"
+              >
                 Book a Free 1:1 Session
               </Button>
             </div>
@@ -370,7 +391,15 @@ function Header() {
         )}
 
         {/* Desktop Button */}
-        <Button className="hidden items-center justify-center sm:flex bg-[#12233d] rounded-lg py-[8px] sm:py-[10px] px-2 sm:px-3 hover:bg-[#12233d]/80 text-white text-xs sm:text-sm">
+        <Button
+          onClick={() =>
+            window.open(
+              "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
+              "_blank"
+            )
+          }
+          className="hidden items-center justify-center sm:flex bg-[#12233d] rounded-lg py-[8px] sm:py-[10px] px-2 sm:px-3 hover:bg-[#12233d]/80 text-white text-xs sm:text-sm"
+        >
           Book a Free 1:1 Session
         </Button>
       </div>
