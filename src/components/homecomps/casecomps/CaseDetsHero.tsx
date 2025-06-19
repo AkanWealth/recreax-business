@@ -34,7 +34,7 @@ function CaseDetsHero({ caseHeroData }: { caseHeroData: CaseStudy }) {
         className="w-full"
       >
         <Image
-          src={caseHeroData.imageUrl}
+          src={caseHeroData.heroImageUrl}
           alt={caseHeroData.title}
           width={927}
           height={477}

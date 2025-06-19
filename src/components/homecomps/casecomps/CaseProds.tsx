@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
+import ProductCard from "@/components/homecomps/minicomps/ProductCard";
+import { motion } from "framer-motion";
 
-import ProductCard from "../minicomps/ProductCard";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { HiArrowRight } from "react-icons/hi2";
-function Products() {
+function CaseProds() {
   const products = [
     {
       image: "/images/GHIH.png",
@@ -50,35 +48,49 @@ function Products() {
     },
   ];
 
-  return (
-    <div className="flex flex-col items-start justify-center w-full bg-white gap-16 py-10 sm:py-20 px-4 sm:px-32">
-      <h2 className=" leading-[140%] text-black text-left font-semibold  sm:font-bold text-2xl sm:text-5xl font-tomato">
-        Startups Trust Us. Founders Rely on Us. <br />
-        <span className="text-[#12233d]">Products Launch with Us</span>
-      </h2>
-      <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-20">
-        {products.map((product, index) => (
-          <ProductCard
-            key={index}
-            image={product.image}
-            title={product.title}
-            ownerName={product.ownerName}
-            ownerRole={product.ownerRole}
-            companyLogo={product.companyLogo}
-            review={product.review}
-            link={product.link}
-          />
-        ))}
-      </div>
+  // Animation variants for Framer Motion
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i: number) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, type: "spring" },
+    }),
+  };
 
-      <Link href="/case-studies">
-        <Button className="bg-[#12233d] font-plus-jakarta-sans font-semibold text-base p-4 text-white px-10 py-4 rounded-[8px]">
-          View all Case Studies{" "}
-          <HiArrowRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white" />
-        </Button>
-      </Link>
-    </div>
+  return (
+    <section className="w-full flex flex-col gap-10 px-4 py-12 sm:px-8 md:px-16 lg:px-[100px] bg-[#f1fafc]">
+      <h5 className="text-2xl leading-[140%] text-black font-tomato font-semibold mb-6">
+        Other Cases
+      </h5>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 w-full">
+        {products
+          .slice()
+          .sort(() => Math.random() - 0.5)
+          .slice(0, 2)
+          .map((product, index) => (
+            <motion.div
+              key={index}
+              custom={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={cardVariants}
+            >
+              <ProductCard
+                image={product.image}
+                title={product.title}
+                ownerName={product.ownerName}
+                ownerRole={product.ownerRole}
+                companyLogo={product.companyLogo}
+                review={product.review}
+                link={product.link}
+              />
+            </motion.div>
+          ))}
+      </div>
+    </section>
   );
 }
 
-export default Products;
+export default CaseProds;
