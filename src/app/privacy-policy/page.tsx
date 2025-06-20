@@ -1,6 +1,18 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 
 function PrivacyPolicyPage() {
+  // Enable smooth scrolling
+  useEffect(() => {
+    // Add smooth scrolling behavior
+    document.documentElement.style.scrollBehavior = "smooth";
+
+    return () => {
+      document.documentElement.style.scrollBehavior = "auto";
+    };
+  }, []);
+
   // Reusable style classes
   const styles = {
     container:
@@ -12,8 +24,23 @@ function PrivacyPolicyPage() {
     heading3: "text-base sm:text-lg font-semibold leading-relaxed",
     paragraph: "text-base sm:text-lg font-normal leading-relaxed",
     list: "list-disc list-inside space-y-1 text-base sm:text-lg font-normal leading-relaxed",
-    link: "text-sky-600 hover:text-sky-700 transition-colors",
+    link: "text-sky-600 hover:text-sky-700 transition-colors cursor-pointer",
     tableContainer: "w-full overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0",
+  };
+
+  // Function to scroll to section
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const offset = 80; // Offset for better visibility
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
   };
 
   // Summary points data
@@ -28,7 +55,10 @@ function PrivacyPolicyPage() {
             services, the choices you make, and the products and features you
             use. Learn more about the
           </span>
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-1")}
+          >
             {" "}
             personal information you disclose to us.
           </span>
@@ -43,7 +73,10 @@ function PrivacyPolicyPage() {
             We may process sensitive personal information when necessary with
             your consent or as otherwise permitted by applicable law. <br />
           </span>
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-1")}
+          >
             Learn more about the sensitive information we process
           </span>
         </>
@@ -57,7 +90,10 @@ function PrivacyPolicyPage() {
             We may collect information from public databases, marketing
             partners, social media platforms, and other outside sources.{" "}
           </span>
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-1")}
+          >
             Learn more about information collected from other sources.
           </span>
         </>
@@ -74,7 +110,10 @@ function PrivacyPolicyPage() {
             with your consent. We process your information only when we have a
             valid legal reason to do so.{" "}
           </span>
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-2")}
+          >
             Learn more about how we process your information
           </span>
         </>
@@ -89,7 +128,10 @@ function PrivacyPolicyPage() {
             We may share information in specific situations and with specific
             categories of third parties. <br />
           </span>
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-4")}
+          >
             Learn more about when and with whom we share your personal
             information
           </span>
@@ -109,7 +151,10 @@ function PrivacyPolicyPage() {
             will not be able to defeat our security and improperly collect,
             access, steal, or modify your information.{" "}
           </span>
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-9")}
+          >
             Learn more about how we keep your information safe.
           </span>
         </>
@@ -124,7 +169,10 @@ function PrivacyPolicyPage() {
             privacy law may mean you have certain rights regarding your personal
             information.{" "}
           </span>
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-11")}
+          >
             Learn more about your privacy rights.
           </span>
         </>
@@ -148,22 +196,40 @@ function PrivacyPolicyPage() {
 
   // Table of contents items
   const tableOfContents = [
-    "1. WHAT INFORMATION DO WE COLLECT?",
-    "2. HOW DO WE PROCESS YOUR INFORMATION?",
-    "3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?",
-    "4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?",
-    "5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
-    "6. HOW DO WE HANDLE YOUR SOCIAL LOGINS?",
-    "7. IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?",
-    "8. HOW LONG DO WE KEEP YOUR INFORMATION?",
-    "9. HOW DO WE KEEP YOUR INFORMATION SAFE?",
-    "10. DO WE COLLECT INFORMATION FROM MINORS?",
-    "11. WHAT ARE YOUR PRIVACY RIGHTS?",
-    "12. CONTROLS FOR DO-NOT-TRACK FEATURES",
-    "13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
-    "14. DO WE MAKE UPDATES TO THIS NOTICE?",
-    "15. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?",
-    "16. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
+    { text: "1. WHAT INFORMATION DO WE COLLECT?", id: "section-1" },
+    { text: "2. HOW DO WE PROCESS YOUR INFORMATION?", id: "section-2" },
+    {
+      text: "3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?",
+      id: "section-3",
+    },
+    {
+      text: "4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?",
+      id: "section-4",
+    },
+    {
+      text: "5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?",
+      id: "section-5",
+    },
+    { text: "6. HOW DO WE HANDLE YOUR SOCIAL LOGINS?", id: "section-6" },
+    {
+      text: "7. IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?",
+      id: "section-7",
+    },
+    { text: "8. HOW LONG DO WE KEEP YOUR INFORMATION?", id: "section-8" },
+    { text: "9. HOW DO WE KEEP YOUR INFORMATION SAFE?", id: "section-9" },
+    { text: "10. DO WE COLLECT INFORMATION FROM MINORS?", id: "section-10" },
+    { text: "11. WHAT ARE YOUR PRIVACY RIGHTS?", id: "section-11" },
+    { text: "12. CONTROLS FOR DO-NOT-TRACK FEATURES", id: "section-12" },
+    {
+      text: "13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?",
+      id: "section-13",
+    },
+    { text: "14. DO WE MAKE UPDATES TO THIS NOTICE?", id: "section-14" },
+    { text: "15. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?", id: "section-15" },
+    {
+      text: "16. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?",
+      id: "section-16",
+    },
   ];
 
   // Personal information list items
@@ -385,10 +451,15 @@ function PrivacyPolicyPage() {
         {/* Table of Contents */}
         <div className={styles.section}>
           <h2 className={styles.heading2}>TABLE OF CONTENTS</h2>
-          <div className={`${styles.link} ${styles.paragraph}`}>
+          <div className={styles.paragraph}>
             {tableOfContents.map((item, idx) => (
               <React.Fragment key={idx}>
-                {item}
+                <span
+                  onClick={() => scrollToSection(item.id)}
+                  className={`${styles.link} hover:underline`}
+                >
+                  {item.text}
+                </span>
                 {idx < tableOfContents.length - 1 && <br />}
               </React.Fragment>
             ))}
@@ -397,7 +468,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 1 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-1">
         <h2 className={styles.heading2}>1. WHAT INFORMATION DO WE COLLECT?</h2>
         <div className={styles.section}>
           <div className="space-y-4">
@@ -478,7 +549,10 @@ function PrivacyPolicyPage() {
               in this way, we will collect certain profile information about you
               from the social media provider, as described in the section called
               &apos;
-              <span className={styles.link}>
+              <span
+                className={`${styles.link} hover:underline`}
+                onClick={() => scrollToSection("section-6")}
+              >
                 HOW DO WE HANDLE YOUR SOCIAL LOGINS?
               </span>
               &apos; below.
@@ -517,8 +591,8 @@ function PrivacyPolicyPage() {
                 (IP) address (or proxy server). If you are using our
                 application(s), Bubble may also collect information about the
                 phone network associated with your mobile device, your mobile
-                device&apos;s operating system or platform, the type of mobile
-                device you use, your mobile device&apos;s unique device ID, and
+                device&apos;s operating system or platform, the type of mobile device
+                you use, your mobile device&apos;s unique device ID, and
                 information about the features of our application(s) you
                 accessed.
               </li>
@@ -643,7 +717,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 2 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-2">
         <h2 className={styles.heading2}>
           2. HOW DO WE PROCESS YOUR INFORMATION?
         </h2>
@@ -695,7 +769,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 3 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-3">
         <h2 className={styles.heading2}>
           3. WHAT LEGAL BASES DO WE RELY ON TO PROCESS YOUR INFORMATION?
         </h2>
@@ -815,7 +889,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 4 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-4">
         <h2 className={styles.heading2}>
           4. WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
         </h2>
@@ -903,7 +977,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 5 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-5">
         <h2 className={styles.heading2}>
           5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?
         </h2>
@@ -933,7 +1007,10 @@ function PrivacyPolicyPage() {
             advertising, as defined under the applicable laws) under applicable
             US state laws, you can opt out of these online tracking technologies
             by submitting a request as described below under section &apos;
-            <span className={styles.link}>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-13")}
+            >
               DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
             </span>
             &apos;
@@ -978,7 +1055,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 6 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-6">
         <h2 className={styles.heading2}>
           6. HOW DO WE HANDLE YOUR SOCIAL LOGINS?
         </h2>
@@ -1008,7 +1085,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 7 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-7">
         <h2 className={styles.heading2}>
           7. IS YOUR INFORMATION TRANSFERRED INTERNATIONALLY?
         </h2>
@@ -1021,7 +1098,10 @@ function PrivacyPolicyPage() {
           information may be transferred to, stored, and processed by us in our
           facilities and by those third parties with whom we may share your
           personal information (see &apos;
-          <span className={styles.link}>
+          <span
+            className={`${styles.link} hover:underline`}
+            onClick={() => scrollToSection("section-4")}
+          >
             WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
           </span>
           &apos; above), in the United States, and other countries.
@@ -1051,7 +1131,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 8 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-8">
         <h2 className={styles.heading2}>
           8. HOW LONG DO WE KEEP YOUR INFORMATION?
         </h2>
@@ -1083,7 +1163,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 9 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-9">
         <h2 className={styles.heading2}>
           9. HOW DO WE KEEP YOUR INFORMATION SAFE?
         </h2>
@@ -1107,7 +1187,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 10 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-10">
         <h2 className={styles.heading2}>
           10. DO WE COLLECT INFORMATION FROM MINORS?
         </h2>
@@ -1132,7 +1212,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 11 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-11">
         <h2 className={styles.heading2}>11. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
         <div className="space-y-4">
           <p className={styles.paragraph}>
@@ -1162,7 +1242,10 @@ function PrivacyPolicyPage() {
             the processing of your personal information. You can make such a
             request by contacting us using the contact details provided in the
             section &apos;
-            <span className={styles.link}>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-15")}
+            >
               HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
             </span>
             &apos; below.
@@ -1193,7 +1276,10 @@ function PrivacyPolicyPage() {
             on the applicable law, you have the right to withdraw your consent
             at any time. You can withdraw your consent at any time by contacting
             us using the contact details provided in the section &apos;
-            <span className={styles.link}>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-15")}
+            >
               HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
             </span>
             &apos; below or updating your preferences.
@@ -1212,7 +1298,10 @@ function PrivacyPolicyPage() {
             communications at any time by clicking on the unsubscribe link in
             the emails that we send, or by contacting us using the contact
             details provided in the section &apos;
-            <span className={styles.link}>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-15")}
+            >
               HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
             </span>
             &apos; below. You will then be removed from the marketing lists.
@@ -1260,7 +1349,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 12 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-12">
         <h2 className={styles.heading2}>
           12. CONTROLS FOR DO-NOT-TRACK FEATURES
         </h2>
@@ -1288,7 +1377,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 13 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-13">
         <h2 className={styles.heading2}>
           13. DO UNITED STATES RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?
         </h2>
@@ -1393,7 +1482,12 @@ function PrivacyPolicyPage() {
           <p className={styles.paragraph}>
             Learn more about the sources of personal information we collect in
             &apos;
-            <span className={styles.link}>WHAT INFORMATION DO WE COLLECT?</span>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-1")}
+            >
+              WHAT INFORMATION DO WE COLLECT?
+            </span>
             &apos;
           </p>
           <h3 className={styles.heading3}>
@@ -1402,7 +1496,10 @@ function PrivacyPolicyPage() {
           <p className="text-lg sm:text-2xl font-normal leading-relaxed">
             Learn about how we use your personal information in the section,
             &apos;
-            <span className={styles.link}>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-2")}
+            >
               HOW DO WE PROCESS YOUR INFORMATION?
             </span>
             &apos;
@@ -1419,7 +1516,10 @@ function PrivacyPolicyPage() {
             pursuant to a written contract between us and each service provider.
             Learn more about how we disclose personal information in the
             section, &apos;
-            <span className={styles.link}>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-4")}
+            >
               WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
             </span>
             &apos
@@ -1464,7 +1564,10 @@ function PrivacyPolicyPage() {
               information for a business or commercial purpose can be found
               under &apos;
             </span>
-            <span className={styles.link}>
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-4")}
+            >
               WHEN AND WITH WHOM DO WE SHARE YOUR PERSONAL INFORMATION?
             </span>
             <span className={styles.paragraph}>&apos;</span>
@@ -1602,19 +1705,19 @@ function PrivacyPolicyPage() {
             you are a California resident and would like to make such a request,
             please submit your request in writing to us by using the contact
             details provided in the section &apos;
-            <a
-              href="#how-can-you-contact-us-about-this-notice"
-              className={styles.link}
+            <span
+              className={`${styles.link} hover:underline`}
+              onClick={() => scrollToSection("section-15")}
             >
               HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
-            </a>
-            <span className={styles.paragraph}>&apos;</span>
+            </span>
+            &apos;
           </p>
         </div>
       </div>
 
       {/* Section 14 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-14">
         <h2 className={styles.heading2}>
           14. DO WE MAKE UPDATES TO THIS NOTICE?
         </h2>
@@ -1633,7 +1736,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 15 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-15">
         <h2 className={styles.heading2}>
           15.HOW CAN YOU CONTACT US ABOUT THIS NOTICE?
         </h2>
@@ -1661,7 +1764,7 @@ function PrivacyPolicyPage() {
       </div>
 
       {/* Section 16 */}
-      <div className={styles.section}>
+      <div className={styles.section} id="section-16">
         <h2 className={styles.heading2}>
           16. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM
           YOU?
