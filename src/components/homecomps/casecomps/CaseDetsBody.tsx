@@ -68,7 +68,7 @@ function CaseDetsBody({ caseBodyData }: { caseBodyData: CaseStudy }) {
           </h2>
           <div className="flex flex-row text-[#2a2829] text-sm sm:text-base font-plus-jakarta-sans gap-6 sm:gap-10">
             <a
-              href="https://www.facebook.com/company/recreax"
+              href="https://www.facebook.com/share/1LWZBE8jrV/"
               target="_blank"
               rel="noopener noreferrer"
               className="transform hover:scale-110 transition-transform duration-300"
@@ -77,7 +77,7 @@ function CaseDetsBody({ caseBodyData }: { caseBodyData: CaseStudy }) {
               <FaFacebook className="w-5 h-5 sm:w-6 sm:h-6 hover:fill-[#bce8ef] transition-colors duration-300" />
             </a>
             <a
-              href="https://www.x.com/recreax"
+              href="https://x.com/recreaxbusiness"
               target="_blank"
               rel="noopener noreferrer"
               className="transform hover:scale-110 transition-transform duration-300"
@@ -86,7 +86,7 @@ function CaseDetsBody({ caseBodyData }: { caseBodyData: CaseStudy }) {
               <FaXTwitter className="w-5 h-5 sm:w-6 sm:h-6 hover:fill-[#bce8ef] transition-colors duration-300" />
             </a>
             <a
-              href="https://www.instagram.com/recreax"
+              href="https://www.instagram.com/recreaxbusiness"
               target="_blank"
               rel="noopener noreferrer"
               className="transform hover:scale-110 transition-transform duration-300"
@@ -95,7 +95,7 @@ function CaseDetsBody({ caseBodyData }: { caseBodyData: CaseStudy }) {
               <FaInstagram className="w-5 h-5 sm:w-6 sm:h-6 hover:fill-[#bce8ef] transition-colors duration-300" />
             </a>
             <a
-              href="https://www.linkedin.com/company/recreax"
+              href="https://www.linkedin.com/showcase/recreax-for-business/"
               target="_blank"
               rel="noopener noreferrer"
               className="transform hover:scale-110 transition-transform duration-300"
@@ -177,20 +177,36 @@ function CaseDetsBody({ caseBodyData }: { caseBodyData: CaseStudy }) {
             {caseBodyData.outcome}
           </p>
           {/* Masonry/Bento Grid using CSS columns */}
-          <div className="columns-1 sm:columns-2 gap-4 mb-6">
-            {caseBodyData.outcomeImg.map((img, idx) => (
-              <div key={idx} className="mb-4 break-inside-avoid">
-                <Image
-                  src={img}
-                  alt={`Outcome visual ${idx + 1}`}
-                  width={600}
-                  height={400}
-                  unoptimized={true}
-                  className="w-full h-auto rounded-xl shadow-md object-cover"
-                />
-              </div>
-            ))}
-          </div>
+
+          {caseBodyData.outcomeImg.length === 1 ? (
+            <div className=" w-full h-auto">
+            <Image
+              src={caseBodyData.outcomeImg[0]}
+              width={907}
+              height={1038}
+
+              unoptimized={true}
+              quality={100}
+              alt="Outcome visual 1"
+              className="mb-6 h-auto w-full rounded  "
+            />
+            </div>
+          ) : (
+            <div className=" columns-1 gap-4 sm:columns-2">
+              {caseBodyData.outcomeImg.map((img, idx) => (
+                <div key={idx} className="mb-4 break-inside-avoid">
+                  <Image
+                    src={img}
+                    alt={`Outcome visual ${idx + 1}`}
+                    width={600}
+                    height={400}
+                    unoptimized
+                    className="h-auto w-full rounded-xl object-cover shadow-md"
+                  />
+                </div>
+              ))}
+            </div>
+          )}
           {/* Quote Block */}
           <blockquote className="bg-[#12233d] text-white p-12 gap-6 flex flex-col rounded-2xl ">
             <p className="italic text-lg mb-2">
