@@ -55,7 +55,7 @@ export const caseData: CaseStudy[] = [
     ],
     outcome:
       "The project was delivered on time and exceeded expectations. AudioCare now has a fully functional website that enhances their online credibility, simplifies content updates, and is optimized for discoverability. The client also received user documentation and post-launch support for smooth operations.",
-    outcomeImg: ["/images/audio/1.png", "/images/audio/2.png"],
+    outcomeImg: [ "/images/audio/e-1.png"],
     quote: {
       message:
         "I'm truly impressed by the dedication the team at ReCreaX showed during this project. They managed to build an incredible platform that showcases my business, within a tight deadline. Their hard work and expertise really made a difference.",

@@ -81,7 +81,7 @@ function AccelFAQ() {
         </h2>
       </motion.div>
       <motion.div variants={itemVariants} className="w-full ">
-        <Accordion type="multiple" className="bg-transparent">
+        <Accordion type="single" className="bg-transparent">
           {questions.map((question) => (
             <AccordionItem
               key={question.question}
