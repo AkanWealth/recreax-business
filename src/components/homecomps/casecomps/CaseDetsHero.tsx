@@ -56,7 +56,7 @@ function CaseDetsHero({ caseHeroData }: { caseHeroData: CaseStudy }) {
         <p className="text-sm md:text-base w-full font-normal leading-[148%] tracking-normal align-middle font-plus-jakarta-sans">
           {caseHeroData.description}
         </p>
-        <div className="flex w-full flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0">
+        <div className="hidden w-full flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-0">
           <div className="flex flex-row items-center gap-2">
             <Image
               src={caseHeroData.authorImage}

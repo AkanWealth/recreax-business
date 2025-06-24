@@ -56,7 +56,7 @@ function Products() {
         Startups Trust Us. Founders Rely on Us. <br />
         <span className="text-[#12233d]">Products Launch with Us</span>
       </h2>
-      <div className="grid grid-cols-1 w-full sm:grid-cols-2 gap-20">
+      <div className="grid grid-cols-1 w-full justify-items-center sm:grid-cols-2 gap-20">
         {products.map((product, index) => (
           <ProductCard
             key={index}

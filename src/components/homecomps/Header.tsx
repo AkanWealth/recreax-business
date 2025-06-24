@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 
 import { PiBuilding } from "react-icons/pi";
 import { FaRegAddressCard } from "react-icons/fa";
-import { MdWeb } from "react-icons/md";
-import { IoMailUnreadOutline } from "react-icons/io5";
+// import { MdWeb } from "react-icons/md";
+// import { IoMailUnreadOutline } from "react-icons/io5";
 
 // import { BsNewspaper } from "react-icons/bs";
 
@@ -123,7 +123,7 @@ function Header() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger className="focus-visible:outline-none">
               <div className="flex items-center h-fit gap-1 md:gap-2">
                 <p className="font-medium font-plus-jakarta-sans text-xs sm:text-sm text-gray-950">
@@ -133,24 +133,7 @@ function Header() {
               </div>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-[280px] sm:w-[320px] md:w-[360px]">
-              {/* <DropdownMenuItem className="flex flex-row gap-3 items-center justify-start ">
-                <Link
-                  href="/case-studies"
-                  className="flex flex-row gap-3 items-center justify-start "
-                >
-                  <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
-                    <BsNewspaper className="w-5 h-5 text-[#003267]" />
-                  </div>
-                  <div className="flex flex-col gap-1 items-start justify-start">
-                    <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
-                      Case Studies
-                    </p>
-                    <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
-                      See how founders launched and scaled with ReCreaX{" "}
-                    </p>
-                  </div>
-                </Link>
-              </DropdownMenuItem> */}
+         
               <DropdownMenuItem>
                 <Link
                   href="/blog"
@@ -205,9 +188,9 @@ function Header() {
                     </p>
                   </div>
                 </Link>
-              </DropdownMenuItem> */}
+              </DropdownMenuItem> 
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </div>
 
         {/* Mobile Menu Button */}
@@ -294,86 +277,86 @@ function Header() {
               </Accordion>
 
               {/* Mobile Resources Dropdown */}
-              <Accordion type="single" collapsible>
-                <AccordionItem value="item-2">
-                  <AccordionTrigger className="focus-visible:outline-none py-0">
-                    <p className="font-medium font-plus-jakarta-sans text-sm text-gray-950">
-                      Resources
-                    </p>
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    <div className="p-4 bg-white rounded-lg flex flex-col gap-2">
-                      {/* <Link
-                        href="/case-studies"
-                        className="flex flex-row gap-3 items-center justify-start "
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
-                          <BsNewspaper className="w-5 h-5 text-[#003267]" />
-                        </div>
-                        <div className="flex flex-col gap-1 items-start justify-start">
-                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
-                            Case Studies
-                          </p>
-                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
-                            See how founders launched and scaled with ReCreaX
-                          </p>
-                        </div>
-                      </Link> */}
-                      <Link
-                        href="/blog"
-                        className="flex flex-row gap-3 items-center justify-start "
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
-                          <MdWeb className="w-5 h-5 text-[#003267]" />
-                        </div>
-                        <div className="flex flex-col gap-1 items-start justify-start">
-                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
-                            Blog
-                          </p>
-                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
-                            Weekly insights to help you build smarter
-                          </p>
-                        </div>
-                      </Link>
-                      <p
-                        className="flex flex-row gap-3 items-center justify-start "
-                        onClick={() => setIsModalOpen(true)}
-                      >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
-                          <IoMailUnreadOutline className="w-5 h-5 text-[#003267]" />
-                        </div>
-                        <div className="flex flex-col gap-1 items-start justify-start">
-                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
-                            Newsletter
-                          </p>
-                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
-                            Get curated founder tips in your inbox
-                          </p>
-                        </div>
+              {/* <Accordion type="single" collapsible>
+                  <AccordionItem value="item-2">
+                    <AccordionTrigger className="focus-visible:outline-none py-0">
+                      <p className="font-medium font-plus-jakarta-sans text-sm text-gray-950">
+                        Resources
                       </p>
-                      {/* <Link
-                        href="/playbooks"
-                        className="flex flex-row gap-3 items-center justify-start "
-                        onClick={() => setIsMobileMenuOpen(false)}
-                      >
-                        <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
-                          <PiBookOpenTextLight className="w-5 h-5 text-[#003267]" />
-                        </div>
-                        <div className="flex flex-col gap-1 items-start justify-start">
-                          <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
-                            Playbooks
-                          </p>
-                          <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
-                            Step-by-step guides for product execution
-                          </p>
-                        </div>
-                      </Link> */}
-                    </div>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
+                    </AccordionTrigger>
+                    <AccordionContent>
+                      <div className="p-4 bg-white rounded-lg flex flex-col gap-2">
+                         <Link
+                          href="/case-studies"
+                          className="flex flex-row gap-3 items-center justify-start "
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                            <BsNewspaper className="w-5 h-5 text-[#003267]" />
+                          </div>
+                          <div className="flex flex-col gap-1 items-start justify-start">
+                            <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                              Case Studies
+                            </p>
+                            <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                              See how founders launched and scaled with ReCreaX
+                            </p>
+                          </div>
+                        </Link> 
+                        <Link
+                          href="/blog"
+                          className="flex flex-row gap-3 items-center justify-start "
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                            <MdWeb className="w-5 h-5 text-[#003267]" />
+                          </div>
+                          <div className="flex flex-col gap-1 items-start justify-start">
+                            <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                              Blog
+                            </p>
+                            <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                              Weekly insights to help you build smarter
+                            </p>
+                          </div>
+                        </Link>
+                        <p
+                          className="flex flex-row gap-3 items-center justify-start "
+                          onClick={() => setIsModalOpen(true)}
+                        >
+                          <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                            <IoMailUnreadOutline className="w-5 h-5 text-[#003267]" />
+                          </div>
+                          <div className="flex flex-col gap-1 items-start justify-start">
+                            <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                              Newsletter
+                            </p>
+                            <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                              Get curated founder tips in your inbox
+                            </p>
+                          </div>
+                        </p>
+                         <Link
+                          href="/playbooks"
+                          className="flex flex-row gap-3 items-center justify-start "
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <div className=" bg-blue-100 text-clickable-text w-8 h-8 p-1 flex items-center justify-center  rounded-full">
+                            <PiBookOpenTextLight className="w-5 h-5 text-[#003267]" />
+                          </div>
+                          <div className="flex flex-col gap-1 items-start justify-start">
+                            <p className="text-sm font-medium font-plus-jakarta-sans text-gray-950">
+                              Playbooks
+                            </p>
+                            <p className="text-xs whitespace-nowrap font-plus-jakarta-sans text-[#65605c]">
+                              Step-by-step guides for product execution
+                            </p>
+                          </div>
+                        </Link> 
+                      </div>
+                    </AccordionContent>
+                  </AccordionItem>
+                </Accordion> */}
 
               <Button
                 onClick={() =>
