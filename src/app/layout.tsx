@@ -108,8 +108,8 @@ const tomato = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Recreax Buisness",
-  description: "Recreax Buisness",
+  title: "ReCreax Business",
+  description: "ReCreax Business",
 
 };
 
