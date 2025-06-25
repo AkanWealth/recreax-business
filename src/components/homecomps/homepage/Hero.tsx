@@ -26,7 +26,7 @@ function Hero() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="relative z-10 flex flex-col gap-6 sm:gap-8 items-center justify-center w-full px-4 py-8 sm:py-16"
+        className="relative z-10 flex flex-col gap-6 sm:gap-8 items-center justify-center w-full px-4 py-8 sm:py-16 lg:mt-20"
       >
         <div className="flex flex-row flex-wrap w-full gap-2 sm:gap-4 items-center justify-center text-center font-tomato text-3xl sm:text-[64px] max-w-[1000px] font-semibold">
           <motion.span
@@ -99,19 +99,18 @@ function Hero() {
           transition={{ delay: 1.4 }}
           className="flex flex-col sm:flex-row gap-4 sm:gap-8"
         >
-          <Link href="/book-a-call">
-            <Button
-              onClick={() =>
-                window.open(
-                  "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
-                  "_blank"
-                )
-              }
-              className="px-6 py-4 rounded-xl font-plus-jakarta-sans font-medium text-base text-center bg-[#12233d] text-white hover:bg-[#1a2f4d] transition-colors duration-300 w-full sm:w-auto"
-            >
-              Book a Free 1:1 Session
-            </Button>
-          </Link>
+          <Button
+            onClick={() =>
+              window.open(
+                "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
+                "_blank"
+              )
+            }
+            className="px-6 py-4 rounded-xl font-plus-jakarta-sans font-medium text-base text-center bg-[#12233d] text-white hover:bg-[#1a2f4d] transition-colors duration-300 w-full sm:w-auto"
+          >
+            Book a Free 1:1 Session
+          </Button>
+
           <Link href="/case-studies">
             <Button className="border-2 bg-transparent border-[#12233d] p-4 rounded-xl text-base font-medium font-plus-jakarta-sans text-[#12233d] hover:bg-[#12233d] hover:text-white transition-all duration-300 w-full sm:w-auto">
               See Our Work

@@ -43,8 +43,8 @@ function Header() {
   }, [pathname]);
 
   return (
-    <nav className=" sticky top-0 left-0 right-0 z-50 w-full py-0 px-0 sm:py-4 sm:px-8 md:py-8 md:px-12 lg:py-10 lg:px-20 bg-transparent">
-      <div className="flex shadow-md px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 bg-white h-fit w-full sm:rounded-full items-center justify-between">
+    <nav className=" sticky top-0 left-0 right-0 z-50 w-full py-0 px-0 sm:py-4 sm:p-8   bg-white">
+      <div className="flex px-4 sm:px-6 md:px-8 lg:px-12 py-4 sm:py-5 bg-white h-fit w-full  items-center justify-between">
         <Link href="/">
           <Image
             unoptimized={true}
