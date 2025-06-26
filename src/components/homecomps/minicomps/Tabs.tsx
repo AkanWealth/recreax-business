@@ -24,7 +24,7 @@ const Tabs: React.FC<TabsProps> = ({ categories, active, onChange }) => (
         key={cat}
         className={`
           px-3 py-1 sm:px-5 sm:py-2 rounded-full font-medium
-          text-xs sm:text-sm transition-colors
+          text-xs sm:text-sm transition-colors cursor-pointer
           ${
             active === cat
               ? "bg-[#7ee3f0] text-[#12233d]"

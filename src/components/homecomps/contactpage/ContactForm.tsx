@@ -197,7 +197,7 @@ function ContactForm() {
               onClick={handleSubmit}
               className={`font-plus-jakarta-sans font-semibold text-base flex items-center gap-2 p-4 rounded-xl transition-all duration-300 transform hover:scale-105 ${
                 isFormValid
-                  ? "bg-[#12233d] hover:bg-[#38547b] text-white shadow-lg hover:shadow-xl"
+                  ? "bg-[#12233d] hover:bg-[#38547b] text-white shadow-lg hover:shadow-xl cursor-pointer"
                   : "bg-gray-500/40 text-white cursor-not-allowed"
               }`}
             >

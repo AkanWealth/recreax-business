@@ -116,7 +116,7 @@ function IconInput({
             <button
               type="button"
               onClick={togglePasswordVisibility}
-              className="absolute right-3 top-3 text-gray-400 text-md focus:outline-none"
+              className="absolute right-3 top-3 text-gray-400 text-md focus:outline-none cursor-pointer"
             >
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>

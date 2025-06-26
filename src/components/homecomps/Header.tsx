@@ -195,7 +195,7 @@ function Header() {
 
         {/* Mobile Menu Button */}
         <button
-          className="sm:hidden p-2"
+          className="sm:hidden p-2 cursor-pointer"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -365,7 +365,7 @@ function Header() {
                     "_blank"
                   )
                 }
-                className="bg-[#12233d] text-sm font-medium rounded-lg py-[12px] px-4 hover:bg-[#12233d]/80 text-white w-full"
+                className="bg-[#12233d] text-sm font-medium rounded-lg py-[12px] px-4 hover:bg-[#12233d]/80 text-white w-full cursor-pointer"
               >
                 Book a Free 1:1 Session
               </Button>
@@ -381,7 +381,7 @@ function Header() {
               "_blank"
             )
           }
-          className="hidden items-center justify-center sm:flex bg-[#12233d] rounded-lg py-[8px] sm:py-[10px] px-2 sm:px-3 hover:bg-[#12233d]/80 text-white text-xs sm:text-sm"
+          className="hidden items-center justify-center sm:flex bg-[#12233d] rounded-lg py-[8px] sm:py-[10px] px-2 sm:px-3 hover:bg-[#12233d]/80 text-white text-xs sm:text-sm cursor-pointer"
         >
           Book a Free 1:1 Session
         </Button>

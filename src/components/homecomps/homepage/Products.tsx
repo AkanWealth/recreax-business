@@ -72,7 +72,7 @@ function Products() {
       </div>
 
       <Link href="/case-studies">
-        <Button className="bg-[#12233d] font-plus-jakarta-sans font-semibold text-base p-4 text-white px-10 py-4 rounded-[8px]">
+        <Button className="bg-[#12233d] font-plus-jakarta-sans font-semibold text-base p-4 text-white px-10 py-4 rounded-[8px] cursor-pointer">
           View all Case Studies{" "}
           <HiArrowRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white" />
         </Button>

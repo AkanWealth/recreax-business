@@ -85,7 +85,7 @@ const BlogSubDisplay: React.FC<BlogSubDisplayProps> = ({
               whileHover={{ scale: 1.05, backgroundColor: "#1e40af" }}
               whileTap={{ scale: 0.97 }}
               onClick={onLoadMore}
-              className="px-6 py-2 bg-blue-900 text-white rounded-lg transition-colors duration-200"
+              className="px-6 py-2 bg-blue-900 text-white rounded-lg transition-colors duration-200 cursor-pointer"
             >
               Load more
             </motion.button>

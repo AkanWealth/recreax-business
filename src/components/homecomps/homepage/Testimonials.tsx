@@ -147,7 +147,7 @@ function Testimonials() {
         <div className="flex justify-end gap-3 sm:gap-[10px] w-full">
           <button
             onClick={handlePrevious}
-            className="bg-[#12233d] text-white py-[7px] px-[10px] rounded-[8px] sm:py-2 sm:px-3  hover:bg-[#38547b] transition-colors"
+            className="bg-[#12233d] text-white py-[7px] px-[10px] rounded-[8px] sm:py-2 sm:px-3  hover:bg-[#38547b] transition-colors cursor-pointer"
             aria-label="Previous testimonial"
           >
             <HiArrowLongLeft className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white text-white bor" />
@@ -155,7 +155,7 @@ function Testimonials() {
 
           <button
             onClick={handleNext}
-            className="bg-[#12233d] text-white py-[7px] px-[10px] rounded-[8px] sm:py-2 sm:px-3  hover:bg-[#38547b] transition-colors"
+            className="bg-[#12233d] text-white py-[7px] px-[10px] rounded-[8px] sm:py-2 sm:px-3  hover:bg-[#38547b] transition-colors cursor-pointer"
             aria-label="Next testimonial"
           >
             <HiArrowLongRight className="w-5 h-5 sm:w-6 sm:h-6 stroke-white fill-white text-white bor" />
