@@ -230,7 +230,7 @@ function Header() {
               {/* Mobile Company Dropdown */}
               <Accordion type="single" collapsible>
                 <AccordionItem value="item-1">
-                  <AccordionTrigger className="focus-visible:outline-none py-0 no-underline">
+                  <AccordionTrigger className="focus-visible:outline-none py-0 no-underline cursor-pointer">
                     <p className="font-medium font-plus-jakarta-sans text-sm text-gray-950">
                       Company
                     </p>
