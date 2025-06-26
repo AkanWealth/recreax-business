@@ -44,7 +44,7 @@ function Hero() {
           >
             <Image
               unoptimized={true}
-              src="/images/hero-light.png"
+              src="/images/hero-light.svg"
               alt="People"
               width={70}
               height={70}

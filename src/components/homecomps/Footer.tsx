@@ -54,7 +54,6 @@ function Footer() {
           </div>
           <div className="flex flex-col-reverse sm:flex-col w-fit gap-2">
             <div className="flex flex-row gap-8">
-           
               <Link
                 href={"/privacy-policy"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-plus-jakarta-sans"
@@ -110,7 +109,7 @@ function Footer() {
               >
                 Book a Free 1:1
               </Link>
-        
+
               <Link
                 href={"/about-us"}
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
@@ -149,7 +148,7 @@ function Footer() {
                 Playbook
               </Link>
               <p
-                className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
+                className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans cursor-pointer"
                 onClick={() => setIsModalOpen(true)}
               >
                 Newsletter
@@ -224,7 +223,7 @@ function Footer() {
               Playbook
             </Link>
             <p
-              className="text-white hover:text-[#bce8ef] transition-colors duration-300   text-sm sm:text-base font-normal font-plus-jakarta-sans"
+              className="text-white hover:text-[#bce8ef] transition-colors duration-300   text-sm sm:text-base font-normal font-plus-jakarta-sans cursor-pointer"
               onClick={() => setIsModalOpen(true)}
             >
               Newsletter
