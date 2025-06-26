@@ -106,13 +106,13 @@ function Hero() {
                 "_blank"
               )
             }
-            className="px-6 py-4 rounded-xl font-plus-jakarta-sans font-medium text-base text-center bg-[#12233d] text-white hover:bg-[#1a2f4d] transition-colors duration-300 w-full sm:w-auto"
+            className="px-6 py-4 rounded-xl font-plus-jakarta-sans font-medium text-base text-center bg-[#12233d] text-white hover:bg-[#1a2f4d] transition-colors duration-300 w-full sm:w-auto cursor-pointer"
           >
             Book a Free 1:1 Session
           </Button>
 
           <Link href="/case-studies">
-            <Button className="border-2 bg-transparent border-[#12233d] p-4 rounded-xl text-base font-medium font-plus-jakarta-sans text-[#12233d] hover:bg-[#12233d] hover:text-white transition-all duration-300 w-full sm:w-auto">
+            <Button className="border-2 bg-transparent border-[#12233d] p-4 rounded-xl text-base font-medium font-plus-jakarta-sans text-[#12233d] hover:bg-[#12233d] hover:text-white transition-all duration-300 w-full sm:w-auto cursor-pointer">
               See Our Work
             </Button>
           </Link>

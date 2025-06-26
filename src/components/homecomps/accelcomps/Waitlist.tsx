@@ -292,7 +292,7 @@ function Waitlist() {
             onClick={handleSubmit}
             className={`font-plus-jakarta-sans text-center items-center justify-center font-semibold text-sm sm:text-base flex gap-2 p-3 sm:p-4 rounded-xl transition-all duration-300 transform hover:scale-105 w-full ${
               isFormValid
-                ? "bg-[#12233d] hover:bg-[#38547b] text-white shadow-lg hover:shadow-xl"
+                ? "bg-[#12233d] hover:bg-[#38547b] text-white shadow-lg hover:shadow-xl cursor-pointer"
                 : "bg-gray-500/40 text-white cursor-not-allowed"
             }`}
           >
@@ -330,7 +330,7 @@ function Waitlist() {
               </div>
               <button
                 onClick={() => router.push("/")}
-                className="bg-[#12233d] w-full rounded-2xl text-sm sm:text-base font-semibold leading-[148%] font-plus-jakarta-sans text-white px-4 p-3 sm:p-4 text-center hover:bg-[#38547b] transition-colors duration-300"
+                className="bg-[#12233d] w-full rounded-2xl text-sm sm:text-base font-semibold leading-[148%] font-plus-jakarta-sans text-white px-4 p-3 sm:p-4 text-center hover:bg-[#38547b] transition-colors duration-300 cursor-pointer"
               >
                 Home Page
               </button>

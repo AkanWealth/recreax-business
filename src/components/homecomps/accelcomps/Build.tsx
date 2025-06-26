@@ -21,7 +21,7 @@ function Build() {
         <div className="animate-slideUp">
           <Button
             onClick={() => router.push("/studio/waitlist")}
-            className="bg-[#00ffff] w-fit group hover:bg-[#aeffff] px-4 py-3 md:px-5 md:py-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-sm md:text-base"
+            className="bg-[#00ffff] w-fit group hover:bg-[#aeffff] px-4 py-3 md:px-5 md:py-4 rounded-lg flex flex-row gap-1 text-[#12233d] font-semibold font-plus-jakarta-sans text-sm md:text-base cursor-pointer"
           >
             Join the Waitlist{" "}
             <span className="animate-bounce">

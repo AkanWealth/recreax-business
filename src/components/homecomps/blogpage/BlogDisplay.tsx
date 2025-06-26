@@ -148,7 +148,7 @@ function BlogDisplay() {
           {tabs.map((tab) => (
             <button
               key={tab.value}
-              className={`relative px-4 py-2 rounded-2xl font-medium text-base md:text-lg font-plus-jakarta-sans transition-colors duration-300
+              className={`relative px-4 py-2 rounded-2xl font-medium text-base md:text-lg font-plus-jakarta-sans transition-colors duration-300 cursor-pointer
                 ${
                   activeTab === tab.value
                     ? "bg-[#12233d] text-white"

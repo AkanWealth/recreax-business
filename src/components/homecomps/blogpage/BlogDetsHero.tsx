@@ -21,7 +21,7 @@ function BlogDetsHero({ blogHeroData }: { blogHeroData: BlogPost }) {
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 0.2 }}
         onClick={() => router.back()}
-        className="flex items-center gap-2 self-start mb-4 text-[#2a2829] hover:text-[#bce8ef] transition-colors duration-300 font-plus-jakarta-sans text-base md:text-lg font-medium"
+        className="flex items-center gap-2 self-start mb-4 text-[#2a2829] hover:text-[#bce8ef] transition-colors duration-300 font-plus-jakarta-sans text-base md:text-lg font-medium cursor-pointer"
       >
         <span className="text-xl">←</span>
         Back

@@ -96,7 +96,7 @@ function NewsModal({
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => onOpenChange(false)}
-                className="text-gray-500 hover:text-gray-700 text-xl"
+                className="text-gray-500 hover:text-gray-700 text-xl cursor-pointer"
               >
                 ✕
               </motion.button>
@@ -158,10 +158,10 @@ function NewsModal({
                     <Button
                       disabled={!isValid}
                       onClick={handleSubscribe}
-                      className="w-full disabled:bg-gray-500 hover:bg-[#38547b] bg-[#12233d] text-white"
+                      className="w-full disabled:bg-gray-500 hover:bg-[#38547b] bg-[#12233d] text-white cursor-pointer"
                     >
                       {isLoading ? (
-                        <FaSpinner className="animate-spin mr-2" />
+                        <FaSpinner className="animate-spin mr-2 cursor-progress" />
                       ) : (
                         "Subscribe Now"
                       )}

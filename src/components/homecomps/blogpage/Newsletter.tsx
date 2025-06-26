@@ -95,7 +95,7 @@ function Newsletter() {
         <Button
           type="submit"
           size={"lg"}
-          className="w-full sm:w-auto bg-[#12233d] hover:bg-[#1e3a64] text-white rounded-xl font-plus-jakarta-sans font-semibold text-base transition-all duration-300"
+          className="w-full sm:w-auto bg-[#12233d] hover:bg-[#1e3a64] text-white rounded-xl font-plus-jakarta-sans font-semibold text-base transition-all duration-300 cursor-pointer"
           disabled={isSubmitting}
         >
           {isSubmitting ? (
