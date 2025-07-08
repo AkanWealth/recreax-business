@@ -136,7 +136,9 @@ function Footer() {
                 Case Studies
               </Link>
               <Link
-                href={"/blog"}
+                href={"https://blog.recreax.com/blog/"}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
               >
                 Blog
@@ -211,11 +213,13 @@ function Footer() {
               Case Studies
             </Link>
             <Link
-              href={"/blog"}
-              className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
-            >
-              Blog
-            </Link>
+                href={"https://blog.recreax.com/blog/"}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
+              >
+                Blog
+              </Link>
             <Link
               href={"/blog/playbook"}
               className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
