@@ -108,9 +108,9 @@ const tomato = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ReCreax Business",
-  description: "ReCreax Business",
-
+  title: "ReCreaX | Product Development Partner for Fast Launch",
+  description:
+    "ReCreaX helps startups and lean teams turn ideas into real products. Launch faster with full stack product teams handling strategy, design, and development.",
 };
 
 export default function RootLayout({
