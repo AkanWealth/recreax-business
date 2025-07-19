@@ -6,12 +6,12 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 
-import { PiBuilding } from "react-icons/pi";
+import { PiBookOpenTextLight, PiBuilding } from "react-icons/pi";
 import { FaRegAddressCard } from "react-icons/fa";
-// import { MdWeb } from "react-icons/md";
-// import { IoMailUnreadOutline } from "react-icons/io5";
+import { MdWeb } from "react-icons/md";
+import { IoMailUnreadOutline } from "react-icons/io5";
 
-// import { BsNewspaper } from "react-icons/bs";
+import { BsNewspaper } from "react-icons/bs";
 
 // import { Button } from "../ui/button";
 import {
@@ -123,7 +123,7 @@ function Header() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          {/* <DropdownMenu>
+          <DropdownMenu>
             <DropdownMenuTrigger className="focus-visible:outline-none">
               <div className="flex items-center h-fit gap-1 md:gap-2">
                 <p className="font-medium font-plus-jakarta-sans text-xs sm:text-sm text-gray-950">
@@ -171,7 +171,7 @@ function Header() {
                 </div>
               </DropdownMenuItem>
 
-              {/* <DropdownMenuItem>
+              <DropdownMenuItem>
                 <Link
                   href="/playbooks"
                   className="flex flex-row gap-3 items-center justify-start "
@@ -190,7 +190,7 @@ function Header() {
                 </Link>
               </DropdownMenuItem> 
             </DropdownMenuContent>
-          </DropdownMenu> */}
+          </DropdownMenu> 
         </div>
 
         {/* Mobile Menu Button */}
