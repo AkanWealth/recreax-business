@@ -277,7 +277,7 @@ function Header() {
               </Accordion>
 
               {/* Mobile Resources Dropdown */}
-              {/* <Accordion type="single" collapsible>
+              <Accordion type="single" collapsible>
                   <AccordionItem value="item-2">
                     <AccordionTrigger className="focus-visible:outline-none py-0">
                       <p className="font-medium font-plus-jakarta-sans text-sm text-gray-950">
@@ -356,7 +356,7 @@ function Header() {
                       </div>
                     </AccordionContent>
                   </AccordionItem>
-                </Accordion> */}
+                </Accordion>
 
               <Button
                 onClick={() =>
@@ -370,7 +370,7 @@ function Header() {
                 Book a Free 1:1 Session
               </Button>
             </div>
-          </div>
+          </div> 
         )}
 
         {/* Desktop Button */}
