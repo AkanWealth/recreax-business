@@ -15,6 +15,7 @@ const initialFounderPosts: BlogCardProps[] = [
     readTime: "5 min read",
     type: "founder",
     category: "Founder Playbooks",
+    slug: "zero-to-mvp-checklist-first-time-founders-2",
   },
   {
     image: "/images/newsletter.png",
@@ -24,6 +25,7 @@ const initialFounderPosts: BlogCardProps[] = [
     readTime: "5 min read",
     type: "founder",
     category: "Founder Playbooks",
+    slug: "zero-to-mvp-checklist-first-time-founders-2",
   },
   {
     image: "/images/newsletter.png",
@@ -33,6 +35,7 @@ const initialFounderPosts: BlogCardProps[] = [
     readTime: "5 min read",
     type: "founder",
     category: "Founder Playbooks",
+    slug: "zero-to-mvp-checklist-first-time-founders-2",
   },
   {
     image: "/images/newsletter.png",
@@ -42,6 +45,7 @@ const initialFounderPosts: BlogCardProps[] = [
     readTime: "5 min read",
     type: "founder",
     category: "Founder Playbooks",
+    slug: "zero-to-mvp-checklist-first-time-founders-2",
   },
 ];
 function Page() {

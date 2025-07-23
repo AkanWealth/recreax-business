@@ -31,7 +31,7 @@ const BlogSubDisplay: React.FC<BlogSubDisplayProps> = ({
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: i * 0.08, type: "spring", stiffness: 60 },
+      transition: { delay: i * 0.08, type: "spring" as const, stiffness: 60 },
     }),
   };
 

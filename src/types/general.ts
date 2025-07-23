@@ -38,6 +38,7 @@ interface BlogCardProps {
   description: string;
   date: string;
   readTime: string;
+  slug: string;
   type: "founder" | "executive" | "case study" | string;
   category: string;
 }
