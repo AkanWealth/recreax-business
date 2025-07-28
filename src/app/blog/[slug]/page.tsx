@@ -180,7 +180,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-// ✅ FIXED: Added await when accessing params
 export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = await params; // Added 'await' here
   const post = await getBlogPost(slug);

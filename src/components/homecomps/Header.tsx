@@ -6,12 +6,12 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { usePathname } from "next/navigation";
 
-import { PiBookOpenTextLight, PiBuilding } from "react-icons/pi";
+import { PiBuilding } from "react-icons/pi";
 import { FaRegAddressCard } from "react-icons/fa";
-import { MdWeb } from "react-icons/md";
-import { IoMailUnreadOutline } from "react-icons/io5";
+// import { MdWeb } from "react-icons/md";
+// import { IoMailUnreadOutline } from "react-icons/io5";
 
-import { BsNewspaper } from "react-icons/bs";
+// import { BsNewspaper } from "react-icons/bs";
 
 // import { Button } from "../ui/button";
 import {
