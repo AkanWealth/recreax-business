@@ -124,7 +124,7 @@ function Header() {
             </DropdownMenuContent>
           </DropdownMenu>
           <DropdownMenu>
-            <DropdownMenuTrigger className="focus-visible:outline-none">
+            {/* <DropdownMenuTrigger className="focus-visible:outline-none">
               <div className="flex items-center h-fit gap-1 md:gap-2">
                 <p className="font-medium font-plus-jakarta-sans text-xs sm:text-sm text-gray-950">
                   Resources
@@ -189,7 +189,7 @@ function Header() {
                   </div>
                 </Link>
               </DropdownMenuItem> 
-            </DropdownMenuContent>
+            </DropdownMenuContent> */}
           </DropdownMenu> 
         </div>
 
@@ -277,7 +277,7 @@ function Header() {
               </Accordion>
 
               {/* Mobile Resources Dropdown */}
-              <Accordion type="single" collapsible>
+              {/* <Accordion type="single" collapsible>
                   <AccordionItem value="item-2">
                     <AccordionTrigger className="focus-visible:outline-none py-0">
                       <p className="font-medium font-plus-jakarta-sans text-sm text-gray-950">
@@ -356,7 +356,7 @@ function Header() {
                       </div>
                     </AccordionContent>
                   </AccordionItem>
-                </Accordion>
+                </Accordion> */}
 
               <Button
                 onClick={() =>
