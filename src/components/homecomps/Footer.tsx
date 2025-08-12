@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import NewsModal from "@/components/homecomps/blogpage/NewsModal";
 // import { useRouter } from "next/navigation";
@@ -25,7 +25,7 @@ function Footer() {
             Let turn your idea into reality and launch faster
           </p>
         </div>
-        <Button
+        {/* <Button
           onClick={() =>
             window.open(
               "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
@@ -36,7 +36,7 @@ function Footer() {
         >
           Book a call with Us!{" "}
           <ArrowRight className="w-4 h-4 group-hover:translate-x-1  transition-transform duration-700 ease-in-out" />
-        </Button>
+        </Button> */}
       </div>
       <div className="grid grid-cols-1 gap-6 sm:flex sm:flex-row justify-between mt-8">
         <div className="flex flex-col items-start justify-start gap-6 sm:gap-14 col-span-1 sm:col-auto">
@@ -101,14 +101,14 @@ function Footer() {
               >
                 Studio
               </Link>
-              <Link
+              {/* <Link
                 href={"https://calendly.com/rasheed-ogunbakinde-recreax/30min"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
               >
                 Book a Free 1:1
-              </Link>
+              </Link> */}
 
               <Link
                 href={"/about-us"}
@@ -178,14 +178,14 @@ function Footer() {
             >
               Studio
             </Link>
-            <Link
+            {/* <Link
               href={"https://calendly.com/rasheed-ogunbakinde-recreax/30min"}
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-[#bce8ef] transition-colors duration-300 text-sm sm:text-base font-normal font-plus-jakarta-sans"
             >
               Book a Free 1:1
-            </Link>
+            </Link> */}
 
             <Link
               href={"/about-us"}
