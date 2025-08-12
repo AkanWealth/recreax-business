@@ -43,7 +43,7 @@ function ContactHero() {
           hear from you.
         </p>
       </motion.div>
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
@@ -58,7 +58,7 @@ function ContactHero() {
             info@recreax.com
           </span>
         </motion.p>
-        {/* <motion.p
+        <motion.p
           whileHover={{ scale: 1.05 }}
           className="flex flex-col gap-2 items-center sm:items-start justify-start w-fit text-white text-xl sm:text-2xl font-tomato font-semibold"
         >
@@ -66,7 +66,7 @@ function ContactHero() {
           <span className="text-white text-base sm:text-lg font-plus-jakarta-sans font-normal">
             +2348086929001
           </span>
-        </motion.p> */}
+        </motion.p>
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
           <Button
             onClick={() =>
@@ -81,7 +81,7 @@ function ContactHero() {
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-700 ease-in-out" />
           </Button>
         </motion.div>
-      </motion.div>
+      </motion.div> */}
     </motion.div>
   );
 }
