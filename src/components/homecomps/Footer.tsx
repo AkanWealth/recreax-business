@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import NewsModal from "@/components/homecomps/blogpage/NewsModal";
 // import { useRouter } from "next/navigation";

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import { PhoneInput } from "@/components/genui/PhoneInput";
 import InputEle from "@/components/genui/InputEle";
 import { HiArrowRight } from "react-icons/hi2";
-import { CheckCircle } from "lucide-react";
+// import { CheckCircle } from "lucide-react";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -206,7 +206,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   Thanks for reaching out!
                 </h2>
                 <p className="text-gray-600 text-sm">
-                  We've received your consultation request. Our team will get back to you within 24 hours to schedule your free 1:1 session.
+                  We&apos;ve received your consultation request. Our team will get back to you within 24 hours to schedule your free 1:1 session.
                 </p>
               </div>
               <div className="bg-[#12233D] rounded-lg p-4 mb-4">
@@ -235,7 +235,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                   Book a Free 1:1 Session
                 </h2>
                 <p className="text-gray-600">
-                  Let's discuss your project, idea, or challenge. Fill in the details so we can prepare and make the most of our session.
+                  Let&apos;s discuss your project, idea, or challenge. Fill in the details so we can prepare and make the most of our session.
                 </p>
               </div>
 
@@ -405,7 +405,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 </button>
 
                 <p className="text-xs text-gray-500 text-center leading-relaxed">
-                  By submitting this form, you agree to our privacy policy. We'll only use your information to contact you about your project and schedule your consultation.
+                  By submitting this form, you agree to our privacy policy. We&apos;ll only use your information to contact you about your project and schedule your consultation.
                 </p>
               </form>
             </>
