@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
+import React, {useState}from "react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "motion/react";
+import ContactModal from "../contactpage/contactModal";
 
 type heroImageCaro = {
   url: string;
@@ -12,6 +13,7 @@ type heroImageCaro = {
 };
 
 function Hero() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const imageSetting: heroImageCaro[] = [
     { url: "/images/carousel/c1.png", degree: 0 },
     { url: "/images/carousel/c2.png", degree: 0 },
@@ -19,6 +21,8 @@ function Hero() {
     { url: "/images/carousel/c4.png", degree: 15 },
     { url: "/images/carousel/c5.png", degree: -30 },
   ];
+
+  
   return (
     <div className="flex flex-col gap-8 sm:gap-[120px] items-center justify-between sm:min-h-screen bg-[url(/images/bg/hhero.png)]   overflow-hidden">
       {/* Hero content section */}
@@ -100,15 +104,10 @@ function Hero() {
           className="flex flex-col sm:flex-row gap-4 sm:gap-8"
         >
           <Button
-            onClick={() =>
-              window.open(
-                "https://calendly.com/rasheed-ogunbakinde-recreax/30min",
-                "_blank"
-              )
-            }
+             onClick={() => setIsModalOpen(true)}
             className="px-6 py-4 rounded-xl font-plus-jakarta-sans font-medium text-base text-center bg-[#12233d] text-white hover:bg-[#1a2f4d] transition-colors duration-300 w-full sm:w-auto cursor-pointer"
           >
-            Book a Free 1:1 Session
+            Book a Free Session
           </Button>
 
           <Link href="/case-studies">
@@ -170,6 +169,11 @@ function Hero() {
         </div>
         <div className="relative curved-rectangle w-full z-[-10px]   sm:mt-[-200px] sm:h-[400px]  h-[200px] "></div>
       </div>
+
+       <ContactModal
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            />
     </div>
   );
 }

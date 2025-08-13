@@ -1027,7 +1027,7 @@ function Header() {
                 onClick={() => setIsModalOpen(true)}
                 className="bg-[#12233d] text-sm font-medium rounded-lg py-[12px] px-4 hover:bg-[#12233d]/80 text-white w-full cursor-pointer"
               >
-                Contact us
+                Book a Free Session
               </Button>
             </div>
           </div>
