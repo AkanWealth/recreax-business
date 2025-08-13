@@ -282,7 +282,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     addStyle="transition-all duration-300 hover:scale-[1.01]"
                   />
                   <div className="w-full h-fit flex flex-col gap-3">
-                    <label className="text-sm font-medium text-gray-700">
+                    <label className="text-lg font-plus-jakarta-sans font-semibold ">
                       Phone Number
                     </label>
                     <PhoneInput
@@ -299,7 +299,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
                 {/* Project Needs */}
                 <div>
-                  <label className="text-sm font-medium text-gray-700 block mb-2">
+                  <label className="text-lg font-plus-jakarta-sans font-semibold  block mb-2">
                     What best describes your need
                   </label>
                   <p className="text-xs text-gray-500 mb-3">Choose multiple options if applicable</p>
@@ -329,7 +329,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 {/* Budget and Timeline */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
-                    <label className="text-sm font-medium text-gray-700 block mb-2">
+                    <label className="text-lg font-plus-jakarta-sans font-semibold block mb-2">
                       Project Budget
                     </label>
                     <select
@@ -349,7 +349,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
                     {errors.budget && <p className="text-red-500 text-sm font-medium mt-1">{errors.budget}</p>}
                   </div>
                   <div>
-                    <label className="text-sm font-medium text-gray-700 block mb-2">
+                    <label className="text-lg font-plus-jakarta-sans font-semibold  block mb-2">
                       Timeline
                     </label>
                     <select
@@ -370,7 +370,7 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
                 {/* Project Description */}
                 <div>
-                  <label className="text-sm font-medium text-gray-700 block mb-2">
+                  <label className="text-lg font-plus-jakarta-sans font-semibold  block mb-2">
                     Tell us about your project
                   </label>
                   <textarea
