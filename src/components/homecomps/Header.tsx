@@ -764,9 +764,9 @@ import { usePathname } from "next/navigation";
 
 import { PiBuilding } from "react-icons/pi";
 import { FaRegAddressCard } from "react-icons/fa";
-import { PiBookOpenTextLight } from "react-icons/pi";
-import { MdWeb } from "react-icons/md";
-import { IoMailUnreadOutline } from "react-icons/io5";
+// import { PiBookOpenTextLight } from "react-icons/pi";
+// import { MdWeb } from "react-icons/md";
+// import { IoMailUnreadOutline } from "react-icons/io5";
 
 import {
   DropdownMenu,
