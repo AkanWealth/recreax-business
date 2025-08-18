@@ -875,7 +875,7 @@ function Header() {
               </DropdownMenuItem>
             </DropdownMenuContent>
           </DropdownMenu>
-          <DropdownMenu>
+          {/* <DropdownMenu>
             <DropdownMenuTrigger className="focus-visible:outline-none">
               <div className="flex items-center h-fit gap-1 md:gap-2">
                 <p className="font-medium font-plus-jakarta-sans text-xs sm:text-sm text-gray-950">
@@ -940,7 +940,7 @@ function Header() {
                 </Link>
               </DropdownMenuItem>
             </DropdownMenuContent>
-          </DropdownMenu>
+          </DropdownMenu> */}
         </div>
 
         <button
